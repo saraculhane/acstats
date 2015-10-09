@@ -35,6 +35,7 @@
 \usepackage{longtable,booktabs,setspace}
 \usepackage{chemarr} %% Useful for one reaction arrow, useless if you're not a chem major
 \usepackage[hyphens]{url}
+%%%%%%% Commented out by CII
 \usepackage{rotating}
 \usepackage{natbib}
 % Comment out the natbib line above and uncomment the following two lines to use the new
@@ -71,93 +72,108 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
-\title{$title.formatted$}
-$if(keywords.formatted)$
-\Keywords{$for(keywords.formatted)$$keywords.formatted$$sep$, $endfor$}
-$endif$
+\author{
+Your R. Name\\
+}
+\title{My Final College Paper}
 
 \Abstract{
-$abstract$
+The abstract of your thesis.
 }
 
-\Acknowledgements{
-$acknowledgements$
-}
-
-\Plainauthor{$for(author)$$author.name$$sep$, $endfor$}
-$if(title.plain)$
-\Plaintitle{$title.plain$}
-$endif$
-$if(title.short)$
-\Shorttitle{$title.short$}
-$endif$
-$if(keywords.plain)$
-\Plainkeywords{$for(keywords.plain)$$keywords.plain$$sep$, $endfor$}
-$endif$
+\Plainauthor{Your R. Name}
+\Plaintitle{My Final College Paper}
+\Shorttitle{Reed Senior Thesis}
 
 %% publication information
 %% \Volume{50}
 %% \Issue{9}
 %% \Month{June}
 %% \Year{2012}
-%% \Submitdate{$submitdate$}
+%% \Submitdate{}
 %% \Acceptdate{2012-06-04}
 
 % \Address{
-% $for(author)$
-%   $if(author.address)$
-%   $author.name$\\
-%   $author.affiliation$\\
-%   $author.address$\\
-%   $if(author.email)$E-mail: $author.email$\\$endif$
-%   $if(author.url)$URL: $author.url$\\~\\$endif$
-%   $endif$
-% $endfor$
-% }
+% %   % % }
 
-% $preamble$
+% 
+
+
 
 \begin{document}
-$if(title)$
+
 \maketitle
-$endif$
-
-  \frontmatter % this stuff will be roman-numbered
-  \pagestyle{empty} % this removes page numbers from the frontmatter
-
-$if(abstract)$
-\begin{abstract}
-$abstract$
-\end{abstract}
-$endif$
-
-$for(include-before)$
-$include-before$
-
-$endfor$
-$if(toc)$
-{
-\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
-\setcounter{tocdepth}{$toc-depth$}
-\tableofcontents
-}
-$endif$
-$if(lot)$
-\listoftables
-$endif$
-$if(lof)$
-\listoffigures
-$endif$
-
-
-
-%  \chapter*{\Acknowledgements{$acknowledgements$}}
-%  \chapter*{\Abstract{$abstract$}}
-
 
 %\input{body_thesis.tex}
 
-$body$
+\tableofcontents
+
+\chapter*{Introduction}
+
+Welcome to the \LaTeX~thesis template. If you've never used \TeX~or
+\LaTeX~before, you'll have an initial learning period to go through, but
+the results of a nicely formatted thesis are worth it for more than the
+aesthetic benefit: markup like \LaTeX~is more consistent than the output
+of a word processor, much less prone to corruption or crashing and the
+resulting file is smaller than a Word file. While you may have never had
+problems using Word in the past, your thesis is going to be about twice
+as large and complex as anything you've written before, taxing Word's
+capabilities. If you're still on the fence about using \LaTeX, read the
+Introduction to LaTeX on the CUS site as well as skim the following
+template and give it a few weeks. Pretty soon all the markup gibberish
+will become second nature.
+
+\section{Why use it?}
+
+\LaTeX~does a great job of formatting tables and paragraphs. Its
+line-breaking algorithm was the subject of a PhD.\thinspace thesis. It
+does a fine job of automatically inserting ligatures, and to top it all
+off it is the only way to typeset good-looking mathematics.
+
+\section{Who should use it?}
+
+Anyone who needs to use math, tables, a lot of figures, complex
+cross-references, IPA or who just cares about the final appearance of
+their document should use \LaTeX. At Reed, math majors are required to
+use it, most physics majors will want to use it, and many other science
+majors may want it also.
+
+\chapter{R Markdown}
+
+This is an R Markdown document. Markdown is a simple formatting syntax
+for authoring HTML, PDF, and MS Word documents. For more details on
+using R Markdown see \url{http://rmarkdown.rstudio.com}.
+
+When you click the \textbf{Knit} button a document will be generated
+that includes both content as well as the output of any embedded R code
+chunks within the document. You can embed an R code chunk like this:
+
+\begin{CodeChunk}
+\begin{CodeInput}
+summary(cars)
+\end{CodeInput}
+\begin{CodeOutput}
+     speed           dist       
+ Min.   : 4.0   Min.   :  2.00  
+ 1st Qu.:12.0   1st Qu.: 26.00  
+ Median :15.0   Median : 36.00  
+ Mean   :15.4   Mean   : 42.98  
+ 3rd Qu.:19.0   3rd Qu.: 56.00  
+ Max.   :25.0   Max.   :120.00  
+\end{CodeOutput}
+\end{CodeChunk}
+
+You can also embed plots, for example:
+
+\begin{CodeChunk}
+
+
+\begin{center}\includegraphics{skeleton_files/figure-latex/unnamed-chunk-4-1} \end{center}
+
+\end{CodeChunk}
+
+Note that the \texttt{echo = FALSE} parameter was added to the code
+chunk to prevent printing of the R code that generated the plot.
 
 \end{document}
 

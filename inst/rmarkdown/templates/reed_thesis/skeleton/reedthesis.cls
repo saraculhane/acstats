@@ -28,6 +28,8 @@
 \ProcessOptions\relax
 \LoadClass{book}
 \RequirePackage{fancyhdr}
+% Added by CII to produce nice looking code in BeginVerbatimEnvironment
+\RequirePackage{fancyvrb}
 
 % This gives us rules below the headers
 \AtBeginDocument{%
@@ -170,6 +172,22 @@
   \fontsize{12}{14}\selectfont
 }{\clearpage \if@restonecol\twocolumn\fi}%
 
+%%% Added by CII
+\newenvironment{acknowledgements}{%
+  \if@twocolumn
+    \@restonecoltrue\onecolumn
+  \else
+    \@restonecolfalse
+  \fi
+  \chapter[Acknowledgements]{}
+  \begin{center}
+  {\fontsize{14}{16}\selectfont \bfseries Acknowledgements}
+  \end{center}
+  \fontsize{12}{14}\selectfont
+}{\clearpage \if@restonecol\twocolumn\fi}%
+%%%
+
+
 \ifx\@pdfoutput\@undefined
   \newcommand{\RTpercent}{\@percentchar\space}
   \AtBeginDvi{\special{!\RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}}
@@ -251,3 +269,15 @@
 \newcommand{\Abstract}[1]{\def\@Abstract{#1}}
 \newcommand{\Keywords}[1]{\def\@Keywords{#1}}
 \newcommand{\Plainkeywords}[1]{\def\@Plainkeywords{#1}}
+\newcommand{\Acknowledgements}[1]{\def\@Acknowledgements{#1}}
+
+%% Sweave(-like)
+\DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl}
+\DefineVerbatimEnvironment{Soutput}{Verbatim}{}
+\DefineVerbatimEnvironment{Scode}{Verbatim}{fontshape=sl}
+\newenvironment{Schunk}{}{}
+\DefineVerbatimEnvironment{Code}{Verbatim}{}
+\DefineVerbatimEnvironment{CodeInput}{Verbatim}{fontshape=sl}
+\DefineVerbatimEnvironment{CodeOutput}{Verbatim}{}
+\newenvironment{CodeChunk}{}{}
+% \setkeys{Gin}{width=0.8\textwidth}
