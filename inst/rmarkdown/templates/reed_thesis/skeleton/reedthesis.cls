@@ -51,7 +51,7 @@
     \addcontentsline{toc}{chapter}{\bibname}
   }{\endoldthebibliography}
  %%%%%% end of things for psych majors to comment out
-  
+
   \let\oldtheindex=\theindex
   \let\endoldtheindex=\endtheindex
   \renewenvironment{theindex}{
@@ -68,7 +68,7 @@
 		    \global\@topnum\z@
 		    \@afterindentfalse
 		    \secdef\@chapter\@schapter}
-		    
+
 % Stolen from book.cls PBC 5/12/05
 % Using this to actually show "Chapter 1" in TOC instead of "1"
 \def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
@@ -172,13 +172,13 @@
 
 \ifx\@pdfoutput\@undefined
   \newcommand{\RTpercent}{\@percentchar\space}
-  \AtBeginDvi{\special{!\RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}} 
-  \AtBeginDvi{\special{rawpostscript \RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}} 
+  \AtBeginDvi{\special{!\RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}}
+  \AtBeginDvi{\special{rawpostscript \RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}}
 \else
-  \AtEndDocument{\pdfinfo{/Creator	(Reed College LaTeX Thesis Class 2001/12/04 SN)}} 
+  \AtEndDocument{\pdfinfo{/Creator	(Reed College LaTeX Thesis Class 2001/12/04 SN)}}
 \fi
 
-% I hacked the title page to all be the same font size 
+% I hacked the title page to all be the same font size
 % as requested by the library, BTS 2005
 
 \renewcommand{\maketitle}{%
@@ -243,3 +243,11 @@
   }
 }
 
+% From JSS
+%% for all publications
+\newcommand{\Plaintitle}[1]{\def\@Plaintitle{#1}}
+\newcommand{\Shorttitle}[1]{\def\@Shorttitle{#1}}
+\newcommand{\Plainauthor}[1]{\def\@Plainauthor{#1}}
+\newcommand{\Abstract}[1]{\def\@Abstract{#1}}
+\newcommand{\Keywords}[1]{\def\@Keywords{#1}}
+\newcommand{\Plainkeywords}[1]{\def\@Plainkeywords{#1}}
