@@ -1,26 +1,33 @@
 ---
-title: Capitalized Title Here
 author:
-  - name: Author One
+  - name: FirstName LastName
+    affiliation: University/Company
+    address: >
+      First line
+      Second line
+    email: name@company.com
+    url: http://rstudio.com
+  - name: Second Author
     affiliation: Affiliation
-    address:
-    - line 1
-    - line 2
-    email:  author1@work
-  - name: Author Two
-    affiliation: Affiliation
-    address:
-    - line 1
-    - line 2
-    email:  author2@work
+title:
+  formatted: "A Capitalized Title: Something about a Package \\pkg{foo}"
+  # If you use tex in the formatted title, also supply version without
+  plain:     "A Capitalized Title: Something about a Package foo"
+  # For running headers, if needed
+  short:     "\\pkg{foo}: A Capitalized Title"
 abstract: >
-  An abstract of less than 150 words.
+  The abstract of the article.
+keywords:
+  # at least one keyword must be supplied
+  formatted: [keywords, not capitalized, "\\proglang{Java}"]
+  plain:     [keywords, not capitalized, Java]
 preamble: >
-  % Any extra latex you need in the preamble
+  \usepackage{amsmath}
 output: rticles::reed_thesis
 ---
 
-```{r setup}
+
+```{r setup, include = FALSE}
 if(!require(rticles)){
   if(!require(devtools))
     install.packages("devtools")
@@ -33,33 +40,23 @@ if(!require(rticles)){
 ```
 
 
-## Introduction
+# Introduction
 
-Introductory section which may include references in parentheses
-\citep{R}, or cite a reference such as \citet{R} in the text.
+This template demonstrates some of the basic latex you'll need to know to create a JSS article.
 
-## Section title in sentence case
+## Code formatting
 
-This section may contain a figure such as Figure \ref{figure:rlogo}.
+Don't use markdown, instead use the more precise latex commands:
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics{Rlogo}
-  \caption{The logo of R.}
-  \label{figure:rlogo}
-\end{figure}
+* \proglang{Java}
+* \pkg{plyr}
+* \code{print("abc")}
 
-## Another section
+# R code
 
-There will likely be several sections, perhaps including code snippets, such as:
+Can be inserted in regular R markdown blocks.
 
 ```{r}
 x <- 1:10
 x
 ```
-
-## Summary
-
-This file is only a basic article template. For full details of _The R Journal_ style and information on how to prepare your article for submission, see the [Instructions for Authors](http://journal.r-project.org/latex/RJauthorguide.pdf).
-
-\bibliography{RJreferences}
