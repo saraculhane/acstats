@@ -311,9 +311,9 @@
 % \setlength{\parindent}{0em}
 % %% for all publications
 % \newcommand{\Address}[1]{\def\@Address{#1}}
-% \newcommand{\Plaintitle}[1]{\def\@Plaintitle{#1}}
-% \newcommand{\Shorttitle}[1]{\def\@Shorttitle{#1}}
-% \newcommand{\Plainauthor}[1]{\def\@Plainauthor{#1}}
+ \newcommand{\Plaintitle}[1]{\def\@Plaintitle{#1}}
+ \newcommand{\Shorttitle}[1]{\def\@Shorttitle{#1}}
+ \newcommand{\Plainauthor}[1]{\def\@Plainauthor{#1}}
 % \newcommand{\Volume}[1]{\def\@Volume{#1}}
 % \newcommand{\Year}[1]{\def\@Year{#1}}
 % \newcommand{\Month}[1]{\def\@Month{#1}}

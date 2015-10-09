@@ -1,12 +1,6 @@
 ---
 author:
-  - name: FirstName LastName
-    affiliation: University/Company
-    address: >
-      First line
-      Second line
-    email: name@company.com
-    url: http://rstudio.com
+  - name: Your R. Name
 title:
   formatted: "My Final College Paper"
   # If you use tex in the formatted title, also supply version without
