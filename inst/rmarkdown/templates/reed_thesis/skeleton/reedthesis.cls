@@ -245,41 +245,41 @@
 
 %% Jss class stuff
 %% options
-\newif\if@article
+%\newif\if@article
 \newif\if@codesnippet
-\newif\if@bookreview
-\newif\if@softwarereview
-\newif\if@review
+%\newif\if@bookreview
+%\newif\if@softwarereview
+%\newif\if@review
 \newif\if@shortnames
-\newif\if@nojss
-\newif\if@notitle
-\newif\if@noheadings
-\newif\if@nofooter
+%\newif\if@nojss
+%\newif\if@notitle
+%\newif\if@noheadings
+%\newif\if@nofooter
 
-\@articletrue
+%\@articletrue
 \@codesnippetfalse
-\@bookreviewfalse
-\@softwarereviewfalse
-\@reviewfalse
+%\@bookreviewfalse
+%\@softwarereviewfalse
+%\@reviewfalse
 \@shortnamesfalse
-\@nojssfalse
-\@notitlefalse
-\@noheadingsfalse
-\@nofooterfalse
+%\@nojssfalse
+%\@notitlefalse
+%\@noheadingsfalse
+%\@nofooterfalse
 
-\DeclareOption{article}{\@articletrue%
-  \@codesnippetfalse \@bookreviewfalse \@softwarereviewfalse}
+%\DeclareOption{article}{\@articletrue%
+%  \@codesnippetfalse \@bookreviewfalse \@softwarereviewfalse}
 \DeclareOption{codesnippet}{\@articlefalse%
   \@codesnippettrue \@bookreviewfalse \@softwarereviewfalse}
-\DeclareOption{bookreview}{\@articlefalse%
-  \@codesnippetfalse \@bookreviewtrue \@softwarereviewfalse}
-\DeclareOption{softwarereview}{\@articlefalse%
-  \@codesnippetfalse \@bookreviewfalse \@softwarereviewtrue}
+%\DeclareOption{bookreview}{\@articlefalse%
+%  \@codesnippetfalse \@bookreviewtrue \@softwarereviewfalse}
+%\DeclareOption{softwarereview}{\@articlefalse%
+%  \@codesnippetfalse \@bookreviewfalse \@softwarereviewtrue}
 \DeclareOption{shortnames}{\@shortnamestrue}
-\DeclareOption{nojss}{\@nojsstrue}
-\DeclareOption{notitle}{\@notitletrue}
-\DeclareOption{noheadings}{\@noheadingstrue}
-\DeclareOption{nofooter}{\@nofootertrue}
+%\DeclareOption{nojss}{\@nojsstrue}
+%\DeclareOption{notitle}{\@notitletrue}
+%\DeclareOption{noheadings}{\@noheadingstrue}
+%\DeclareOption{nofooter}{\@nofootertrue}
 
 \ProcessOptions
 
@@ -346,8 +346,8 @@
 % \newcommand{\Seconddate}[1]{\def\@Seconddate{#1}}
 % \newcommand{\Reviewauthor}[1]{\def\@Reviewauthor{#1}}
 % %% defaults
- \author{Firstname Lastname\\Affiliation}
- \title{Title}
+ \author{Your R. Name}
+ \title{My Final College Paper}
  \Abstract{---!!!---an abstract is required---!!!---}
  \Plainauthor{\@author}
 % \Volume{VV}
@@ -429,6 +429,7 @@
 %   \Firstdate{\textit{Submitted:} \@Submitdate}
 %   \Seconddate{\textit{Accepted:} \@Acceptdate}
 % \fi
+
 %% Sweave(-like)
 \DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl}
 \DefineVerbatimEnvironment{Soutput}{Verbatim}{}
