@@ -11,7 +11,7 @@ reed_thesis <- function() {
   base$knitr$opts_chunk$comment <- NA
   base$knitr$opts_chunk$highlight <- FALSE
 
-  base$knitr$opts_chunk$dev.args <- list(pointsize = 11)
+  base$knitr$opts_chunk$dev.args <- list(pointsize = 12)
   base$knitr$opts_chunk$fig.width <- 4.9 # 6.125" * 0.8, as in template
   base$knitr$opts_chunk$fig.height <- 3.675 # 4.9 * 3:4
   base$knitr$opts_chunk$fig.align <- "center"

@@ -7,10 +7,8 @@ title:
   plain:     "My Final College Paper"
   # For running headers, if needed
   short:     "Reed Senior Thesis"
-#abstract: >
-#  The abstract of your thesis.
-preamble: >
-  \usepackage{amsmath}
+abstract: >
+  The abstract of your thesis.
 output: rticles::reed_thesis
 ---
 
