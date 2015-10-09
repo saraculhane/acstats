@@ -27,11 +27,3 @@ if(!require(rticles)){
 }
 ```
 
-# R code
-
-Can be inserted in regular R markdown blocks.
-
-```{r}
-x <- 1:10
-x
-```

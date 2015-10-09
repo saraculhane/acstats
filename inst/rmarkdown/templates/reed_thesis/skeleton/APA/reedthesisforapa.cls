@@ -33,23 +33,23 @@
 \AtBeginDocument{%
   \fancyhf{}
   \fancyhead[LE,RO]{\thepage}
-%  \fancyhead[RE]{\slshape \leftmark}
-%  \fancyhead[LO]{\slshape \rightmark}
+  \fancyhead[RE]{\slshape \leftmark}
+  \fancyhead[LO]{\slshape \rightmark}
 %	The above makes your headers in all caps. If you would like different headers, choose one of the following options (be sure to remove the % symbol from both the right and left headers):
-	 \fancyhead[RE]{\slshape \nouppercase \leftmark} % This makes the headers on the RIGHT side pages be italic and use lowercase With Capitals When Specified.
-	\fancyhead[LO]{\slshape \nouppercase \rightmark} % This does the same thing to the LEFT side pages
+%	 \fancyhead[RE]{\slshape \nouppercase \leftmark} % This makes the headers on the RIGHT side pages be italic and use lowercase With Capitals When Specified.
+%	\fancyhead[LO]{\slshape \nouppercase \rightmark} % This does the same thing to the LEFT side pages
 %	or
 %	\fancyhead[RE]{\scshape \leftmark} % The RIGHT headers will be in small caps.
 %	\fancyhead[LO]{\scshape \rightmark} %  And so will the LEFT headers
   \pagestyle{fancy}
 
 % Psych majors: You do not need the following six lines, as it conflicts with apacite, so comment them out.
-  \let\oldthebibliography=\thebibliography
-  \let\endoldthebibliography=\endthebibliography
-  \renewenvironment{thebibliography}[1]{
-    \oldthebibliography{#1}
-    \addcontentsline{toc}{chapter}{\bibname}
-  }{\endoldthebibliography}
+%  \let\oldthebibliography=\thebibliography
+%  \let\endoldthebibliography=\endthebibliography
+%  \renewenvironment{thebibliography}[1]{
+%    \oldthebibliography{#1}
+%    \addcontentsline{toc}{chapter}{\bibname}
+%  }{\endoldthebibliography}
  %%%%%% end of things for psych majors to comment out
   
   \let\oldtheindex=\theindex
@@ -101,25 +101,17 @@
 \let\RToldcleardoublepage\cleardoublepage
 \renewcommand{\cleardoublepage}{\RTcleardoublepage}
 
-% adjust margins for binding  (changed 2007-04-24 tgp)
-\setlength{\oddsidemargin}{.5in}
+% adjust margins for binding
+\setlength{\oddsidemargin}{.6in}
 \setlength{\evensidemargin}{0in}
-\setlength{\textwidth}{6.0in}
-\setlength{\textheight}{9.0in}
+\setlength{\textwidth}{5.9in}
 \setlength\topmargin{0in}
+\addtolength\headheight{2.5pt}
 \addtolength\topmargin{-\headheight}
 \addtolength\topmargin{-\headsep}
-
-%\setlength{\oddsidemargin}{.6in}
-%\setlength{\evensidemargin}{0in}
-%\setlength{\textwidth}{5.9in}
-%\setlength\topmargin{0in}
-%\addtolength\headheight{2.5pt}
-%\addtolength\topmargin{-\headheight}
-%\addtolength\topmargin{-\headsep}
-%\addtolength\textheight{1in}
-%\addtolength\textheight{\headheight}
-%\addtolength\textheight{\headsep}
+\addtolength\textheight{1in}
+\addtolength\textheight{\headheight}
+\addtolength\textheight{\headsep}
 
 \def\division#1{\gdef \@division{#1}}
 \def\@division{\@latex@warning@no@line{No \noexpand\division given}}
@@ -170,7 +162,7 @@
   \fontsize{12}{14}\selectfont
 }{\clearpage \if@restonecol\twocolumn\fi}%
 
-\ifx\@pdfoutput\@undefined
+\ifx\pdfoutput\@undefined
   \newcommand{\RTpercent}{\@percentchar\space}
   \AtBeginDvi{\special{!\RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}} 
   \AtBeginDvi{\special{rawpostscript \RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}} 
