@@ -321,9 +321,9 @@
 % \newcommand{\Submitdate}[1]{\def\@Submitdate{#1}}
 % %% for articles and code snippets
 % \newcommand{\Acceptdate}[1]{\def\@Acceptdate{#1}}
-% \newcommand{\Abstract}[1]{\def\@Abstract{#1}}
-% \newcommand{\Keywords}[1]{\def\@Keywords{#1}}
-% \newcommand{\Plainkeywords}[1]{\def\@Plainkeywords{#1}}
+ \newcommand{\Abstract}[1]{\def\@Abstract{#1}}
+ \newcommand{\Keywords}[1]{\def\@Keywords{#1}}
+ \newcommand{\Plainkeywords}[1]{\def\@Plainkeywords{#1}}
 % %% for book and software reviews
 % \newcommand{\Reviewer}[1]{\def\@Reviewer{#1}}
 % \newcommand{\Booktitle}[1]{\def\@Booktitle{#1}}
@@ -346,10 +346,10 @@
 % \newcommand{\Seconddate}[1]{\def\@Seconddate{#1}}
 % \newcommand{\Reviewauthor}[1]{\def\@Reviewauthor{#1}}
 % %% defaults
-% \author{Firstname Lastname\\Affiliation}
-% \title{Title}
-% \Abstract{---!!!---an abstract is required---!!!---}
-% \Plainauthor{\@author}
+ \author{Firstname Lastname\\Affiliation}
+ \title{Title}
+ \Abstract{---!!!---an abstract is required---!!!---}
+ \Plainauthor{\@author}
 % \Volume{VV}
 % \Year{YYYY}
 % \Month{MMMMMM}
