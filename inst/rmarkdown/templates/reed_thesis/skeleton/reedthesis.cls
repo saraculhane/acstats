@@ -296,139 +296,139 @@
 \bibpunct{(}{)}{;}{a}{}{,}
 %\bibliographystyle{jss}
 %% page layout
-\topmargin 0pt
-\textheight 46\baselineskip
-\advance\textheight by \topskip
-\oddsidemargin 0.1in
-\evensidemargin 0.15in
-\marginparwidth 1in
-\oddsidemargin 0.125in
-\evensidemargin 0.125in
-\marginparwidth 0.75in
-\textwidth 6.125in
-%% paragraphs
-\setlength{\parskip}{0.7ex plus0.1ex minus0.1ex}
-\setlength{\parindent}{0em}
-%% for all publications
-\newcommand{\Address}[1]{\def\@Address{#1}}
-\newcommand{\Plaintitle}[1]{\def\@Plaintitle{#1}}
-\newcommand{\Shorttitle}[1]{\def\@Shorttitle{#1}}
-\newcommand{\Plainauthor}[1]{\def\@Plainauthor{#1}}
-\newcommand{\Volume}[1]{\def\@Volume{#1}}
-\newcommand{\Year}[1]{\def\@Year{#1}}
-\newcommand{\Month}[1]{\def\@Month{#1}}
-\newcommand{\Issue}[1]{\def\@Issue{#1}}
-\newcommand{\Submitdate}[1]{\def\@Submitdate{#1}}
-%% for articles and code snippets
-\newcommand{\Acceptdate}[1]{\def\@Acceptdate{#1}}
-\newcommand{\Abstract}[1]{\def\@Abstract{#1}}
-\newcommand{\Keywords}[1]{\def\@Keywords{#1}}
-\newcommand{\Plainkeywords}[1]{\def\@Plainkeywords{#1}}
-%% for book and software reviews
-\newcommand{\Reviewer}[1]{\def\@Reviewer{#1}}
-\newcommand{\Booktitle}[1]{\def\@Booktitle{#1}}
-\newcommand{\Bookauthor}[1]{\def\@Bookauthor{#1}}
-\newcommand{\Publisher}[1]{\def\@Publisher{#1}}
-\newcommand{\Pubaddress}[1]{\def\@Pubaddress{#1}}
-\newcommand{\Pubyear}[1]{\def\@Pubyear{#1}}
-\newcommand{\ISBN}[1]{\def\@ISBN{#1}}
-\newcommand{\Pages}[1]{\def\@Pages{#1}}
-\newcommand{\Price}[1]{\def\@Price{#1}}
-\newcommand{\Plainreviewer}[1]{\def\@Plainreviewer{#1}}
-\newcommand{\Softwaretitle}[1]{\def\@Softwaretitle{#1}}
-\newcommand{\URL}[1]{\def\@URL{#1}}
-%% for internal use
-\newcommand{\Seriesname}[1]{\def\@Seriesname{#1}}
-\newcommand{\Hypersubject}[1]{\def\@Hypersubject{#1}}
-\newcommand{\Hyperauthor}[1]{\def\@Hyperauthor{#1}}
-\newcommand{\Footername}[1]{\def\@Footername{#1}}
-\newcommand{\Firstdate}[1]{\def\@Firstdate{#1}}
-\newcommand{\Seconddate}[1]{\def\@Seconddate{#1}}
-\newcommand{\Reviewauthor}[1]{\def\@Reviewauthor{#1}}
-%% defaults
-\author{Firstname Lastname\\Affiliation}
-\title{Title}
-\Abstract{---!!!---an abstract is required---!!!---}
-\Plainauthor{\@author}
-\Volume{VV}
-\Year{YYYY}
-\Month{MMMMMM}
-\Issue{II}
-\Submitdate{yyyy-mm-dd}
-\Acceptdate{yyyy-mm-dd}
-\Address{
-  Firstname Lastname\\
-  Affiliation\\
-  Address, Country\\
-  E-mail: \email{name@address}\\
-  URL: \url{http://link/to/webpage/}
-}
-
-\Reviewer{Firstname Lastname\\Affiliation}
-\Plainreviewer{Firstname Lastname}
-\Booktitle{Book Title}
-\Bookauthor{Book Author}
-\Publisher{Publisher}
-\Pubaddress{Publisher's Address}
-\Pubyear{YYY}
-\ISBN{x-xxxxx-xxx-x}
-\Pages{xv + 123}
-\Price{USD 69.95 (P)}
-\URL{http://link/to/webpage/}
-\if@article
-  \Seriesname{Issue}
-  \Hypersubject{Journal of Statistical Software}
-  \Plaintitle{\@title}
-  \Shorttitle{\@title}
-  \Plainkeywords{\@Keywords}
-\fi
-
-\if@codesnippet
-  \Seriesname{Code Snippet}
-  \Hypersubject{Journal of Statistical Software -- Code Snippets}
-  \Plaintitle{\@title}
-  \Shorttitle{\@title}
-  \Plainkeywords{\@Keywords}
-\fi
-
-\if@bookreview
-  \Seriesname{Book Review}
-  \Hypersubject{Journal of Statistical Software -- Book Reviews}
-  \Plaintitle{\@Booktitle}
-  \Shorttitle{\@Booktitle}
-  \Reviewauthor{\@Bookauthor\\
-                \@Publisher, \@Pubaddress, \@Pubyear.\\
-                ISBN~\@ISBN. \@Pages~pp. \@Price.\\
-                \url{\@URL}}
-  \Plainkeywords{}
-  \@reviewtrue
-\fi
-
-\if@softwarereview
-  \Seriesname{Software Review}
-  \Hypersubject{Journal of Statistical Software -- Software Reviews}
-  \Plaintitle{\@Softwaretitle}
-  \Shorttitle{\@Softwaretitle}
-  \Booktitle{\@Softwaretitle}
-  \Reviewauthor{\@Publisher, \@Pubaddress. \@Price.\\
-                \url{\@URL}}
-  \Plainkeywords{}
-  \@reviewtrue
-\fi
-
-\if@review
-  \Hyperauthor{\@Plainreviewer}
-  \Keywords{}
-  \Footername{Reviewer}
-  \Firstdate{\textit{Published:} \@Submitdate}
-  \Seconddate{}
-\else
-  \Hyperauthor{\@Plainauthor}
-  \Keywords{---!!!---at least one keyword is required---!!!---}
-  \Footername{Affiliation}
-  \Firstdate{\textit{Submitted:} \@Submitdate}
-  \Seconddate{\textit{Accepted:} \@Acceptdate}
-\fi
+% \topmargin 0pt
+% \textheight 46\baselineskip
+% \advance\textheight by \topskip
+% \oddsidemargin 0.1in
+% \evensidemargin 0.15in
+% \marginparwidth 1in
+% \oddsidemargin 0.125in
+% \evensidemargin 0.125in
+% \marginparwidth 0.75in
+% \textwidth 6.125in
+% %% paragraphs
+% \setlength{\parskip}{0.7ex plus0.1ex minus0.1ex}
+% \setlength{\parindent}{0em}
+% %% for all publications
+% \newcommand{\Address}[1]{\def\@Address{#1}}
+% \newcommand{\Plaintitle}[1]{\def\@Plaintitle{#1}}
+% \newcommand{\Shorttitle}[1]{\def\@Shorttitle{#1}}
+% \newcommand{\Plainauthor}[1]{\def\@Plainauthor{#1}}
+% \newcommand{\Volume}[1]{\def\@Volume{#1}}
+% \newcommand{\Year}[1]{\def\@Year{#1}}
+% \newcommand{\Month}[1]{\def\@Month{#1}}
+% \newcommand{\Issue}[1]{\def\@Issue{#1}}
+% \newcommand{\Submitdate}[1]{\def\@Submitdate{#1}}
+% %% for articles and code snippets
+% \newcommand{\Acceptdate}[1]{\def\@Acceptdate{#1}}
+% \newcommand{\Abstract}[1]{\def\@Abstract{#1}}
+% \newcommand{\Keywords}[1]{\def\@Keywords{#1}}
+% \newcommand{\Plainkeywords}[1]{\def\@Plainkeywords{#1}}
+% %% for book and software reviews
+% \newcommand{\Reviewer}[1]{\def\@Reviewer{#1}}
+% \newcommand{\Booktitle}[1]{\def\@Booktitle{#1}}
+% \newcommand{\Bookauthor}[1]{\def\@Bookauthor{#1}}
+% \newcommand{\Publisher}[1]{\def\@Publisher{#1}}
+% \newcommand{\Pubaddress}[1]{\def\@Pubaddress{#1}}
+% \newcommand{\Pubyear}[1]{\def\@Pubyear{#1}}
+% \newcommand{\ISBN}[1]{\def\@ISBN{#1}}
+% \newcommand{\Pages}[1]{\def\@Pages{#1}}
+% \newcommand{\Price}[1]{\def\@Price{#1}}
+% \newcommand{\Plainreviewer}[1]{\def\@Plainreviewer{#1}}
+% \newcommand{\Softwaretitle}[1]{\def\@Softwaretitle{#1}}
+% \newcommand{\URL}[1]{\def\@URL{#1}}
+% %% for internal use
+% \newcommand{\Seriesname}[1]{\def\@Seriesname{#1}}
+% \newcommand{\Hypersubject}[1]{\def\@Hypersubject{#1}}
+% \newcommand{\Hyperauthor}[1]{\def\@Hyperauthor{#1}}
+% \newcommand{\Footername}[1]{\def\@Footername{#1}}
+% \newcommand{\Firstdate}[1]{\def\@Firstdate{#1}}
+% \newcommand{\Seconddate}[1]{\def\@Seconddate{#1}}
+% \newcommand{\Reviewauthor}[1]{\def\@Reviewauthor{#1}}
+% %% defaults
+% \author{Firstname Lastname\\Affiliation}
+% \title{Title}
+% \Abstract{---!!!---an abstract is required---!!!---}
+% \Plainauthor{\@author}
+% \Volume{VV}
+% \Year{YYYY}
+% \Month{MMMMMM}
+% \Issue{II}
+% \Submitdate{yyyy-mm-dd}
+% \Acceptdate{yyyy-mm-dd}
+% \Address{
+%   Firstname Lastname\\
+%   Affiliation\\
+%   Address, Country\\
+%   E-mail: \email{name@address}\\
+%   URL: \url{http://link/to/webpage/}
+% }
+%
+% \Reviewer{Firstname Lastname\\Affiliation}
+% \Plainreviewer{Firstname Lastname}
+% \Booktitle{Book Title}
+% \Bookauthor{Book Author}
+% \Publisher{Publisher}
+% \Pubaddress{Publisher's Address}
+% \Pubyear{YYY}
+% \ISBN{x-xxxxx-xxx-x}
+% \Pages{xv + 123}
+% \Price{USD 69.95 (P)}
+% \URL{http://link/to/webpage/}
+% \if@article
+%   \Seriesname{Issue}
+%   \Hypersubject{Journal of Statistical Software}
+%   \Plaintitle{\@title}
+%   \Shorttitle{\@title}
+%   \Plainkeywords{\@Keywords}
+% \fi
+%
+% \if@codesnippet
+%   \Seriesname{Code Snippet}
+%   \Hypersubject{Journal of Statistical Software -- Code Snippets}
+%   \Plaintitle{\@title}
+%   \Shorttitle{\@title}
+%   \Plainkeywords{\@Keywords}
+% \fi
+%
+% \if@bookreview
+%   \Seriesname{Book Review}
+%   \Hypersubject{Journal of Statistical Software -- Book Reviews}
+%   \Plaintitle{\@Booktitle}
+%   \Shorttitle{\@Booktitle}
+%   \Reviewauthor{\@Bookauthor\\
+%                 \@Publisher, \@Pubaddress, \@Pubyear.\\
+%                 ISBN~\@ISBN. \@Pages~pp. \@Price.\\
+%                 \url{\@URL}}
+%   \Plainkeywords{}
+%   \@reviewtrue
+% \fi
+%
+% \if@softwarereview
+%   \Seriesname{Software Review}
+%   \Hypersubject{Journal of Statistical Software -- Software Reviews}
+%   \Plaintitle{\@Softwaretitle}
+%   \Shorttitle{\@Softwaretitle}
+%   \Booktitle{\@Softwaretitle}
+%   \Reviewauthor{\@Publisher, \@Pubaddress. \@Price.\\
+%                 \url{\@URL}}
+%   \Plainkeywords{}
+%   \@reviewtrue
+% \fi
+%
+% \if@review
+%   \Hyperauthor{\@Plainreviewer}
+%   \Keywords{}
+%   \Footername{Reviewer}
+%   \Firstdate{\textit{Published:} \@Submitdate}
+%   \Seconddate{}
+% \else
+%   \Hyperauthor{\@Plainauthor}
+%   \Keywords{---!!!---at least one keyword is required---!!!---}
+%   \Footername{Affiliation}
+%   \Firstdate{\textit{Submitted:} \@Submitdate}
+%   \Seconddate{\textit{Accepted:} \@Acceptdate}
+% \fi
 %% Sweave(-like)
 \DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl}
 \DefineVerbatimEnvironment{Soutput}{Verbatim}{}
