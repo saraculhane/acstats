@@ -26,5 +26,3 @@ if(!require(rticles)){
   library(rticles)
 }
 ```
-
-\input{body_thesis.tex}
