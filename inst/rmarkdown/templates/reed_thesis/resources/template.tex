@@ -78,13 +78,23 @@
 %\Keywords{$for(keywords.formatted)$$keywords.formatted$$sep$, $endfor$}
 %$endif$
 
+\Acknowledgements{
+$acknowledgements$
+}
+
+\Dedication{
+$dedication$
+}
+
+\Preface{
+$preface$
+}
+
 \Abstract{
 $abstract$
 }
 
-\Acknowledgements{
-$acknowledgements$
-}
+
 
 %\Plainauthor{$for(author)$$author.name$$sep$, $endfor$}
 $if(title.plain)$
@@ -127,16 +137,28 @@ $endif$
   \frontmatter % this stuff will be roman-numbered
   \pagestyle{empty} % this removes page numbers from the frontmatter
 
+$if(acknowledgements)$
+\begin{acknowledgements}
+$acknowledgements$
+\end{acknowledgements}
+$endif$
+
+$if(preface)$
+\begin{preface}
+$preface$
+\end{preface}
+$endif$
+
 $if(abstract)$
 \begin{abstract}
 $abstract$
 \end{abstract}
 $endif$
 
-$if(acknowledgements)$
-\begin{acknowledgements}
-$acknowledgements$
-\end{acknowledgements}
+$if(dedication)$
+\begin{dedication}
+$abstract$
+\end{dedication}
 $endif$
 
 $for(include-before)$

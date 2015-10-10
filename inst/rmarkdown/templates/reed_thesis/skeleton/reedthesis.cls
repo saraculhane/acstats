@@ -159,18 +159,7 @@
     \endgroup
   \fi}
 
-\newenvironment{abstract}{%
-  \if@twocolumn
-    \@restonecoltrue\onecolumn
-  \else
-    \@restonecolfalse
-  \fi
-  \chapter[Abstract]{}
-  \begin{center}
-  {\fontsize{14}{16}\selectfont \bfseries Abstract}
-  \end{center}
-  \fontsize{12}{14}\selectfont
-}{\clearpage \if@restonecol\twocolumn\fi}%
+
 
 %%% Added by CII
 \newenvironment{acknowledgements}{%
@@ -185,7 +174,74 @@
 %  \end{center}
   \fontsize{12}{14}\selectfont
 }{\clearpage \if@restonecol\twocolumn\fi}%
+
+\newenvironment{preface}{%
+  \if@twocolumn
+    \@restonecoltrue\onecolumn
+  \else
+    \@restonecolfalse
+  \fi
+  \chapter[Preface]{Preface}
+  \fontsize{12}{14}\selectfont
+}{\clearpage \if@restonecol\twocolumn\fi}%
+
+% List of abbreviations
+% \newenvironment{preface}{%
+%   \if@twocolumn
+%     \@restonecoltrue\onecolumn
+%   \else
+%     \@restonecolfalse
+%   \fi
+%   \chapter[Preface]{Preface}
+%   \fontsize{12}{14}\selectfont
+% }{\clearpage \if@restonecol\twocolumn\fi}%
+
+% List of tables
+% \newenvironment{preface}{%
+%   \if@twocolumn
+%     \@restonecoltrue\onecolumn
+%   \else
+%     \@restonecolfalse
+%   \fi
+%   \chapter[Preface]{Preface}
+%   \fontsize{12}{14}\selectfont
+% }{\clearpage \if@restonecol\twocolumn\fi}%
+
+% List of figures
+% \newenvironment{preface}{%
+%   \if@twocolumn
+%     \@restonecoltrue\onecolumn
+%   \else
+%     \@restonecolfalse
+%   \fi
+%   \chapter[Preface]{Preface}
+%   \fontsize{12}{14}\selectfont
+% }{\clearpage \if@restonecol\twocolumn\fi}%
+
 %%%
+
+\newenvironment{abstract}{%
+  \if@twocolumn
+    \@restonecoltrue\onecolumn
+  \else
+    \@restonecolfalse
+  \fi
+  \chapter[Abstract]{Abstract}
+%   \begin{center}
+%   {\fontsize{14}{16}\selectfont \bfseries Abstract}
+%   \end{center}
+  \fontsize{12}{14}\selectfont
+}{\clearpage \if@restonecol\twocolumn\fi}%
+
+\newenvironment{dedication}{%
+  \if@twocolumn
+    \@restonecoltrue\onecolumn
+  \else
+    \@restonecolfalse
+  \fi
+  \chapter[Dedication]{Dedication}
+  \fontsize{12}{14}\selectfont
+}{\clearpage \if@restonecol\twocolumn\fi}%
 
 
 \ifx\@pdfoutput\@undefined
@@ -270,6 +326,8 @@
 \newcommand{\Keywords}[1]{\def\@Keywords{#1}}
 \newcommand{\Plainkeywords}[1]{\def\@Plainkeywords{#1}}
 \newcommand{\Acknowledgements}[1]{\def\@Acknowledgements{#1}}
+\newcommand{\Dedication}[1]{\def\@Dedication{#1}}
+\newcommand{\Preface}[1]{\def\@Preface{#1}}
 
 %% Sweave(-like)
 \DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl}
