@@ -1,5 +1,6 @@
 ---
-author: 'Test Your R. Name'
+author: 'Your R. Name'
+date: 'May 20xx'
 title:
   formatted: "My Final College Paper"
 # If you use tex in the formatted title, also supply version without
