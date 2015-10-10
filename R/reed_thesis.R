@@ -2,7 +2,7 @@
 reed_thesis <- function() {
   template <- find_resource("reed_thesis", "template.tex")
 
-  base <- rmarkdown::pdf_document(template = template, toc = FALSE, keep_tex = TRUE)
+  base <- rmarkdown::pdf_document(template = template, toc = toc, keep_tex = TRUE)
 
   # Mostly copied from knitr::render_sweave
   base$knitr$opts_knit$out.format <- "sweave"

@@ -67,33 +67,33 @@
 %%
 %% End Preamble
 %%
-
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-
-\title{$title.formatted$}
-$if(keywords.formatted)$
-\Keywords{$for(keywords.formatted)$$keywords.formatted$$sep$, $endfor$}
-$endif$
-
-\Abstract{
-$abstract$
-}
-
-\Acknowledgements{
-$acknowledgements$
-}
-
-\Plainauthor{$for(author)$$author.name$$sep$, $endfor$}
-$if(title.plain)$
-\Plaintitle{$title.plain$}
-$endif$
-$if(title.short)$
-\Shorttitle{$title.short$}
-$endif$
-$if(keywords.plain)$
-\Plainkeywords{$for(keywords.plain)$$keywords.plain$$sep$, $endfor$}
-$endif$
+%
+% \providecommand{\tightlist}{%
+%   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+%
+% \title{$title.formatted$}
+% $if(keywords.formatted)$
+% \Keywords{$for(keywords.formatted)$$keywords.formatted$$sep$, $endfor$}
+% $endif$
+%
+% \Abstract{
+% $abstract$
+% }
+%
+% \Acknowledgements{
+% $acknowledgements$
+% }
+%
+% \Plainauthor{$for(author)$$author.name$$sep$, $endfor$}
+% $if(title.plain)$
+% \Plaintitle{$title.plain$}
+% $endif$
+% $if(title.short)$
+% \Shorttitle{$title.short$}
+% $endif$
+% $if(keywords.plain)$
+% \Plainkeywords{$for(keywords.plain)$$keywords.plain$$sep$, $endfor$}
+% $endif$
 
 %% publication information
 %% \Volume{50}
@@ -118,36 +118,37 @@ $endif$
 % $preamble$
 
 \begin{document}
-$if(title)$
-\maketitle
-$endif$
-
-  \frontmatter % this stuff will be roman-numbered
-  \pagestyle{empty} % this removes page numbers from the frontmatter
-
-$if(abstract)$
-\begin{abstract}
-$abstract$
-\end{abstract}
-$endif$
-
-$for(include-before)$
-$include-before$
-
-$endfor$
-$if(toc)$
-{
-\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
-\setcounter{tocdepth}{$toc-depth$}
-\tableofcontents
-}
-$endif$
-$if(lot)$
-\listoftables
-$endif$
-$if(lof)$
-\listoffigures
-$endif$
+% $if(title)$
+% \maketitle
+% $endif$
+%
+%   \frontmatter % this stuff will be roman-numbered
+%   \pagestyle{empty} % this removes page numbers from the frontmatter
+%
+% $if(abstract)$
+% \begin{abstract}
+% $abstract$
+% \end{abstract}
+% $endif$
+%
+% $for(include-before)$
+% $include-before$
+%
+% $endfor$
+%
+% $if(toc)$
+% {
+% \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
+% \setcounter{tocdepth}{$toc-depth$}
+% \tableofcontents
+% }
+% $endif$
+% $if(lot)$
+% \listoftables
+% $endif$
+% $if(lof)$
+% \listoffigures
+% $endif$
 
 
 
@@ -157,7 +158,7 @@ $endif$
 
 %\input{body_thesis.tex}
 
-$body$
+%$body$
 
 \end{document}
 
