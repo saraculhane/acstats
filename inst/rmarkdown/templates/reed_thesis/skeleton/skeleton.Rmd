@@ -16,6 +16,7 @@ dedication: >
   You can have a dedication here if you wish.
 preface: >
   This is an example of a thesis setup to use the reed thesis document class.
+bibliography: thesis
 output: 
 #  pdf_document
   rticles::reed_thesis
