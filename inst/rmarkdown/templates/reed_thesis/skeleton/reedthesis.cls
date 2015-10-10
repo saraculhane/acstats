@@ -168,7 +168,7 @@
   \else
     \@restonecolfalse
   \fi
-  \chapter*[Acknowledgements]{Acknowledgements}
+  \chapter*{Acknowledgements}
 %  \begin{center}
 %  {\fontsize{14}{16}\selectfont \bfseries Acknowledgements}
 %  \end{center}
@@ -181,7 +181,7 @@
   \else
     \@restonecolfalse
   \fi
-  \chapter*[Preface]{Preface}
+  \chapter*{Preface}
   \fontsize{12}{14}\selectfont
 }{\clearpage \if@restonecol\twocolumn\fi}%
 
@@ -239,7 +239,7 @@
   \else
     \@restonecolfalse
   \fi
-  \chapter*[Dedication]{Dedication}
+  \chapter*{Dedication}
   \fontsize{12}{14}\selectfont
 }{\clearpage \if@restonecol\twocolumn\fi}%
 
