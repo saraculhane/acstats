@@ -179,7 +179,7 @@
   \else
     \@restonecolfalse
   \fi
-  \chapter[Acknowledgements]{}
+  \chapter[Acknowledgements]{Acknowledgements}
 %  \begin{center}
 %  {\fontsize{14}{16}\selectfont \bfseries Acknowledgements}
 %  \end{center}
