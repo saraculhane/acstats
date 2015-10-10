@@ -12,29 +12,25 @@ abstract: >
 acknowledgements: >
   I want to thank a few people.
 output: rticles::reed_thesis
-#  toc: true
 ---
 
+# Introduction
 
-```{r setup, include = FALSE}
-if(!require(rticles)){
-  if(!require(devtools))
-    install.packages("devtools")
-  library(devtools)
-  devtools::install_github("ismayc/rticles")
-  library(rticles)
-} else{
-  library(rticles)
-}
+This template demonstrates some of the basic latex you'll need to know to create a JSS article.
+
+## Code formatting
+
+Don't use markdown, instead use the more precise latex commands:
+
+* \proglang{Java}
+* \pkg{plyr}
+* \code{print("abc")}
+
+# R code
+
+Can be inserted in regular R markdown blocks.
+
+```{r}
+x <- 1:10
+x
 ```
-
-<!--
-\tableofcontents
--->
-
-```{r child = 'chap0.Rmd'}
-```
-
-```{r child = 'chap1.Rmd'}
-```
-
