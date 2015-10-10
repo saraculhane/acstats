@@ -180,9 +180,9 @@
     \@restonecolfalse
   \fi
   \chapter[Acknowledgements]{}
-  \begin{center}
-  {\fontsize{14}{16}\selectfont \bfseries Acknowledgements}
-  \end{center}
+%  \begin{center}
+%  {\fontsize{14}{16}\selectfont \bfseries Acknowledgements}
+%  \end{center}
   \fontsize{12}{14}\selectfont
 }{\clearpage \if@restonecol\twocolumn\fi}%
 %%%
