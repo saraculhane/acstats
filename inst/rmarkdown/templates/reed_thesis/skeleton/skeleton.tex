@@ -75,13 +75,24 @@
 
 %\title{My Final College Paper}
 %
-\Abstract{
-The abstract of your thesis.
-}
-
 \Acknowledgements{
 I want to thank a few people.
 }
+
+\Dedication{
+You can have a dedication here if you wish.
+}
+
+\Preface{
+This is an example of a thesis setup to use the reed thesis document
+class.
+}
+
+\Abstract{
+The preface pretty much says it all.
+}
+
+
 
 %\Plainauthor{}
 \Plaintitle{My Final College Paper}
@@ -105,17 +116,28 @@ I want to thank a few people.
   \frontmatter % this stuff will be roman-numbered
   \pagestyle{empty} % this removes page numbers from the frontmatter
 
-\begin{abstract}
-The abstract of your thesis.
-\end{abstract}
-
 \begin{acknowledgements}
 I want to thank a few people.
 \end{acknowledgements}
 
+\begin{preface}
+This is an example of a thesis setup to use the reed thesis document
+class.
+\end{preface}
+
+\begin{abstract}
+The preface pretty much says it all.
+\end{abstract}
+
+\begin{dedication}
+The preface pretty much says it all.
+\end{dedication}
+
 
 
 %\input{body_thesis.tex}
+
+\tableofcontents
 
 \chapter*{Introduction}
 
@@ -175,14 +197,24 @@ summary(cars)
 You can also embed plots, for example:
 
 \begin{CodeChunk}
+\begin{CodeInput}
+plot(cars)
+\end{CodeInput}
+
+
+\begin{center}\includegraphics{skeleton_files/figure-latex/plot-1} \end{center}
+
+\end{CodeChunk}
+
+\begin{CodeChunk}
+\begin{CodeInput}
+plot(iris)
+\end{CodeInput}
 
 
 \begin{center}\includegraphics{skeleton_files/figure-latex/unnamed-chunk-3-1} \end{center}
 
 \end{CodeChunk}
-
-Note that the \texttt{echo = FALSE} parameter was added to the code
-chunk to prevent printing of the R code that generated the plot.
 
 \end{document}
 

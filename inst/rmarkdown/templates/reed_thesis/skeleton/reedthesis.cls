@@ -168,7 +168,7 @@
   \else
     \@restonecolfalse
   \fi
-  \chapter[Acknowledgements]{Acknowledgements}
+  \chapter*[Acknowledgements]{Acknowledgements}
 %  \begin{center}
 %  {\fontsize{14}{16}\selectfont \bfseries Acknowledgements}
 %  \end{center}
@@ -181,7 +181,7 @@
   \else
     \@restonecolfalse
   \fi
-  \chapter[Preface]{Preface}
+  \chapter*[Preface]{Preface}
   \fontsize{12}{14}\selectfont
 }{\clearpage \if@restonecol\twocolumn\fi}%
 
@@ -239,7 +239,7 @@
   \else
     \@restonecolfalse
   \fi
-  \chapter[Dedication]{Dedication}
+  \chapter*[Dedication]{Dedication}
   \fontsize{12}{14}\selectfont
 }{\clearpage \if@restonecol\twocolumn\fi}%
 
@@ -323,8 +323,8 @@
 \newcommand{\Shorttitle}[1]{\def\@Shorttitle{#1}}
 \newcommand{\Plainauthor}[1]{\def\@Plainauthor{#1}}
 \newcommand{\Abstract}[1]{\def\@Abstract{#1}}
-\newcommand{\Keywords}[1]{\def\@Keywords{#1}}
-\newcommand{\Plainkeywords}[1]{\def\@Plainkeywords{#1}}
+%\newcommand{\Keywords}[1]{\def\@Keywords{#1}}
+%\newcommand{\Plainkeywords}[1]{\def\@Plainkeywords{#1}}
 \newcommand{\Acknowledgements}[1]{\def\@Acknowledgements{#1}}
 \newcommand{\Dedication}[1]{\def\@Dedication{#1}}
 \newcommand{\Preface}[1]{\def\@Preface{#1}}
