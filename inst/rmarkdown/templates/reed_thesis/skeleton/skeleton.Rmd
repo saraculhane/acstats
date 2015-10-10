@@ -23,19 +23,6 @@ output:
 # toc: true
 ---
 
-
-```{r setup, include = FALSE}
-if(!require(rticles)){
-  if(!require(devtools))
-    install.packages("devtools")
-  library(devtools)
-  devtools::install_github("ismayc/rticles")
-  library(rticles)
-} else{
-  library(rticles)
-}
-```
-
 \tableofcontents
 
 ```{r child = 'chap0.Rmd'}
