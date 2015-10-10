@@ -1,12 +1,13 @@
 ---
 author: 'Your R. Name'
-date: 'May 2015'
+date: 'May 20xx'
+division: 'Mathematics and Natural Sciences'
+advisor: 'Advisor F. Name'
+department: 'Mathematics'
 title:
   formatted: "My Final College Paper"
 # If you use tex in the formatted title, also supply version without
   plain:     "My Final College Paper"
-# For running headers, if needed
-  short:     "Reed Senior Thesis"
 abstract: >
   The abstract of your thesis.
 acknowledgements: >
