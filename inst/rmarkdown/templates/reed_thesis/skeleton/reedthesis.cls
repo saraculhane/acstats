@@ -226,7 +226,7 @@
   \else
     \@restonecolfalse
   \fi
-  \chapter[Abstract]{Abstract}
+  \chapter*{Abstract}
 %   \begin{center}
 %   {\fontsize{14}{16}\selectfont \bfseries Abstract}
 %   \end{center}
