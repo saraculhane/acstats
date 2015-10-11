@@ -24,8 +24,8 @@ lot: true
 lof: true
 ---
 
-```{r child = 'chap0.Rmd'}
+```{r intro, child = 'chap0.Rmd'}
 ```
 
-```{r child = 'chap1.Rmd'}
+```{r chapter1, child = 'chap1.Rmd'}
 ```

@@ -120,21 +120,7 @@ $endif$
     \end{preface}
   $endif$
 
-  $if(abstract)$
-    \begin{abstract}
-      $abstract$
-    \end{abstract}
-  $endif$
-
-  $if(dedication)$
-    \begin{dedication}
-      $abstract$
-    \end{dedication}
-  $endif$
-
-  $for(include-before)$
-    $include-before$
-  $endfor$
+  % Add table of abbreviations?
 
   $if(toc)$
   {
@@ -151,6 +137,22 @@ $endif$
   $if(lof)$
     \listoffigures
   $endif$
+
+  $if(abstract)$
+    \begin{abstract}
+      $abstract$
+    \end{abstract}
+  $endif$
+
+  $if(dedication)$
+    \begin{dedication}
+      $abstract$
+    \end{dedication}
+  $endif$
+
+  $for(include-before)$
+    $include-before$
+  $endfor$
 
   \mainmatter % here the regular arabic numbering starts
   \pagestyle{fancyplain} % turns page numbering back on
