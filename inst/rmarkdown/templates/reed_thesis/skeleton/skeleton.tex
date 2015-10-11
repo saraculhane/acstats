@@ -34,8 +34,12 @@
 \usepackage{amssymb,amsthm,amsmath}
 \usepackage{longtable,booktabs,setspace}
 \usepackage{chemarr} %% Useful for one reaction arrow, useless if you're not a chem major
-\usepackage{hyperref} % Added by CII
-\usepackage[hyphens]{url}
+
+% Modified by CII
+\PassOptionsToPackage{hyphens}{url}
+\loadpackage{hyperref}
+\loadpackage{url}
+
 \usepackage{rotating}
 \usepackage{natbib}
 % Comment out the natbib line above and uncomment the following two lines to use the new
