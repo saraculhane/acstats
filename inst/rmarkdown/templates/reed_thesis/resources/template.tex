@@ -101,6 +101,8 @@ $endif$
 
 \begin{document}
 
+  \nocite{*}
+
   $if(title)$
     \maketitle
   $endif$
@@ -160,8 +162,6 @@ $endif$
   $body$
 
   \backmatter
-
-  \nocite{*}
 
   \bibliographystyle{APA/apa-good}
   \bibliography{$bibliography$}
