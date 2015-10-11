@@ -19,8 +19,8 @@ preface: >
 bibliography: thesis.bib
 output: 
 #  pdf_document
-  rticles::reed_thesis
-# toc: true
+  rticles::reed_thesis:
+    toc: true
 ---
 
 \tableofcontents
