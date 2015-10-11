@@ -34,6 +34,7 @@
 \usepackage{amssymb,amsthm,amsmath}
 \usepackage{longtable,booktabs,setspace}
 \usepackage{chemarr} %% Useful for one reaction arrow, useless if you're not a chem major
+\usepackage{hyperref} % Added by CII
 \usepackage[hyphens]{url}
 \usepackage{rotating}
 \usepackage{natbib}
@@ -168,7 +169,7 @@ $endfor$
 
 $if(toc)$
 {
-%\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
+\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
 \setcounter{tocdepth}{$toc-depth$}
 \tableofcontents
 }
