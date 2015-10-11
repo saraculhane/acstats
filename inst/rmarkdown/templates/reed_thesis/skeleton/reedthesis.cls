@@ -185,41 +185,6 @@
   \fontsize{12}{14}\selectfont
 }{\clearpage \if@restonecol\twocolumn\fi}%
 
-% List of abbreviations
-% \newenvironment{preface}{%
-%   \if@twocolumn
-%     \@restonecoltrue\onecolumn
-%   \else
-%     \@restonecolfalse
-%   \fi
-%   \chapter[Preface]{Preface}
-%   \fontsize{12}{14}\selectfont
-% }{\clearpage \if@restonecol\twocolumn\fi}%
-
-% List of tables
-% \newenvironment{preface}{%
-%   \if@twocolumn
-%     \@restonecoltrue\onecolumn
-%   \else
-%     \@restonecolfalse
-%   \fi
-%   \chapter[Preface]{Preface}
-%   \fontsize{12}{14}\selectfont
-% }{\clearpage \if@restonecol\twocolumn\fi}%
-
-% List of figures
-% \newenvironment{preface}{%
-%   \if@twocolumn
-%     \@restonecoltrue\onecolumn
-%   \else
-%     \@restonecolfalse
-%   \fi
-%   \chapter[Preface]{Preface}
-%   \fontsize{12}{14}\selectfont
-% }{\clearpage \if@restonecol\twocolumn\fi}%
-
-%%%
-
 \newenvironment{abstract}{%
   \if@twocolumn
     \@restonecoltrue\onecolumn

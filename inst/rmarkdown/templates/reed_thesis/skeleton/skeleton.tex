@@ -36,9 +36,8 @@
 \usepackage{chemarr} %% Useful for one reaction arrow, useless if you're not a chem major
 
 % Modified by CII
-\PassOptionsToPackage{hyphens}{url}
-\loadpackage{hyperref}
-\loadpackage{url}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
 
 \usepackage{rotating}
 \usepackage{natbib}
@@ -145,11 +144,10 @@ The preface pretty much says it all.
 \tableofcontents
 }
 
+\listoftables
 
   \mainmatter % here the regular arabic numbering starts
   \pagestyle{fancyplain} % turns page numbering back on
-
-\tableofcontents
 
 \chapter*{Introduction}
 

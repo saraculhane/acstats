@@ -74,13 +74,10 @@
 %% End Preamble
 %%
 %
+
+% Below added by CII
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-
-%\title{$title.formatted$}
-%$if(keywords.formatted)$
-%\Keywords{$for(keywords.formatted)$$keywords.formatted$$sep$, $endfor$}
-%$endif$
 
 \Acknowledgements{
 $acknowledgements$
@@ -98,104 +95,72 @@ $preface$
 $abstract$
 }
 
-
-
-%\Plainauthor{$for(author)$$author.name$$sep$, $endfor$}
 $if(title.plain)$
 \Plaintitle{$title.plain$}
 $endif$
-% $if(title.short)$
-% \Shorttitle{$title.short$}
-% $endif$
-% $if(keywords.plain)$
-% \Plainkeywords{$for(keywords.plain)$$keywords.plain$$sep$, $endfor$}
-% $endif$
-
-%% publication information
-%% \Volume{50}
-%% \Issue{9}
-%% \Month{June}
-%% \Year{2012}
-%% \Submitdate{$submitdate$}
-%% \Acceptdate{2012-06-04}
-
-% \Address{
-% $for(author)$
-%   $if(author.address)$
-%   $author.name$\\
-%   $author.affiliation$\\
-%   $author.address$\\
-%   $if(author.email)$E-mail: $author.email$\\$endif$
-%   $if(author.url)$URL: $author.url$\\~\\$endif$
-%   $endif$
-% $endfor$
-% }
-
-% $preamble$
 
 \begin{document}
-$if(title)$
-\maketitle
-$endif$
+
+  $if(title)$
+    \maketitle
+  $endif$
 
   \frontmatter % this stuff will be roman-numbered
   \pagestyle{empty} % this removes page numbers from the frontmatter
 
-$if(acknowledgements)$
-\begin{acknowledgements}
-$acknowledgements$
-\end{acknowledgements}
-$endif$
+  $if(acknowledgements)$
+    \begin{acknowledgements}
+      $acknowledgements$
+    \end{acknowledgements}
+  $endif$
 
-$if(preface)$
-\begin{preface}
-$preface$
-\end{preface}
-$endif$
+  $if(preface)$
+    \begin{preface}
+      $preface$
+    \end{preface}
+  $endif$
 
-$if(abstract)$
-\begin{abstract}
-$abstract$
-\end{abstract}
-$endif$
+  $if(abstract)$
+    \begin{abstract}
+      $abstract$
+    \end{abstract}
+  $endif$
 
-$if(dedication)$
-\begin{dedication}
-$abstract$
-\end{dedication}
-$endif$
+  $if(dedication)$
+    \begin{dedication}
+      $abstract$
+    \end{dedication}
+  $endif$
 
-$for(include-before)$
-$include-before$
+  $for(include-before)$
+    $include-before$
+  $endfor$
 
-$endfor$
+  $if(toc)$
+  {
+    \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
+    \setcounter{tocdepth}{$toc-depth$}
+    \tableofcontents
+  }
+  $endif$
 
-$if(toc)$
-{
-\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
-\setcounter{tocdepth}{$toc-depth$}
-\tableofcontents
-}
-$endif$
+  $if(lot)$
+    \listoftables
+  $endif$
 
-$if(lot)$
-\listoftables
-$endif$
-$if(lof)$
-\listoffigures
-$endif$
+  $if(lof)$
+    \listoffigures
+  $endif$
 
   \mainmatter % here the regular arabic numbering starts
   \pagestyle{fancyplain} % turns page numbering back on
 
-$body$
+  $body$
 
-\backmatter
+  \backmatter
 
-\bibliographystyle{APA/apa-good}
-\bibliography{$bibliography$}
-
-
+  \bibliographystyle{APA/apa-good}
+  \bibliography{$bibliography$}
 
 \end{document}
 
