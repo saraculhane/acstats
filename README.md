@@ -20,7 +20,7 @@ devtools::install_github("ismayc/rticles")
 
 3) Use the **New R Markdown** dialog to create an article from one of the templates:
 
-![New R Markdown](http://rmarkdown.rstudio.com/images/new_r_markdown.png)
+![New R Markdown](reed_template.png)
     
     
 ### Using rticles outside of RStudio
