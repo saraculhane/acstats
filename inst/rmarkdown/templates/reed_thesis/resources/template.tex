@@ -101,6 +101,12 @@ $endif$
 
 \begin{document}
 
+  $if(bibliography)$
+   % \chapter*{\bibname}
+    \bibliographystyle{APA/apa-good}
+    \bibliography{$bibliography$}
+  $endif$
+
   $if(title)$
     \maketitle
   $endif$
@@ -162,13 +168,6 @@ $endif$
   \clearpage
 
 %  \backmatter
-
-  $if(bibliography)$
-    \chapter*{\bibname}
-    \bibliographystyle{APA/apa-good}
-    \bibliography{$bibliography$}
-    \printbibliography
-  $endif$
 
 \end{document}
 
