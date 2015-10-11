@@ -100,10 +100,6 @@ The preface pretty much says it all.
 
 \begin{document}
 
-     % \chapter*{\bibname}
-    \bibliographystyle{APA/apa-good}
-    \bibliography{thesis.bib}
-  
       \maketitle
   
   \frontmatter % this stuff will be roman-numbered
@@ -254,9 +250,12 @@ The preface pretty much says it all.
   Reed~College. 2007. ``LaTeX Your Document.''
   \url{http://web.reed.edu/cis/help/LaTeX/index.html}.
 
-  \clearpage
+  \backmatter
 
-%  \backmatter
-
+      \clearpage
+    \chapter*{\bibname}
+    \bibliographystyle{APA/apa-good}
+    \bibliography{thesis.bib}
+  
 \end{document}
 
