@@ -29,3 +29,5 @@ lof: true
 
 ```{r chapter1, child = 'chap1.Rmd'}
 ```
+
+\chapter{Second}
