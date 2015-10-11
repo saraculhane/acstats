@@ -30,4 +30,3 @@ output:
 
 ```{r child = 'chap1.Rmd'}
 ```
-
