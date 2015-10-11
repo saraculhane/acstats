@@ -134,6 +134,11 @@ The preface pretty much says it all.
 \end{dedication}
 
 
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
 
 
   \mainmatter % here the regular arabic numbering starts
@@ -227,7 +232,7 @@ plot(iris)
 Of course you will need to cite things, and you will probably accumulate
 an armful of sources. This is why BibTeX was created. For more
 information about BibTeX and bibliographies, see our CUS site
-(\url{http://web.reed.edu/cis/help/latex/index.html})(Reed{~}College
+(\url{http://web.reed.edu/cis/help/latex/index.html})(Reed~College
 2007). There are three pages on this topic: \emph{bibtex} (which talks
 about using BibTeX, at
 \url{http://web.reed.edu/cis/help/latex/bibtex.html}),
@@ -243,7 +248,8 @@ apa-good natbib style file.
 
 \clearpage
 
-Reed{~}College. 2007. ``LaTeX Your Document.''
+\hyperdef{}{ref-reedweb2007}{\label{ref-reedweb2007}}
+Reed~College. 2007. ``LaTeX Your Document.''
 \url{http://web.reed.edu/cis/help/LaTeX/index.html}.
 
 \backmatter
