@@ -139,7 +139,7 @@
 \@altadvisorfalse
 
 \renewcommand{\contentsname}{Table of Contents}
-%\renewcommand{\bibname}{References}
+\renewcommand{\bibname}{References}
 
 \renewcommand\l@chapter[2]{%
   \ifnum \c@tocdepth >\m@ne
