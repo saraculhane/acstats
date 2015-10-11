@@ -197,6 +197,8 @@ The preface pretty much says it all.
   \end{CodeOutput}
   \end{CodeChunk}
   
+  Testing citations: (Angel 2000)
+  
   You can also embed plots, for example:
   
   \begin{CodeChunk}
@@ -238,7 +240,9 @@ The preface pretty much says it all.
   APA stuff here, but we don't need it since I've fixed this with my
   apa-good natbib style file.
   
-  \clearpage
+  \hyperdef{}{ref-angel2000}{\label{ref-angel2000}}
+  Angel, Edward. 2000. \emph{Interactive Computer Graphics : A Top-down
+  Approach with OpenGL}. Boston, MA: Addison Wesley Longman.
   
   \hyperdef{}{ref-reedweb2007}{\label{ref-reedweb2007}}
   Reed~College. 2007. ``LaTeX Your Document.''
@@ -246,9 +250,9 @@ The preface pretty much says it all.
 
   \backmatter
 
-    \chapter*{\bibname}
-  \bibliographystyle{APA/apa-good}
-  \bibliography{thesis.bib}
+      \chapter*{\bibname}
+    \bibliographystyle{APA/apa-good}
+    \bibliography{thesis.bib}
   
 \end{document}
 
