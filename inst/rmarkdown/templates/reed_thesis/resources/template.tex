@@ -159,11 +159,12 @@ $endif$
 
   $body$
 
-  \backmatter
   \clearpage
 
+  \backmatter
+
   $if(bibliography)$
-   % \chapter*{\bibname}
+    \chapter*{\bibname}
     \bibliographystyle{APA/apa-good}
     \bibliography{$bibliography$}
   $endif$
