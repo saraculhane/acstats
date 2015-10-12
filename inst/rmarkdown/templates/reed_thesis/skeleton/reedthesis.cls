@@ -283,7 +283,7 @@
 
 % From JSS
 %% for all publications
-\newcommand{\title}[1]{\def\@title{#1}}
+\renewcommand{\title}[1]{\def\@title{#1}}
 %\newcommand{\Shorttitle}[1]{\def\@Shorttitle{#1}}
 \newcommand{\Plainauthor}[1]{\def\@Plainauthor{#1}}
 \newcommand{\Abstract}[1]{\def\@Abstract{#1}}
