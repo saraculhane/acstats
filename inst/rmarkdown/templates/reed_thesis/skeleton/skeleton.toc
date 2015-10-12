@@ -1,3 +1,5 @@
-\contentsline {section}{\numberline {0.1}Why use it?}{7}
-\contentsline {section}{\numberline {0.2}Who should use it?}{7}
-\contentsline {chapter}{Chapter 1: R Markdown}{9}
+\contentsline {chapter}{Introduction}{1}{chapter*.8}
+\contentsline {section}{\numberline {0.1}Why use it?}{1}{section.0.1}
+\contentsline {section}{\numberline {0.2}Who should use it?}{1}{section.0.2}
+\contentsline {chapter}{Chapter 1: R Markdown}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Bibliographies}{4}{section.1.1}
