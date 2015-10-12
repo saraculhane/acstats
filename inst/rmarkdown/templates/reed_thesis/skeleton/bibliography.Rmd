@@ -6,10 +6,11 @@ output: pdf_document
 \parskip=2\baselineskip \advance\parskip by 0pt plus 2pt
 \setlength{\parindent}{0cm}
 
-
-\setlength{\parindent}{0cm}
 \setlength{\bibhang}{1em}
 
 -->
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{\medskipamount}
 
 \chapter*{\bibname}

@@ -42,6 +42,32 @@
 
 % Added by CII
 \usepackage{hanging}
+
+%% Added by CII
+\newlength\mybibindent
+\setlength\mybibindent{0.25in}
+\makeatletter
+\renewenvironment{thebibliography}[1]
+     {\chapter*{\bibname}%
+      \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\dimexpr\labelsep+\mybibindent\relax\itemindent-\mybibindent% new
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother
+
 %\usepackage{natbib}
 % Comment out the natbib line above and uncomment the following two lines to use the new
 % biblatex-chicago style, for Chicago A. Also make some changes at the end where the
@@ -242,6 +268,8 @@ The preface pretty much says it all.
   will not be useful unless you have only a few sources. There used to be
   APA stuff here, but we don't need it since I've fixed this with my
   apa-good natbib style file.
+  
+  \setlength{\parindent}{0cm} \setlength{\parskip}{\medskipamount}
   
   \chapter*{\bibname}
   
