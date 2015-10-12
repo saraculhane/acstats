@@ -44,9 +44,9 @@
 %\usepackage{hanging}
 
 %% Added by CII
-\setlength\bibindent{2em}
+\let\bibhang\relax
+\setlength\bibhang{0.2in}
 
-%\let\bibhang\relax
 %\usepackage{natbib}
 % Comment out the natbib line above and uncomment the following two lines to use the new
 % biblatex-chicago style, for Chicago A. Also make some changes at the end where the
@@ -249,6 +249,7 @@ The preface pretty much says it all.
   apa-good natbib style file.
   
   \setlength{\parindent}{0cm} \setlength{\parskip}{\medskipamount}
+  \setlength\bibhang{0.2in}
   
   \chapter*{\bibname}
   

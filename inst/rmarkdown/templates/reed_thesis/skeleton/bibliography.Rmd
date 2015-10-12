@@ -12,6 +12,6 @@ output: pdf_document
 
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{\medskipamount}
-
+\setlength\bibhang{0.2in}
 
 \chapter*{\bibname}
