@@ -4,10 +4,7 @@ date: 'May 20xx'
 division: 'Mathematics and Natural Sciences'
 advisor: 'Advisor F. Name'
 department: 'Mathematics'
-title:
-  formatted: "My Final College Paper"
-# If you use tex in the formatted title, also supply version without
-  plain:     "My Final College Paper"
+title: "My Math Final College"
 abstract: >
   The preface pretty much says it all.
 acknowledgements: >
@@ -30,6 +27,6 @@ lof: true
 ```{r chapter1, child = 'chap1.Rmd'}
 ```
 
-\clearpage
+```{r bib, echo = FALSE, child = 'bibliography.Rmd'}
+```
 
-\chapter*{\bibname}
