@@ -12,9 +12,6 @@ output: pdf_document
 
 \backmatter
 
-\let\@afterindentfalse\@afterindenttrue 
-\@afterindenttrue 
-
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{\medskipamount}
 
