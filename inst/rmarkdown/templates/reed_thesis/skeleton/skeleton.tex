@@ -45,7 +45,6 @@
 
 %% Added by CII
 \let\bibhang\relax
-\setlength\bibhang{0.2in}
 
 %\usepackage{natbib}
 % Comment out the natbib line above and uncomment the following two lines to use the new
@@ -248,10 +247,13 @@ The preface pretty much says it all.
   APA stuff here, but we don't need it since I've fixed this with my
   apa-good natbib style file.
   
+  \backmatter
+  
   \setlength{\parindent}{0cm} \setlength{\parskip}{\medskipamount}
-  \setlength\bibhang{0.2in}
   
   \chapter*{\bibname}
+  
+  \nocite{*}
   
   \hyperdef{}{ref-angel2000}{\label{ref-angel2000}}
   Angel, E. (2000). \emph{Interactive computer graphics : A top-down

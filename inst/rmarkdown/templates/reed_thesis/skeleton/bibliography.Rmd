@@ -10,8 +10,9 @@ output: pdf_document
 \setlength{\bibhang}{5em}
 -->
 
+\backmatter
+
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{\medskipamount}
-\setlength\bibhang{0.2in}
 
 \chapter*{\bibname}
