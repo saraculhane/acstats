@@ -41,32 +41,32 @@
 \usepackage{rotating}
 
 % Added by CII
-\usepackage{hanging}
+%\usepackage{hanging}
 
 %% Added by CII
-\newlength\mybibindent
-\setlength\mybibindent{0.25in}
-\makeatletter
-\renewenvironment{thebibliography}[1]
-     {\chapter*{\bibname}%
-      \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
-      \list{\@biblabel{\@arabic\c@enumiv}}%
-           {\settowidth\labelwidth{\@biblabel{#1}}%
-            \leftmargin\labelwidth
-            \advance\leftmargin\dimexpr\labelsep+\mybibindent\relax\itemindent-\mybibindent% new
-            \@openbib@code
-            \usecounter{enumiv}%
-            \let\p@enumiv\@empty
-            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
-      \sloppy
-      \clubpenalty4000
-      \@clubpenalty \clubpenalty
-      \widowpenalty4000%
-      \sfcode`\.\@m}
-     {\def\@noitemerr
-       {\@latex@warning{Empty `thebibliography' environment}}%
-      \endlist}
-\makeatother
+% \newlength\mybibindent
+% \setlength\mybibindent{0.25in}
+% \makeatletter
+% \renewenvironment{thebibliography}[1]
+%      {\chapter*{\bibname}%
+%       \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
+%       \list{\@biblabel{\@arabic\c@enumiv}}%
+%            {\settowidth\labelwidth{\@biblabel{#1}}%
+%             \leftmargin\labelwidth
+%             \advance\leftmargin\dimexpr\labelsep+\mybibindent\relax\itemindent-\mybibindent% new
+%             \@openbib@code
+%             \usecounter{enumiv}%
+%             \let\p@enumiv\@empty
+%             \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+%       \sloppy
+%       \clubpenalty4000
+%       \@clubpenalty \clubpenalty
+%       \widowpenalty4000%
+%       \sfcode`\.\@m}
+%      {\def\@noitemerr
+%        {\@latex@warning{Empty `thebibliography' environment}}%
+%       \endlist}
+% \makeatother
 
 %\usepackage{natbib}
 % Comment out the natbib line above and uncomment the following two lines to use the new
@@ -270,6 +270,7 @@ The preface pretty much says it all.
   apa-good natbib style file.
   
   \setlength{\parindent}{0cm} \setlength{\parskip}{\medskipamount}
+  \setlength{\bibhang}{1em}
   
   \chapter*{\bibname}
   

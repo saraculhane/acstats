@@ -41,7 +41,7 @@
 \usepackage{rotating}
 
 % Added by CII
-%\usepackage{hanging}
+\usepackage{hanging}
 
 %% Added by CII
 % \newlength\mybibindent
@@ -177,16 +177,16 @@ $abstract$
     \end{dedication}
   $endif$
 
-  $for(include-before)$
-    $include-before$
-  $endfor$
+%  $for(include-before)$
+%    $include-before$
+%  $endfor$
 
   \mainmatter % here the regular arabic numbering starts
   \pagestyle{fancyplain} % turns page numbering back on
 
   $body$
 
- % \backmatter
+  \backmatter
 
   % Index?
 
