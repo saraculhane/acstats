@@ -17,6 +17,7 @@ dedication: >
 preface: >
   This is an example of a thesis setup to use the reed thesis document class.
 bibliography: thesis.bib
+bibname: References
 output: 
   rticles::reed_thesis:
     toc: true
@@ -32,4 +33,4 @@ lof: true
 
 \clearpage
 
-# \bibname
+\chapter*{$bibname$}

@@ -1,5 +1,4 @@
 % This is the Reed College LaTeX thesis template. Most of the work
-% for the document class was done by Sam Noble (SN), as well as this
 % template. Later comments etc. by Ben Salzberg (BTS). Additional
 % restructuring and APA support by Jess Youngberg (JY).
 % Your comments and suggestions are more than welcome; please email
@@ -76,6 +75,10 @@
 %
 
 % Below added by CII
+
+\renewcommand{\contentsname}{Table of Contents}
+\renewcommand{\bibname}{$bibname$}
+
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
@@ -161,10 +164,7 @@ $endif$
 
   \backmatter
 
-    \cleardoublepage
-    \chapter*{\bibname}
-%    \bibliographystyle{APA/apa-good}
-%    \bibliography{$bibliography$}
+  % Index?
 
 \end{document}
 

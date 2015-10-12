@@ -197,7 +197,7 @@ The preface pretty much says it all.
   \end{CodeOutput}
   \end{CodeChunk}
   
-  Testing citations: (Angel 2000)
+  Testing citations: {[}@angel2000{]}
   
   You can also embed plots, for example:
   
@@ -226,10 +226,9 @@ The preface pretty much says it all.
   Of course you will need to cite things, and you will probably accumulate
   an armful of sources. This is why BibTeX was created. For more
   information about BibTeX and bibliographies, see our CUS site
-  (\url{http://web.reed.edu/cis/help/latex/index.html})(Reed~College
-  2007). There are three pages on this topic: \emph{bibtex} (which talks
-  about using BibTeX, at
-  \url{http://web.reed.edu/cis/help/latex/bibtex.html}),
+  (\url{http://web.reed.edu/cis/help/latex/index.html}){[}@reedweb2007{]}.
+  There are three pages on this topic: \emph{bibtex} (which talks about
+  using BibTeX, at \url{http://web.reed.edu/cis/help/latex/bibtex.html}),
   \emph{bibtexstyles} (about how to find and use the bibliography style
   that best suits your needs, at
   \url{http://web.reed.edu/cis/help/latex/bibtexstyles.html}) and
@@ -242,23 +241,14 @@ The preface pretty much says it all.
   
   \clearpage
   
-  \section*{\texorpdfstring{\bibname}{}}\label{section}
-  \addcontentsline{toc}{section}{\bibname}
-  
-  \hyperdef{}{ref-angel2000}{\label{ref-angel2000}}
-  Angel, Edward. 2000. \emph{Interactive Computer Graphics : A Top-down
-  Approach with OpenGL}. Boston, MA: Addison Wesley Longman.
-  
-  \hyperdef{}{ref-reedweb2007}{\label{ref-reedweb2007}}
-  Reed~College. 2007. ``LaTeX Your Document.''
-  \url{http://web.reed.edu/cis/help/LaTeX/index.html}.
+  \chapter*{\bibname}
 
   \backmatter
 
     \cleardoublepage
     \chapter*{\bibname}
-    \bibliographystyle{APA/apa-good}
-    \bibliography{thesis.bib}
+%    \bibliographystyle{APA/apa-good}
+%    \bibliography{}
 
 \end{document}
 
