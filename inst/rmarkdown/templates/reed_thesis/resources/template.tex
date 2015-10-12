@@ -47,7 +47,7 @@
 \setlength\bibindent{2em}
 
 \makeatletter
-\renewcommand\NAT@bibsetnum[1]{\settowidth\labelwidth{\@biblabel{#1}}%
+\newcommand\NAT@bibsetnum[1]{\settowidth\labelwidth{\@biblabel{#1}}%
    \setlength{\leftmargin}{\bibindent}\addtolength{\leftmargin}{\dimexpr\labelwidth+\labelsep\relax}%
    \setlength{\itemindent}{-\bibindent}%
    \setlength{\listparindent}{\itemindent}
