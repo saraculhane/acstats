@@ -2,6 +2,6 @@
 output: pdf_document
 ---
 
-\doublespacing
+\parskip=2\baselineskip \advance\parskip by 0pt plus 2pt
 
 \chapter*{\bibname}
