@@ -303,3 +303,9 @@
 \DefineVerbatimEnvironment{CodeOutput}{Verbatim}{}
 \newenvironment{CodeChunk}{}{}
 % \setkeys{Gin}{width=0.8\textwidth}
+
+\if@usenatbib\relax\else%
+\newlength{\bibhang}
+\setlength{\bibhang}{2em}
+\fi
+
