@@ -46,26 +46,12 @@
 %% Added by CII
 \setlength\bibindent{2em}
 
-\makeatletter
-\newcommand\NAT@bibsetnum[1]{\settowidth\labelwidth{\@biblabel{#1}}%
-   \setlength{\leftmargin}{\bibindent}\addtolength{\leftmargin}{\dimexpr\labelwidth+\labelsep\relax}%
-   \setlength{\itemindent}{-\bibindent}%
-   \setlength{\listparindent}{\itemindent}
-\setlength{\itemsep}{\bibsep}\setlength{\parsep}{\z@}%
-   \ifNAT@openbib
-     \addtolength{\leftmargin}{\bibindent}%
-     \setlength{\itemindent}{-\bibindent}%
-     \setlength{\listparindent}{\itemindent}%
-     \setlength{\parsep}{0pt}%
-   \fi
-}
-\makeatother
-
-\usepackage{natbib}
+%\let\bibhang\relax
+%\usepackage{natbib}
 % Comment out the natbib line above and uncomment the following two lines to use the new
 % biblatex-chicago style, for Chicago A. Also make some changes at the end where the
 % bibliography is included.
-%\usepackage{biblatex-chicago}
+\usepackage{biblatex-chicago}
 %\bibliography{thesis}
 
 % \usepackage{times} % other fonts are available like times, bookman, charter, palatino
@@ -219,7 +205,7 @@ The preface pretty much says it all.
   \end{CodeOutput}
   \end{CodeChunk}
   
-  Testing citations: (Angel, 2000)
+  Testing citations: (Angel 2000)
   
   You can also embed plots, for example:
   
@@ -248,7 +234,7 @@ The preface pretty much says it all.
   Of course you will need to cite things, and you will probably accumulate
   an armful of sources. This is why BibTeX was created. For more
   information about BibTeX and bibliographies, see our CUS site
-  (\url{http://web.reed.edu/cis/help/latex/index.html})(Reed~College,
+  (\url{http://web.reed.edu/cis/help/latex/index.html})(Reed~College
   2007). There are three pages on this topic: \emph{bibtex} (which talks
   about using BibTeX, at
   \url{http://web.reed.edu/cis/help/latex/bibtex.html}),
@@ -267,12 +253,12 @@ The preface pretty much says it all.
   \chapter*{\bibname}
   
   \hyperdef{}{ref-angel2000}{\label{ref-angel2000}}
-  Angel, E. (2000). \emph{Interactive computer graphics : A top-down
-  approach with openGL}. Boston, MA: Addison Wesley Longman.
+  Angel, Edward. 2000. \emph{Interactive Computer Graphics : A Top-down
+  Approach with OpenGL}. Boston, MA: Addison Wesley Longman.
   
   \hyperdef{}{ref-reedweb2007}{\label{ref-reedweb2007}}
-  Reed~College. (2007, March). LaTeX your document. Retrieved from
-  \url{http://web.reed.edu/cis/help/LaTeX/index.html}
+  Reed~College. 2007. ``LaTeX Your Document.''
+  \url{http://web.reed.edu/cis/help/LaTeX/index.html}.
 
   \backmatter
 
