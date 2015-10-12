@@ -4,7 +4,7 @@ date: 'May 20xx'
 division: 'Mathematics and Natural Sciences'
 advisor: 'Advisor F. Name'
 department: 'Mathematics'
-title: "My Math Final College"
+title: 'My Final College Paper'
 abstract: >
   The preface pretty much says it all.
 acknowledgements: >
@@ -14,6 +14,7 @@ dedication: >
 preface: >
   This is an example of a thesis setup to use the reed thesis document class.
 bibliography: thesis.bib
+csl: apa.csl
 output: 
   rticles::reed_thesis:
     toc: true
@@ -27,6 +28,9 @@ lof: true
 ```{r chapter1, child = 'chap1.Rmd'}
 ```
 
-```{r bib, echo = FALSE, child = 'bibliography.Rmd'}
+<!--
+The bib chunk below must go last in this document according to how R Markdown renders.  More info is at http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
+-->
+```{r bib, child = 'bibliography.Rmd'}
 ```
 

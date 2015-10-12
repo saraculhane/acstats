@@ -282,7 +282,9 @@
 }
 
 % From JSS
-%% for all publications
+% Added by CII
+
+\setlength{\bibsep}{1.0pt}
 \renewcommand{\title}[1]{\def\@title{#1}}
 %\newcommand{\Shorttitle}[1]{\def\@Shorttitle{#1}}
 \newcommand{\Plainauthor}[1]{\def\@Plainauthor{#1}}
