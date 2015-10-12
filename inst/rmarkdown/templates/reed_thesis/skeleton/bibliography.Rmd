@@ -2,4 +2,6 @@
 output: pdf_document
 ---
 
+\doublespacing
+
 \chapter*{\bibname}
