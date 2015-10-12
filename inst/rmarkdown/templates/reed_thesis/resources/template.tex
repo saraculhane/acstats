@@ -46,26 +46,12 @@
 %% Added by CII
 \setlength\bibindent{2em}
 
-\makeatletter
-\newcommand\NAT@bibsetnum[1]{\settowidth\labelwidth{\@biblabel{#1}}%
-   \setlength{\leftmargin}{\bibindent}\addtolength{\leftmargin}{\dimexpr\labelwidth+\labelsep\relax}%
-   \setlength{\itemindent}{-\bibindent}%
-   \setlength{\listparindent}{\itemindent}
-\setlength{\itemsep}{\bibsep}\setlength{\parsep}{\z@}%
-   \ifNAT@openbib
-     \addtolength{\leftmargin}{\bibindent}%
-     \setlength{\itemindent}{-\bibindent}%
-     \setlength{\listparindent}{\itemindent}%
-     \setlength{\parsep}{0pt}%
-   \fi
-}
-\makeatother
-
-\usepackage{natbib}
+%\let\bibhang\relax
+%\usepackage{natbib}
 % Comment out the natbib line above and uncomment the following two lines to use the new
 % biblatex-chicago style, for Chicago A. Also make some changes at the end where the
 % bibliography is included.
-%\usepackage{biblatex-chicago}
+\usepackage{biblatex-chicago}
 %\bibliography{thesis}
 
 % \usepackage{times} % other fonts are available like times, bookman, charter, palatino
