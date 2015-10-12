@@ -240,7 +240,10 @@ The preface pretty much says it all.
   APA stuff here, but we don't need it since I've fixed this with my
   apa-good natbib style file.
   
-  \chapter{Second}
+  \clearpage
+  
+  \section*{\texorpdfstring{\bibname}{}}\label{section}
+  \addcontentsline{toc}{section}{\bibname}
   
   \hyperdef{}{ref-angel2000}{\label{ref-angel2000}}
   Angel, Edward. 2000. \emph{Interactive Computer Graphics : A Top-down
@@ -252,10 +255,10 @@ The preface pretty much says it all.
 
   \backmatter
 
-      \cleardoublepage
+    \cleardoublepage
     \chapter*{\bibname}
     \bibliographystyle{APA/apa-good}
     \bibliography{thesis.bib}
-  
+
 \end{document}
 
