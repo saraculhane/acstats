@@ -5,11 +5,11 @@ output: pdf_document
 \def\bibindent{1em}
 \parskip=2\baselineskip \advance\parskip by 0pt plus 2pt
 \setlength{\parindent}{0cm}
--->
 
-\parindent=0pt
-\parskip=\medskipamount
-\hangindent=2em
-\hangafter=2
+
+\setlength{\parindent}{0cm}
+\setlength{\bibhang}{1em}
+
+-->
 
 \chapter*{\bibname}
