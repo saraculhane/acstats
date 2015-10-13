@@ -21,7 +21,7 @@ plot(cars)
 ```
 
 ```{r}
-plot(iris)
+plot(Sepal.Length ~ Species, data = iris)
 ```
 
 \section{Bibliographies}

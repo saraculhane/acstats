@@ -15,4 +15,6 @@ output: pdf_document
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{\medskipamount}
 
-\chapter*{\bibname}
+\setlength{\bibhang}{5em}
+
+\chapter{References}
