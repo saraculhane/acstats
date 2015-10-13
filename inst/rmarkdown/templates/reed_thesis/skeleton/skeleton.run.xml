@@ -41,42 +41,34 @@
   >
 ]>
 <requests version="1.0">
-<<<<<<< HEAD
-  <internal package="biblatex" priority="9" active="0">
-=======
   <internal package="biblatex" priority="9" active="1">
->>>>>>> 27fc28ba7ad692f9b2c565c6098c1e3e514bf8c6
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>skeleton.aux</file>
-      <file>skeleton-blx.bib</file>
+      <file>skeleton.bcf</file>
     </provides>
     <requires type="dynamic">
       <file>skeleton.bbl</file>
     </requires>
     <requires type="static">
+      <file>blx-dm.def</file>
       <file>blx-compat.def</file>
       <file>biblatex.def</file>
-      <file>apa.bbx</file>
-      <file>standard.bbx</file>
-      <file>apa.cbx</file>
+      <file>chicago-notes.bbx</file>
+      <file>chicago-notes.cbx</file>
       <file>biblatex.cfg</file>
+      <file>cms-american.lbx</file>
+      <file>american.lbx</file>
       <file>english.lbx</file>
     </requires>
   </internal>
-<<<<<<< HEAD
-  <external package="biblatex" priority="5" active="0">
-=======
   <external package="biblatex" priority="5" active="1">
->>>>>>> 27fc28ba7ad692f9b2c565c6098c1e3e514bf8c6
-    <generic>bibtex</generic>
+    <generic>biber</generic>
     <cmdline>
-      <binary>bibtex</binary>
-      <option>-min-crossrefs 999</option>
+      <binary>biber</binary>
       <infile>skeleton</infile>
     </cmdline>
     <input>
-      <file>skeleton.aux</file>
+      <file>skeleton.bcf</file>
     </input>
     <output>
       <file>skeleton.bbl</file>
@@ -85,14 +77,10 @@
       <file>skeleton.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>skeleton.aux</file>
-      <file>skeleton-blx.bib</file>
+      <file>skeleton.bcf</file>
     </requires>
     <requires type="editable">
-      <file>thesis</file>
-    </requires>
-    <requires type="static">
-      <file>biblatex.bst</file>
+      <file>thesis.bib</file>
     </requires>
   </external>
 </requests>

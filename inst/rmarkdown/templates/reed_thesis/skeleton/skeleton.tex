@@ -44,13 +44,8 @@
 %\usepackage{hanging}
 %\usepackage{natbib}
 
-<<<<<<< HEAD
-\usepackage[backend=bibtex, sorting=none, style=apa]{biblatex}
-\addbibresource{thesis}
-=======
 %\usepackage[backend=bibtex, sorting=none, style=apa]{biblatex}
 %\addbibresource{thesis}
->>>>>>> 27fc28ba7ad692f9b2c565c6098c1e3e514bf8c6
 % \bibliographystyle{APA/apa-good}  % or
 %\bibliography{thesis}
 
@@ -58,8 +53,9 @@
 % Comment out the natbib line above and uncomment the following two lines to use the new
 % biblatex-chicago style, for Chicago A. Also make some changes at the end where the
 % bibliography is included.
-%\usepackage{biblatex-chicago}
-%\bibliography{thesis}
+
+\usepackage{biblatex-chicago}
+\bibliography{thesis}
 
 % \usepackage{times} % other fonts are available like times, bookman, charter, palatino
 
@@ -211,15 +207,9 @@ The preface pretty much says it all.
    Max.   :25.0   Max.   :120.00
   \end{CodeOutput}
   \end{CodeChunk}
-<<<<<<< HEAD
 
-  Testing citations: (Angel 2000)
+  Testing citations: \cite{angel2000} (Angel 2000)
 
-=======
-  
-  Testing citations: \cite{angel2000} {[}@angel2000{]}
-  
->>>>>>> 27fc28ba7ad692f9b2c565c6098c1e3e514bf8c6
   You can also embed plots, for example:
 
   \begin{CodeChunk}
@@ -247,15 +237,9 @@ The preface pretty much says it all.
   Of course you will need to cite things, and you will probably accumulate
   an armful of sources. This is why BibTeX was created. For more
   information about BibTeX and bibliographies, see our CUS site
-<<<<<<< HEAD
-  (\url{http://web.reed.edu/cis/help/latex/index.html})(Reed~College
-  2007). There are three pages on this topic: \emph{bibtex} (which talks
-  about using BibTeX, at
-=======
   (\url{http://web.reed.edu/cis/help/latex/index.html})\cite{reedweb2007}
-  {[}@reedweb2007{]}. There are three pages on this topic: \emph{bibtex}
+  (Reed~College 2007). There are three pages on this topic: \emph{bibtex}
   (which talks about using BibTeX, at
->>>>>>> 27fc28ba7ad692f9b2c565c6098c1e3e514bf8c6
   \url{http://web.reed.edu/cis/help/latex/bibtex.html}),
   \emph{bibtexstyles} (about how to find and use the bibliography style
   that best suits your needs, at
@@ -266,13 +250,14 @@ The preface pretty much says it all.
   will not be useful unless you have only a few sources. There used to be
   APA stuff here, but we don't need it since I've fixed this with my
   apa-good natbib style file.
-<<<<<<< HEAD
 
-  \backmatter
+  \hyperdef{}{ref-angel2000}{\label{ref-angel2000}}
+  Angel, Edward. 2000. \emph{Interactive Computer Graphics : A Top-down
+  Approach with OpenGL}. Boston, MA: Addison Wesley Longman.
 
-  \setlength{\parindent}{0cm} \setlength{\parskip}{\medskipamount}
-=======
->>>>>>> 27fc28ba7ad692f9b2c565c6098c1e3e514bf8c6
+  \hyperdef{}{ref-reedweb2007}{\label{ref-reedweb2007}}
+  Reed~College. 2007. ``LaTeX Your Document.''
+  \url{http://web.reed.edu/cis/help/LaTeX/index.html}.
 
 \printbibliography
 
