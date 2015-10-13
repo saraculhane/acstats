@@ -21,13 +21,12 @@ output:
 lot: true
 lof: true
 ---
-<!--
-#```{r echo=FALSE}
-#Sys.setenv(TEXINPUTS=getwd(),
-#           BIBINPUTS=getwd(),
-#           BSTINPUTS=getwd())
-#```
--->
+
+```{r echo=FALSE}
+Sys.setenv(BIBINPUTS=getwd(),
+           BSTINPUTS=getwd())
+```
+
 
 ```{r intro, child = 'chap0.Rmd'}
 ```
