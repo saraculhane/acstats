@@ -12,7 +12,7 @@ When you click the **Knit** button a document will be generated that includes bo
 summary(cars)
 ```
 
-Testing citations: [@angel2000]
+Testing citations: \cite{angel2000} [@angel2000]
 
 You can also embed plots, for example:
 

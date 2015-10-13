@@ -1,5 +1,13 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Introduction}{1}{chapter*.8}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {0.1}Why use it?}{1}{section.0.1}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {0.2}Who should use it?}{1}{section.0.2}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Chapter 1: R Markdown}{3}{chapter.1}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Bibliographies}{4}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{References}{5}{chapter*.9}

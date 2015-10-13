@@ -1,0 +1,44 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{angel2000}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Angel}{A.}%
+     {Edward}{E.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Addison Wesley Longman}%
+  }
+  \strng{namehash}{AE1}
+  \strng{fullhash}{AE1}
+  \field{isbn}{0-201-38597-X}
+  \field{title}{Interactive Computer Graphics : A Top-Down Approach with
+  OpenGL}
+  \list{location}{1}{%
+    {Boston, MA}%
+  }
+  \field{year}{2000}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
