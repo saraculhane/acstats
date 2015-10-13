@@ -54,7 +54,7 @@
 % biblatex-chicago style, for Chicago A. Also make some changes at the end where the
 % bibliography is included.
 
-\usepackage{biblatex-chicago}
+\usepackage[backend=bibtex]{biblatex-chicago}
 \bibliography{thesis}
 
 % \usepackage{times} % other fonts are available like times, bookman, charter, palatino
@@ -208,7 +208,7 @@ The preface pretty much says it all.
   \end{CodeOutput}
   \end{CodeChunk}
 
-  Testing citations: \cite{angel2000} (Angel 2000)
+  Testing citations: \cite{angel2000} {[}@angel2000{]}
 
   You can also embed plots, for example:
 
@@ -238,7 +238,7 @@ The preface pretty much says it all.
   an armful of sources. This is why BibTeX was created. For more
   information about BibTeX and bibliographies, see our CUS site
   (\url{http://web.reed.edu/cis/help/latex/index.html})\cite{reedweb2007}
-  (Reed~College 2007). There are three pages on this topic: \emph{bibtex}
+  {[}@reedweb2007{]}. There are three pages on this topic: \emph{bibtex}
   (which talks about using BibTeX, at
   \url{http://web.reed.edu/cis/help/latex/bibtex.html}),
   \emph{bibtexstyles} (about how to find and use the bibliography style
@@ -250,14 +250,6 @@ The preface pretty much says it all.
   will not be useful unless you have only a few sources. There used to be
   APA stuff here, but we don't need it since I've fixed this with my
   apa-good natbib style file.
-
-  \hyperdef{}{ref-angel2000}{\label{ref-angel2000}}
-  Angel, Edward. 2000. \emph{Interactive Computer Graphics : A Top-down
-  Approach with OpenGL}. Boston, MA: Addison Wesley Longman.
-
-  \hyperdef{}{ref-reedweb2007}{\label{ref-reedweb2007}}
-  Reed~College. 2007. ``LaTeX Your Document.''
-  \url{http://web.reed.edu/cis/help/LaTeX/index.html}.
 
 \printbibliography
 

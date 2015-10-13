@@ -44,8 +44,8 @@
 %\usepackage{hanging}
 %\usepackage{natbib}
 
-%\usepackage[backend=bibtex, sorting=none, style=apa]{biblatex}
-%\addbibresource{thesis}
+\usepackage[backend=bibtex, sorting=none, style=apa]{biblatex}
+\addbibresource{thesis}
 % \bibliographystyle{APA/apa-good}  % or
 %\bibliography{thesis}
 
@@ -54,8 +54,8 @@
 % biblatex-chicago style, for Chicago A. Also make some changes at the end where the
 % bibliography is included.
 
-\usepackage[backend=bibtex]{biblatex-chicago}
-\bibliography{thesis}
+%\usepackage[backend=bibtex]{biblatex-chicago}
+%\bibliography{thesis}
 
 % \usepackage{times} % other fonts are available like times, bookman, charter, palatino
 
@@ -168,7 +168,7 @@ $abstract$
 
   $body$
 
-\printbibliography
+  \printbibliography[heading=bibintoc]
 
     % Index?
 
