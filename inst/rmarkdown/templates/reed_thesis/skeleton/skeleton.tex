@@ -44,11 +44,15 @@
 %\usepackage{hanging}
 %\usepackage{natbib}
 
+ \bibliographystyle{APA/apa-good}  % or
+ \bibliography{thesis}
+
+
 % Comment out the natbib line above and uncomment the following two lines to use the new
 % biblatex-chicago style, for Chicago A. Also make some changes at the end where the
 % bibliography is included.
-\usepackage[backend=bibtex, sorting=none]{biblatex-chicago}
-\bibliography{thesis}
+%\usepackage{biblatex-chicago}
+% \bibliography{thesis}
 
 % \usepackage{times} % other fonts are available like times, bookman, charter, palatino
 
@@ -105,19 +109,19 @@ The preface pretty much says it all.
 \begin{document}
 
       \maketitle
-
+  
   \frontmatter % this stuff will be roman-numbered
   \pagestyle{empty} % this removes page numbers from the frontmatter
 
       \begin{acknowledgements}
       I want to thank a few people.
     \end{acknowledgements}
-
+  
       \begin{preface}
       This is an example of a thesis setup to use the reed thesis document
       class.
     \end{preface}
-
+  
   % Add table of abbreviations?
 
     {
@@ -125,29 +129,29 @@ The preface pretty much says it all.
     \setcounter{tocdepth}{2}
     \tableofcontents
   }
-
+  
       \listoftables
-
+  
       \listoffigures
-
+  
       \begin{abstract}
       The preface pretty much says it all.
     \end{abstract}
-
+  
       \begin{dedication}
       The preface pretty much says it all.
     \end{dedication}
-
-%
+  
+%  
   \mainmatter % here the regular arabic numbering starts
   \pagestyle{fancyplain} % turns page numbering back on
 
   \chapter*{Introduction}
-
+  
   \addcontentsline{toc}{chapter}{Introduction}
-
+  
   \chaptermark{Introduction} \markboth{Introduction}{Introduction}
-
+  
   Welcome to the \LaTeX~thesis template. If you've never used \TeX~or
   \LaTeX~before, you'll have an initial learning period to go through, but
   the results of a nicely formatted thesis are worth it for more than the
@@ -160,73 +164,73 @@ The preface pretty much says it all.
   Introduction to LaTeX on the CUS site as well as skim the following
   template and give it a few weeks. Pretty soon all the markup gibberish
   will become second nature.
-
+  
   \section{Why use it?}
-
+  
   \LaTeX~does a great job of formatting tables and paragraphs. Its
   line-breaking algorithm was the subject of a PhD.\thinspace thesis. It
   does a fine job of automatically inserting ligatures, and to top it all
   off it is the only way to typeset good-looking mathematics.
-
+  
   \section{Who should use it?}
-
+  
   Anyone who needs to use math, tables, a lot of figures, complex
   cross-references, IPA or who just cares about the final appearance of
   their document should use \LaTeX. At Reed, math majors are required to
   use it, most physics majors will want to use it, and many other science
   majors may want it also.
-
+  
   \chapter{R Markdown}
-
+  
   This is an R Markdown document. Markdown is a simple formatting syntax
   for authoring HTML, PDF, and MS Word documents. For more details on
   using R Markdown see \url{http://rmarkdown.rstudio.com}.
-
+  
   When you click the \textbf{Knit} button a document will be generated
   that includes both content as well as the output of any embedded R code
   chunks within the document. You can embed an R code chunk like this:
-
+  
   \begin{CodeChunk}
   \begin{CodeInput}
   summary(cars)
   \end{CodeInput}
   \begin{CodeOutput}
-       speed           dist
-   Min.   : 4.0   Min.   :  2.00
-   1st Qu.:12.0   1st Qu.: 26.00
-   Median :15.0   Median : 36.00
-   Mean   :15.4   Mean   : 42.98
-   3rd Qu.:19.0   3rd Qu.: 56.00
-   Max.   :25.0   Max.   :120.00
+       speed           dist       
+   Min.   : 4.0   Min.   :  2.00  
+   1st Qu.:12.0   1st Qu.: 26.00  
+   Median :15.0   Median : 36.00  
+   Mean   :15.4   Mean   : 42.98  
+   3rd Qu.:19.0   3rd Qu.: 56.00  
+   Max.   :25.0   Max.   :120.00  
   \end{CodeOutput}
   \end{CodeChunk}
-
+  
   Testing citations: \cite{angel2000} {[}@angel2000{]}
-
+  
   You can also embed plots, for example:
-
+  
   \begin{CodeChunk}
   \begin{CodeInput}
   plot(cars)
   \end{CodeInput}
-
-
+  
+  
   \begin{center}\includegraphics{skeleton_files/figure-latex/plot-1} \end{center}
-
+  
   \end{CodeChunk}
-
+  
   \begin{CodeChunk}
   \begin{CodeInput}
   plot(Sepal.Length ~ Species, data = iris)
   \end{CodeInput}
-
-
+  
+  
   \begin{center}\includegraphics{skeleton_files/figure-latex/unnamed-chunk-1-1} \end{center}
-
+  
   \end{CodeChunk}
-
+  
   \section{Bibliographies}
-
+  
   Of course you will need to cite things, and you will probably accumulate
   an armful of sources. This is why BibTeX was created. For more
   information about BibTeX and bibliographies, see our CUS site
@@ -243,20 +247,9 @@ The preface pretty much says it all.
   APA stuff here, but we don't need it since I've fixed this with my
   apa-good natbib style file.
 
-  \backmatter
-
-  \setlength{\parindent}{0cm} \setlength{\parskip}{\medskipamount}
-
-%  \setlength{\bibhang}{5em}
-
-  \chapter{References}
-
-% \bibliographystyle{APA/apa-good}  % or
-% \bibliography{thesis}
+\printbibliography
 
     % Index?
-
-\printbibliography
 
 \end{document}
 
