@@ -29,6 +29,7 @@
   }
   \strng{namehash}{AE1}
   \strng{fullhash}{AE1}
+  \field{sortinit}{A}
   \field{isbn}{0-201-38597-X}
   \field{title}{Interactive Computer Graphics : A Top-Down Approach with
   OpenGL}
@@ -36,6 +37,25 @@
     {Boston, MA}%
   }
   \field{year}{2000}
+\endentry
+
+\entry{reedweb2007}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Reed{\ }College}{R.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{R1}
+  \strng{fullhash}{R1}
+  \field{sortinit}{R}
+  \field{title}{LaTeX Your Document}
+  \verb{url}
+  \verb http://web.reed.edu/cis/help/LaTeX/index.html
+  \endverb
+  \field{year}{2007}
+  \warn{\item Invalid format of field 'month'}
 \endentry
 
 \lossort
