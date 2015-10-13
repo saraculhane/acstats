@@ -304,11 +304,3 @@
 \newenvironment{CodeChunk}{}{}
 % \setkeys{Gin}{width=0.8\textwidth}
 
-%\newif\if@usenatbib
-%\def\ds@usenatbib{\@usenatbibtrue}
-
-%\if@usenatbib\relax\else%
-%\newlength{\bibhang}
-\setlength{\bibhang}{2em}
-%\fi
-
