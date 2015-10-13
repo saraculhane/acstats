@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 OCT 2015 11:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 OCT 2015 12:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -337,13 +337,6 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box33
 \rot@mess@toks=\toks28
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex-chicago/biblatex-chicago
-.sty
-Package: biblatex-chicago 2014/08/15 v 2.9a biblatex style
- (/usr/local/texlive/2015/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2015/05/04 v2.2 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count124
-)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2015/04/19 v3.0 programmable bibliographies (PK/JW/AB)
 
@@ -351,6 +344,10 @@ Package: biblatex 2015/04/19 v3.0 programmable bibliographies (PK/JW/AB)
 Package: biblatex1 2015/04/19 v3.0 programmable bibliographies (bibtex) (PK/JW/
 AB)
 
+(/usr/local/texlive/2015/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2015/05/04 v2.2 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count124
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count125
@@ -492,53 +489,137 @@ File: biblatex.def
 \c@biburllcpenalty=\count267
 \c@smartand=\count268
 )
-Package biblatex Info: Trying to load bibliography style 'chicago-notes'...
-Package biblatex Info: ... file 'chicago-notes.bbx' found.
+Package biblatex Info: Trying to load bibliography style 'apa'...
+Package biblatex Info: ... file 'apa.bbx' found.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex-chicago/chicago-notes.bb
-x
-File: chicago-notes.bbx 2014/08/15 v 2.9a biblatex bibliography style
-\lositemsep=\skip74
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex-apa/apa.bbx
+File: apa.bbx 2015/01/23 v6.7 APA biblatex references style
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2015/04/19 v3.0 biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count269
+\c@bbx:relatedtotal=\count270
 )
-Package biblatex Info: Trying to load citation style 'chicago-notes'...
-Package biblatex Info: ... file 'chicago-notes.cbx' found.
+! Undefined control sequence.
+l.232 \DeclareStyleSourcemap
+                            {
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex-chicago/chicago-notes.cb
-x
-File: chicago-notes.cbx 2014/08/21 v 2.9a biblatex citation style
-Package biblatex Info: Redefining '\cite'.
+! Undefined control sequence.
+l.233   \maps
+             [datatype=bibtex]{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.233   \maps[
+              datatype=bibtex]{
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+l.234     \map
+              {
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.235       \step
+                 [fieldsource=year, final]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.236       \step
+                 [fieldset=pubstate, null]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.238     \map
+              {
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.239       \step
+                 [fieldsource=date, final]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.240       \step
+                 [fieldset=pubstate, null]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (5.97089pt too wide) in paragraph at lines 233--244
+[]\OT1/cmr/m/n/12 [datatype=bibtex]  [field-source=year, fi-nal] [field-set=pub
+state, null]   [field-
+ []
+
+)
+Package biblatex Info: Trying to load citation style 'apa'...
+Package biblatex Info: ... file 'apa.cbx' found.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex-apa/apa.cbx
+File: apa.cbx 2015/01/23 v6.7 APA biblatex citation style
 Package biblatex Info: Redefining '\parencite'.
-Package biblatex Info: Redefining '\footcite'.
-Package biblatex Info: Redefining '\smartcite'.
-Package biblatex Info: Redefining '\smartcites'.
-Package biblatex Info: Redefining '\footfullcite'.
 Package biblatex Info: Redefining '\fullcite'.
-Package biblatex Info: Redefining '\citeauthor'.
-Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\citeyear'.
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\footcite'.
 Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\citeauthor'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.cfg
-File: biblatex.cfg 
-))))
-Package biblatex Info: Trying to load language 'english' -> 'cms-american'...
-Package biblatex Info: ... file 'cms-american.lbx' found.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex-chicago/cms-american.lbx
-File: cms-american.lbx 2013/10/29 v 2.8 biblatex localization
-Package biblatex Info: Trying to load language 'american'...
-Package biblatex Info: ... file 'american.lbx' found.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/lbx/american.lbx
-File: american.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)))
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
-)))
-\@quotelevel=\count269
-\@quotereset=\count270
+)
+\@quotelevel=\count271
+\@quotereset=\count272
 
 (./skeleton.aux)
 \openout1 = `skeleton.aux'.
@@ -560,16 +641,16 @@ LaTeX Font Info:    ... okay on input line 112.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count271
+\scratchcounter=\count273
 \scratchdimen=\dimen132
 \scratchbox=\box34
-\nofMPsegments=\count272
-\nofMParguments=\count273
+\nofMPsegments=\count274
+\nofMParguments=\count275
 \everyMPshowfont=\toks29
-\MPscratchCnt=\count274
+\MPscratchCnt=\count276
 \MPscratchDim=\dimen133
-\MPnumerator=\count275
-\makeMPintoPDFobject=\count276
+\MPnumerator=\count277
+\makeMPintoPDFobject=\count278
 \everyMPtoPDFconversion=\toks30
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -595,7 +676,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count277
+\c@section@level=\count279
 )
 LaTeX Info: Redefining \ref on input line 112.
 LaTeX Info: Redefining \pageref on input line 112.
@@ -605,25 +686,37 @@ LaTeX Info: Redefining \nameref on input line 112.
 \@outlinefile=\write5
 \openout5 = `skeleton.out'.
 
+
+
+! Package biblatex Error: backend=biber required by style.
+
+See the biblatex package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.112 \begin{document}
+                      
+The selected style or one of the .bib files requires backend=biber.
+It will not work at all with any other backend.
+
 Package biblatex Info: No input encoding detected.
 (biblatex)             Assuming 'ascii'.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'ascii'.
 \openout4 = `skeleton-blx.bib'.
 
-Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'skeleton.bbl' found.
- (./skeleton.bbl
-
-Package biblatex Warning: BibTeX reported the following issues
-(biblatex)                with 'reedweb2007':
-(biblatex)                - Invalid format of field 'month'.
-
-)
 Package biblatex Info: Reference section=0 on input line 112.
 Package biblatex Info: Reference segment=0 on input line 112.
+[1
+Non-PDF special ignored!
+Non-PDF special ignored!
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+]
 LaTeX Font Info:    Try loading font information for U+lasy on input line 115.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ulasy.fd
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 115.
@@ -635,12 +728,17 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 115.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-Non-PDF special ignored!
-Non-PDF special ignored!
-
-
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
+)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.115 
+       [1]pdfTeX warning (ext4): destination with the same identifier (name{pag
+e.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.115 
+       [2
 
 ] [3] [4
 
@@ -659,12 +757,12 @@ Non-PDF special ignored!
 
  [5] [6
 
-]
-(./skeleton.lot)
+] (./skeleton.lot)
 \tf@lot=\write7
 \openout7 = `skeleton.lot'.
 
- [7] [8
+
+[7] [8
 
 ] (./skeleton.lof)
 \tf@lof=\write8
@@ -694,7 +792,10 @@ l.186   \chapter
 
 ]
 Chapter 1.
-<skeleton_files/figure-latex/plot-1.pdf, id=122, 353.32pt x 264.99pt>
+
+LaTeX Warning: Citation 'angel2000' on page 3 undefined on input line 211.
+
+<skeleton_files/figure-latex/plot-1.pdf, id=128, 353.32pt x 264.99pt>
 File: skeleton_files/figure-latex/plot-1.pdf Graphic file (type pdf)
 
 <use skeleton_files/figure-latex/plot-1.pdf>
@@ -710,7 +811,7 @@ been already used, duplicate ignored
                    \relax 
 l.221 ...n_files/figure-latex/plot-1} \end{center}
                                                    [3]
-<skeleton_files/figure-latex/unnamed-chunk-1-1.pdf, id=131, 353.32pt x 264.99pt
+<skeleton_files/figure-latex/unnamed-chunk-1-1.pdf, id=134, 353.32pt x 264.99pt
 >
 File: skeleton_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type pdf)
 
@@ -718,6 +819,16 @@ File: skeleton_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type pdf)
 Package pdftex.def Info: skeleton_files/figure-latex/unnamed-chunk-1-1.pdf used
  on input line 231.
 (pdftex.def)             Requested size: 353.31914pt x 264.98935pt.
+
+
+LaTeX Warning: Citation 'reedweb2007' on page 4 undefined on input line 240.
+
+
+Overfull \hbox (16.29828pt too wide) in paragraph at lines 237--253
+\OT1/cmr/m/n/12 your needs, at []$http : / / web . reed . edu / cis / help / la
+tex / bibtexstyles . html$[]) and \OT1/cmr/m/it/12 bib-man \OT1/cmr/m/n/12 (whi
+ch
+ []
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -731,47 +842,51 @@ been already used, duplicate ignored
                    \relax 
 l.253 
        [4 <./skeleton_files/figure-latex/plot-1.pdf> <./skeleton_files/figure-l
-atex/unnamed-chunk-1-1.pdf>] [5] [6
+atex/unnamed-chunk-1-1.pdf>]
 
-]
-Overfull \hbox (2.31535pt too wide) in paragraph at lines 255--255
-[][]\OT1/cmr/m/n/12 Angel, Ed-ward. \OT1/cmr/m/it/12 In-ter-ac-tive Com-puter G
-raph-ics : A Top-Down Ap-proach with OpenGL\OT1/cmr/m/n/12 .
- []
+LaTeX Warning: Empty bibliography on input line 254.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 258.
-[7]
+[5]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 258.
  (./skeleton.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 258.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 258.
 Package rerunfilecheck Info: File `skeleton.out' has not changed.
 (rerunfilecheck)             Checksum: AF1508AC8FDEDD1D959B320A25D75BCB;287.
+
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run BibTeX on the file(s):
+(biblatex)                skeleton
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'skeleton.run.xml'.
 \openout1 = `skeleton.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 258.
  ) 
 Here is how much of TeX's memory you used:
- 12982 strings out of 493089
- 210147 string characters out of 6134842
- 496982 words of memory out of 5000000
- 16264 multiletter control sequences out of 15000+600000
- 11460 words of font info for 45 fonts, out of 8000000 for 9000
+ 11936 strings out of 493089
+ 186335 string characters out of 6134842
+ 388708 words of memory out of 5000000
+ 15234 multiletter control sequences out of 15000+600000
+ 11159 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,11n,47p,911b,1323s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,11n,45p,937b,664s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr
 /local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr
 /local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on skeleton.pdf (25 pages, 114863 bytes).
+Output written on skeleton.pdf (25 pages, 99704 bytes).
 PDF statistics:
- 215 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
- 39 named destinations out of 1000 (max. 500000)
+ 197 PDF objects out of 1000 (max. 8388607)
+ 157 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
