@@ -308,7 +308,7 @@
 %\def\ds@usenatbib{\@usenatbibtrue}
 
 %\if@usenatbib\relax\else%
-\newlength{\bibhang}
+%\newlength{\bibhang}
 \setlength{\bibhang}{2em}
 %\fi
 
