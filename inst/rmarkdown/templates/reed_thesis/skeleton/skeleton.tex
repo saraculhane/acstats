@@ -44,8 +44,8 @@
 %\usepackage{hanging}
 %\usepackage{natbib}
 
-\usepackage{biblatex}
- \bibliographystyle{APA/apa-good}  % or
+\usepackage[backend=biber, style = apa]{biblatex}
+% \bibliographystyle{APA/apa-good}  % or
  \bibliography{thesis}
 
 
@@ -235,9 +235,10 @@ The preface pretty much says it all.
   Of course you will need to cite things, and you will probably accumulate
   an armful of sources. This is why BibTeX was created. For more
   information about BibTeX and bibliographies, see our CUS site
-  (\url{http://web.reed.edu/cis/help/latex/index.html}){[}@reedweb2007{]}.
-  There are three pages on this topic: \emph{bibtex} (which talks about
-  using BibTeX, at \url{http://web.reed.edu/cis/help/latex/bibtex.html}),
+  (\url{http://web.reed.edu/cis/help/latex/index.html})\cite{reedweb2007}
+  {[}@reedweb2007{]}. There are three pages on this topic: \emph{bibtex}
+  (which talks about using BibTeX, at
+  \url{http://web.reed.edu/cis/help/latex/bibtex.html}),
   \emph{bibtexstyles} (about how to find and use the bibliography style
   that best suits your needs, at
   \url{http://web.reed.edu/cis/help/latex/bibtexstyles.html}) and
