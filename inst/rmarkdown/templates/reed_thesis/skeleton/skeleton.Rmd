@@ -15,6 +15,7 @@ preface: >
   This is an example of a thesis setup to use the reed thesis document class.
 #bibliography: thesis.bib
 #csl: apa.csl
+bibname: 'References'
 output: 
   rticles::reed_thesis:
     toc: true

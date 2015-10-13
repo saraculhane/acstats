@@ -1,21 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2015.10.10)  10 OCT 2015 15:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 OCT 2015 12:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **template.tex
 (./template.tex
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, et
-hiopic, farsi, arabic, pinyin, croatian, bulgarian, ukrainian, russian, slovak,
- czech, danish, dutch, usenglishmax, ukenglish, finnish, french, basque, ngerma
-n, german, swissgerman, ngerman-x-2012-05-30, german-x-2012-05-30, monogreek, g
-reek, ibycus, ancientgreek, hungarian, bengali, tamil, hindi, telugu, gujarati,
- sanskrit, malayalam, kannada, assamese, marathi, oriya, panjabi, italian, lati
-n, latvian, lithuanian, mongolian, mongolianlmc, nynorsk, bokmal, indonesian, e
-speranto, coptic, welsh, irish, interlingua, serbian, serbianc, slovenian, friu
-lan, romansh, estonian, romanian, armenian, uppersorbian, turkish, afrikaans, i
-celandic, kurmanji, polish, portuguese, galician, catalan, spanish, swedish, th
-ai, loaded.
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 
 ! LaTeX Error: File `reedthesis.cls' not found.
 
@@ -26,17 +16,17 @@ Enter file name:
 ! Emergency stop.
 <read *> 
          
-l.33 \usepackage
+l.32 \usepackage
                 {graphicx,latexsym}^^M
 *** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
- 10 strings out of 493485
- 206 string characters out of 3143525
- 47818 words of memory out of 3000000
- 3415 multiletter control sequences out of 15000+200000
- 3640 words of font info for 14 fonts, out of 3000000 for 9000
- 957 hyphenation exceptions out of 8191
- 10i,0n,7p,83b,8s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 10 strings out of 493089
+ 200 string characters out of 6134842
+ 53199 words of memory out of 5000000
+ 3593 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 10i,0n,7p,83b,8s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!
