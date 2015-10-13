@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdftex 2015.5.24)  13 OCT 2015 11:42
 entering extended mode
  %&-line parsing enabled.
 **tmp-pdfcrop-5861
 ! Emergency stop.
 <*> tmp-pdfcrop-5861
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdftex 2015.5.24)  13 OCT 2015 11:15
+entering extended mode
+ %&-line parsing enabled.
+**tmp-pdfcrop-4914
+! Emergency stop.
+<*> tmp-pdfcrop-4914
+>>>>>>> 27fc28ba7ad692f9b2c565c6098c1e3e514bf8c6
                     
 *** (job aborted, file error in nonstop mode)
 

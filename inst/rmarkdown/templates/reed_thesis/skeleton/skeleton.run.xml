@@ -41,7 +41,11 @@
   >
 ]>
 <requests version="1.0">
+<<<<<<< HEAD
   <internal package="biblatex" priority="9" active="0">
+=======
+  <internal package="biblatex" priority="9" active="1">
+>>>>>>> 27fc28ba7ad692f9b2c565c6098c1e3e514bf8c6
     <generic>latex</generic>
     <provides type="dynamic">
       <file>skeleton.aux</file>
@@ -60,7 +64,11 @@
       <file>english.lbx</file>
     </requires>
   </internal>
+<<<<<<< HEAD
   <external package="biblatex" priority="5" active="0">
+=======
+  <external package="biblatex" priority="5" active="1">
+>>>>>>> 27fc28ba7ad692f9b2c565c6098c1e3e514bf8c6
     <generic>bibtex</generic>
     <cmdline>
       <binary>bibtex</binary>
