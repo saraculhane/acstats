@@ -81,7 +81,7 @@
       <file>skeleton-blx.bib</file>
     </requires>
     <requires type="editable">
-      <file>thesis.bib</file>
+      <file>thesis</file>
     </requires>
     <requires type="static">
       <file>biblatex.bst</file>
