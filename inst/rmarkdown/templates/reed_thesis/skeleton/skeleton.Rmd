@@ -8,7 +8,7 @@ title: 'My Final College Paper'
 abstract: >
   The preface pretty much says it all. 
 acknowledgements: >
-  I want to thank a few people. Not changing?
+  I want to thank a few people.
 dedication: >
   You can have a dedication here if you wish. 
 preface: >
