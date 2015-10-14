@@ -1,29 +1,78 @@
 ---
-output: pdf_document
+output: html_document
 ---
 
-\chapter{R Markdown}
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+\chapter{R Markdown Basics}
+
+Here is a brief introduction into using R Markdown. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+# Lists
+
+## Unordered versus ordered
+
+It's easy to create a list.  It can unordered like
+
+* Item 1
+* Item 2
+* Item 3
+
+or it can be ordered like
+
+1. Item 1
+2. Item 2
+4. Item 3
+
+Notice that I intentionally mislabeled Item 3 as number 4.  Markdown automatically figures this out!
+
+To create a sublist, just indent the values a bit:
+
+1. Item 1
+2. Item 2
+3. Item 3
+    - Item 3a
+    - Item 3b
+
+# Line breaks
+
+Make sure to add white space between lines if you'd like to start a new paragraph.  Look at what happens below if you don't:
+
+Here is the first sentence.  Here is another sentence to end the paragraph.
+This should be a new paragraph.
+
+*Here is the correct way:*
+
+Here is the first sentence.  Here is another sentence to end the paragraph.
+
+This should be a new paragraph.
+
+# R chunks
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r summary}
+```{r cars}
 summary(cars)
 ```
 
+# Including Plots
+
 You can also embed plots, for example:
 
-```{r plot}
-plot(cars)
+```{r pressure, echo=FALSE}
+plot(pressure)
 ```
 
-```{r}
-plot(Sepal.Length ~ Species, data = iris)
-```
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.  There are plenty of others way to add chunk options.  More information is available at <http://yihui.name/knitr/options/>.
 
-\section{Bibliographies}
-  Of course you will need to cite things, and you will probably accumulate an armful of sources. This is why BibTeX was created. For more information about BibTeX and bibliographies, see our CUS site (<http://web.reed.edu/cis/help/latex/index.html>) (\cite{reedweb2007}) [@reedweb2007]. There are three pages on this topic: _bibtex_ (which talks about using BibTeX, at <http://web.reed.edu/cis/help/latex/bibtex.html>), _bibtexstyles_ (about how to find and use the bibliography style that best suits your needs, at <http://web.reed.edu/cis/help/latex/bibtexstyles.html>) and _bibman_ (which covers how to make and maintain a bibliography by hand, without BibTeX, at <http://web.reed.edu/cis/help/latex/bibman.html>). The last page will not be useful unless you have only a few sources. There used to be APA stuff here, but we don't need it since I've fixed this with my apa-good natbib style file.
-  
-Testing citations: (\cite{angel2000}) [@angel2000]
+# Inline code / Mathematics
 
+If you'd like to put the results of your analysis directly into your discussion, add inline code like this:
+
+The `cos` of $2 \pi$ is `r cos(2*pi)`.
+
+
+# Additional resources
+
+Markdown Cheatsheet - <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>
+
+R Markdown Reference Guide - <https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf>

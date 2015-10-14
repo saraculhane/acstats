@@ -23,11 +23,35 @@ lot: true
 lof: true
 ---
 
+<!--
+Above is the YAML (YAML Ain't Markup Language) header that includes a lot of metadata used to produce the document.  Be careful with spacing in this header!
+
+If you'd like to include a comment that won't be produced in your resulting PDF file enclose it in a block like this.
+-->
+
+<!--
+This is the way to split your thesis into chapters and then include each of the chapters seperately.  You can Knit the Rmd files corresponding to each chapter individually and then put them all back together by Knit-ing this document.
+
+This is an R chunk and chap0.Rmd refers to the Introductory chapter.  Feel free to name this file as something else, but don't forget to change the argument to in `child = ` below!
+-->
 ```{r intro, child = 'chap0.Rmd'}
 ```
 
+<!--
+This is for including Chapter 1.  Notice that it's also good practice to name your chunk.  This will help you debug potentially issues as you knit.  The chunk above is called intro and the one below is called chapter1.
+-->
+
 ```{r chapter1, child = 'chap1.Rmd'}
 ```
+
+
+```{r conclusion, child = 'conclusion.Rmd'}
+```
+
+
+<!--
+The bibliography section is still under development...
+-->
 
 <!--
 The bib chunk below must go last in this document according to how R Markdown renders.  More info is at http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
