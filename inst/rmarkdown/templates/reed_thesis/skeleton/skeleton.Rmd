@@ -6,11 +6,11 @@ advisor: 'Advisor F. Name'
 department: 'Mathematics'
 title: 'My Final College Paper'
 abstract: >
-  The preface pretty much says it all.
+  The preface pretty much says it all. 
 acknowledgements: >
-  I want to thank a few people.
+  I want to thank a few people. Not changing?
 dedication: >
-  You can have a dedication here if you wish.
+  You can have a dedication here if you wish. 
 preface: >
   This is an example of a thesis setup to use the reed thesis document class.
 #bibliography: thesis.bib
