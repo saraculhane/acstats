@@ -16,11 +16,11 @@ output: pdf_document
 
 \noindent
 
-\setlength{\parindent}{-0.5in}
-\setlength{\leftskip}{0.5in}
+\setlength{\parindent}{-0.20in}
+\setlength{\leftskip}{0.20in}
 \setlength{\parskip}{8pt}
 
 ---
 nocite: | 
-  @angel2001, @angel2002a
+  @angel2000, @angel2001, @angel2002a
 ...
