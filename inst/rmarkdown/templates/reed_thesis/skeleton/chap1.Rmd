@@ -53,7 +53,7 @@ summary(cars)
 
 # Including Plots
 
-You can also embed plots, for example:
+You can also embed plots.  For example, here is a way to use the base **R** graphics package to produce a plot using the built-in `pressure` dataset:
 
 ```{r pressure, echo=FALSE}
 plot(pressure)
@@ -66,6 +66,52 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 If you'd like to put the results of your analysis directly into your discussion, add inline code like this:
 
 The `cos` of $2 \pi$ is `r cos(2*pi)`.
+
+
+# Loading data
+
+Included in this template is a file called `flights.csv`.  This file includes a subset of the larger dataset of information about all flights that departed from Seattle and Portland in 2014.  More information about this dataset and its **R** package is available at <http://github.com/ismayc/pnwflights14>.  This subset includes Portland flights and only rows that were complete with no missing values.
+
+We can load in this data set using the following command:
+
+```{r load_data}
+flights <- read.csv("flights.csv")
+```
+
+The data is now stored in the data frame called `flights` in **R**.  To get a better feel for the variables included in this dataset we can use a variety of functions.  Here we can see the dimensions (rows by columns) and also the names of the columns.
+```{r str}
+dim(flights)
+names(flights)
+```
+
+Another good idea is to take a look at the dataset in table form.  With this being a dataset with more than 50,000 rows, we won't explicitly show the results of the command below.  I recommend you enter the command into the Console **_after_** you have loaded the **R** chunks above to load the data into **R**.
+
+```{r view_flights, eval = FALSE}
+View(flights)
+```
+
+# Exploratory Data Analysis
+
+While not required, it is highly recommended you use the `dplyr` package to manipulate and summarize your data set as needed.  It uses a syntax that is easy to understand using chaining operations.  Below I've created a few examples of using `dplyr` to get information from about the Portland flights in 2014.  You will also see the use of the `ggplot2` package, which produces beautiful high quality academic visuals.
+
+We begin by checking to ensure that `dplyr` and `ggplot2` are installed and then we load them into our current working environment:
+
+```{r load_pkgs, message = FALSE}
+# List of packages required for this analysis
+pkg <- c("dplyr", "ggplot2")
+
+# Check if packages are not installed and assign the
+# names of the packages not installed to the variable new.pkg
+new.pkg <- pkg[!(pkg %in% installed.packages())]
+
+# If there are any packages in the list that aren't installed,
+# install them
+if (length(new.pkg))
+  install.packages(new.pkg, repos = "http://cran.rstudio.com")
+
+library(dplyr)
+library(ggplot2)
+```
 
 
 # Additional resources
