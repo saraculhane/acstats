@@ -70,7 +70,7 @@ The `cos` of $2 \pi$ is `r cos(2*pi)`.
 
 # Loading data
 
-Included in this template is a file called `flights.csv`.  This file includes a subset of the larger dataset of information about all flights that departed from Seattle and Portland in 2014.  More information about this dataset and its **R** package is available at <http://github.com/ismayc/pnwflights14>.  This subset includes Portland flights and only rows that were complete with no missing values.
+Included in this template is a file called `flights.csv`.  This file includes a subset of the larger dataset of information about all flights that departed from Seattle and Portland in 2014.  More information about this dataset and its **R** package is available at <http://github.com/ismayc/pnwflights14>.  This subset includes only Portland flights and only rows that were complete with no missing values.  Merges were also done with the `airports` and `airlines` data sets in the `pnwflights14` package to get more descriptive airport and airline names.
 
 We can load in this data set using the following command:
 
@@ -111,6 +111,18 @@ if (length(new.pkg))
 
 library(dplyr)
 library(ggplot2)
+```
+
+The example we show here does the following:
+
+- Select the following three variables from the `flights` dataset:  `carrier` and `arr_delay`.  Assign this subset to a new variable called `flights2`. 
+
+- Using `flights2`, determine the largest arrival delay for each of the carriers?  (If you'd like a reference to what the carrier abbreviations stand for, you can find them in the `airlines` data set in `pnwflights14`.)
+
+```{r problem3}
+flights2 <- flights %>% select(carrier, arr_delay)
+flights2 %>% group_by(carrier, origin) %>%
+  summarize(max_arr_delay = max(arr_delay, na.rm = TRUE))
 ```
 
 
