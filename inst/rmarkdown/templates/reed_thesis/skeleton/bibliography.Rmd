@@ -17,9 +17,3 @@ output: pdf_document
 \setlength{\parskip}{8pt}
 
 \chapter{$bibname$}
-
-<!--
-\setlength{\bibhang}{5em}
-
-
---->
