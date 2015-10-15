@@ -329,17 +329,33 @@ The preface pretty much says it all.
   
   \section{Additional resources}\label{additional-resources}
   
-  Markdown Cheatsheet -
-  \url{https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet}
+  \begin{itemize}
+  \item
+    Markdown Cheatsheet -
+    \url{https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet}
+  \item
+    R Markdown Reference Guide -
+    \url{https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf}
+  \end{itemize}
   
-  R Markdown Reference Guide -
-  \url{https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf}
+  \chapter{References and Labels}
   
   \section{Bibliographies}\label{bibliographies}
   
-  \begin{verbatim}
-  Of course you will need to cite things, and you will probably accumulate an armful of sources. This is why BibTeX was created. For more information about BibTeX and bibliographies, see our CUS site (<http://web.reed.edu/cis/help/latex/index.html>)[@reedweb2007]}. There are three pages on this topic:  _bibtex_ (which talks about using BibTeX, at <http://web.reed.edu/cis/help/latex/bibtex.html>), _bibtexstyles_} (about how to find and use the bibliography style that best suits your needs, at <http://web.reed.edu/cis/help/latex/bibtexstyles.html>) and _bibman_ (which covers how to make and maintain a bibliography by hand, without BibTeX, at <http://web.reed.edu/cis/help/latex/bibman.html>). The last page will not be useful unless you have only a few sources.
-  \end{verbatim}
+  Of course you will need to cite things, and you will probably accumulate
+  an armful of sources. This is why BibTeX was created. For more
+  information about BibTeX and bibliographies, see our CUS site
+  (\url{http://web.reed.edu/cis/help/latex/index.html})(Reed~College,
+  2007)\}. There are three pages on this topic: \emph{bibtex} (which talks
+  about using BibTeX, at
+  \url{http://web.reed.edu/cis/help/latex/bibtex.html}),
+  \emph{bibtexstyles}\} (about how to find and use the bibliography style
+  that best suits your needs, at
+  \url{http://web.reed.edu/cis/help/latex/bibtexstyles.html}) and
+  \emph{bibman} (which covers how to make and maintain a bibliography by
+  hand, without BibTeX, at
+  \url{http://web.reed.edu/cis/help/latex/bibman.html}). The last page
+  will not be useful unless you have only a few sources.
   
   \chapter*{Conclusion}
   
@@ -372,10 +388,12 @@ The preface pretty much says it all.
   \setlength{\parindent}{-0.5in} \setlength{\leftskip}{0.5in}
   \setlength{\parskip}{8pt}
   
-  \chapter{$bibname$}
+  \hyperdef{}{ref-reedweb2007}{\label{ref-reedweb2007}}
+  Reed~College. (2007, March). LaTeX your document. Retrieved from
+  \url{http://web.reed.edu/cis/help/LaTeX/index.html}
 
 %  \backmatter
-%  \chapter{References}
+  \chapter{References}
 %  \printbibliography[heading=bibintoc, heading=none]
 
     % Index?

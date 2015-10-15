@@ -7,13 +7,11 @@ output: pdf_document
 \setlength{\parindent}{0cm}
 
 \setlength{\bibhang}{1em}
-
+\backmatter
 -->
 
-\backmatter
+
 
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.5in}
 \setlength{\parskip}{8pt}
-
-\chapter{$bibname$}

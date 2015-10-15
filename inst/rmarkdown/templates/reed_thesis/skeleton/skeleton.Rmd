@@ -46,6 +46,7 @@ This is for including Chapter 1.  Notice that it's also good practice to name yo
 ```{r chapter1, child = 'chap1.Rmd'}
 ```
 
+\chapter{References and Labels}
 
 ```{r chapter2, child = 'chap2.Rmd'}
 ```
