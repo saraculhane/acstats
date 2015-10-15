@@ -13,8 +13,8 @@ dedication: >
   You can have a dedication here if you wish. 
 preface: >
   This is an example of a thesis setup to use the reed thesis document class.
-#bibliography: thesis.bib
-#csl: apa.csl
+bibliography: thesis.bib
+csl: apa.csl
 bibname: 'References'
 output: 
   rticles::reed_thesis:
@@ -38,10 +38,16 @@ This is an R chunk and chap0.Rmd refers to the Introductory chapter.  Feel free 
 ```
 
 <!--
-This is for including Chapter 1.  Notice that it's also good practice to name your chunk.  This will help you debug potentially issues as you knit.  The chunk above is called intro and the one below is called chapter1.
+This is for including Chapter 1.  Notice that it's also good practice to name your chunk.  This will help you debug potential issues as you knit.  The chunk above is called intro and the one below is called chapter1.
 -->
 
+\chapter{R Markdown Basics}
+
 ```{r chapter1, child = 'chap1.Rmd'}
+```
+
+
+```{r chapter2, child = 'chap2.Rmd'}
 ```
 
 
@@ -55,7 +61,8 @@ The bibliography section is still under development...
 
 <!--
 The bib chunk below must go last in this document according to how R Markdown renders.  More info is at http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
+-->
 
 # ```{r bib, child = 'bibliography.Rmd'}
 # ```
--->
+

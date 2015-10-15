@@ -1,9 +1,6 @@
 ---
-output: html_document
+output: pdf_document
 ---
-
-
-\chapter{R Markdown Basics}
 
 Here is a brief introduction into using R Markdown. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
