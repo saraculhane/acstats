@@ -55,11 +55,6 @@ This is for including Chapter 1.  Notice that it's also good practice to name yo
 ```{r conclusion, child = 'conclusion.Rmd'}
 ```
 
-
-<!--
-The bibliography section is still under development...
--->
-
 <!--
 The bib chunk below must go last in this document according to how R Markdown renders.  More info is at http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
 -->
