@@ -357,12 +357,13 @@ The preface pretty much says it all.
   \url{http://web.reed.edu/cis/help/latex/bibman.html}). The last page
   will not be useful unless you have only a few sources.
   
+  You can add a Reed Thesis citation (Noble, 2002) option.
+  
   \chapter*{Conclusion}
   
   \addcontentsline{toc}{chapter}{Conclusion}
   
   \chaptermark{Conclusion} \markboth{Conclusion}{Conclusion}
-  \setcounter{chapter}{2} \setcounter{section}{0}
   
   Here's a conclusion, demonstrating the use of all that manual
   incrementing and table of contents adding that has to happen if you use
@@ -383,15 +384,33 @@ The preface pretty much says it all.
   \appendix
   \chapter{The First Appendix} \chapter{The Second Appendix, for Fun}
   
+  \backmatter
+  
+  \chapter{References}
+  
+  \noindent
+  
   \setlength{\parindent}{-0.5in} \setlength{\leftskip}{0.5in}
   \setlength{\parskip}{8pt}
+  
+  \hyperdef{}{ref-angel2001}{\label{ref-angel2001}}
+  Angel, E. (2001a). \emph{Batch-file computer graphics : A bottom-up
+  approach with quickTime}. Boston, MA: Wesley Addison Longman.
+  
+  \hyperdef{}{ref-angel2002a}{\label{ref-angel2002a}}
+  Angel, E. (2001b). \emph{Test second book by angel}. Boston, MA: Wesley
+  Addison Longman.
+  
+  \hyperdef{}{ref-noble2002}{\label{ref-noble2002}}
+  Noble, S. G. (2002). \emph{Turning images into simple line-art}
+  (Undergraduate thesis). Reed College.
   
   \hyperdef{}{ref-reedweb2007}{\label{ref-reedweb2007}}
   Reed~College. (2007, March). LaTeX your document. Retrieved from
   \url{http://web.reed.edu/cis/help/LaTeX/index.html}
 
-%  \backmatter
-  \chapter{References}
+
+  \chapter{}
 %  \printbibliography[heading=bibintoc, heading=none]
 
     % Index?
