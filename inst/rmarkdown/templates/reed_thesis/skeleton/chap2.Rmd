@@ -1,9 +1,30 @@
 ---
-output: html_document
+output: pdf_document
 ---
+
+Now that we've gone over some of the basics of getting used to using R Markdown in Chapter \ref{chap:rmd_basics}, we will explore how to reference different spots in your document by using labels.  Anytime you enter a hashtag (or multiple hashtags) to begin a section or subsection, Markdown will automatically create a label for that section.  For example, in Chapter \ref{chap:rmd_basics}, we had a subsection called "Unordered versus ordered."  Markdown created a label automatically (replacing spaces with hyphens).  We can create a link to this subsection (which will automatically correspond to the appropriate number of the subsection): \ref{unordered-versus-ordered}.
+
+# References, Labels, Custom Commands and Footnotes
+It is easy to refer to anything within your document using the `label` and `ref` tags.  Labels must be unique and shouldn't use any odd characters; generally sticking to letters and numbers (no spaces) should be fine. Put the label on whatever you want to refer to, and put the reference where you want the reference. We will use \LaTeX\ for most of the references and labels, but we will use the `kfigr` **R** package to reference chunks of code and the resulting figures/tables/analysis output.  As one benefit, this will allow figures to automatically be numbered and then referenced via their label.  
+
+You saw much of this executed in Chapter \ref{chap:rmd_basics}.  If we'd like to reference the plot we made there, we enter the following inline **R** code:  `r figr('march3-plot', type = "figure", link = TRUE)`.
+
+\subsection{References and Labels}
+Sometimes you'd like to refer to a table or figure, e.g. you can see in Figure \ref{subd2} that you can rotate figures. Start by labeling your figure or table with the label command (\verb=\label{labelvariable}=) below the caption (see the chapter on graphics and tables for examples). Then when you would like to refer to the table or figure, use the ref command (\verb=\ref{labelvariable}=). Make sure your label variables are unique; you can't have two elements named ``default." Also, since the reference command only puts the figure or table number, you will have to put  ``Table" or ``Figure" as appropriate, as seen in the following examples:
+
+As I showed in Table \ref{inheritance} many factors can be assumed to follow from inheritance. Also see the Figure \ref{subd} for an illustration.
+
+-->
+
+## Footnotes and Endnotes
+
+You might want to footnote something. ^[footnote text] The footnote will be in a smaller font and placed appropriately. Endnotes work in much the same way. More information can be found about both on the CUS site or reach out to data@reed.edu.
+
 
 # Bibliographies
 
-Of course you will need to cite things, and you will probably accumulate an armful of sources. This is why BibTeX was created. For more information about BibTeX and bibliographies, see our CUS site (<http://web.reed.edu/cis/help/latex/index.html>)[@reedweb2007]}. There are three pages on this topic:  _bibtex_ (which talks about using BibTeX, at <http://web.reed.edu/cis/help/latex/bibtex.html>), _bibtexstyles_} (about how to find and use the bibliography style that best suits your needs, at <http://web.reed.edu/cis/help/latex/bibtexstyles.html>) and _bibman_ (which covers how to make and maintain a bibliography by hand, without BibTeX, at <http://web.reed.edu/cis/help/latex/bibman.html>). The last page will not be useful unless you have only a few sources.
+You'll see that the bibliography citation is a little different from the \LaTeX` `label` and `ref` linkings.  R Markdown uses pandoc (<http://pandoc.org/>) to build bibliographies and it requires that you don't have to do a second compile to load in references as standard \LaTeX\ requires.
 
-You can add a Reed Thesis citation [@noble2002] option.
+Of course you will need to cite things, and you will probably accumulate an armful of sources. To cite references place the reference name inside square brackets and precede it by the "at" symbol.  For example, here's a reference to a senior thesis:  [@noble2002].  This `noble2002` entry appears in a file called `thesis.bib` that was created by a program called BibTeX.  It's an incredibly valuable tool!  For more information about BibTeX and bibliographies, see our CUS site (<http://web.reed.edu/cis/help/latex/index.html>)^[@reedweb2007]. There are three pages on this topic:  _bibtex_ (which talks about using BibTeX, at <http://web.reed.edu/cis/help/latex/bibtex.html>), _bibtexstyles_} (about how to find and use the bibliography style that best suits your needs, at <http://web.reed.edu/cis/help/latex/bibtexstyles.html>) and _bibman_ (which covers how to make and maintain a bibliography by hand, without BibTeX, at <http://web.reed.edu/cis/help/latex/bibman.html>). The last page will not be useful unless you have only a few sources.
+
+If you look at the YAML header in the main .Rmd file you can see that we can specify the style of the bibliography by specifying the appropriate csl file.  You can download a variety of different style files at <https://github.com/citation-style-language/styles>.  Make sure to download the file in the same directory as where the main .Rmd file is stored.

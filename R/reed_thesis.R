@@ -6,7 +6,8 @@ reed_thesis <- function(toc = TRUE) {
 
   base <- rmarkdown::pdf_document(template = template,
                                   toc = toc,
-                                  keep_tex = TRUE)
+                                  keep_tex = TRUE,
+                                  pandoc_args = "--chapters")
 
   # Mostly copied from knitr::render_sweave
   base$knitr$opts_knit$out.format <- "sweave"
