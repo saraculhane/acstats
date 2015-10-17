@@ -35,7 +35,7 @@ Of course you will need to cite things, and you will probably accumulate an armf
 
 If you look at the YAML header at the top of the main .Rmd file you can see that we can specify the style of the bibliography by referencing the appropriate csl file.  You can download a variety of different style files at <https://github.com/citation-style-language/styles>.  Make sure to download the file in the same directory as where the main .Rmd file is stored.
 
-### Tips for Bibliographies
+##### Tips for Bibliographies
 
 - Like with thesis formatting, the sooner you start compiling your bibliography for something as large as thesis, the better. Typing in source after source is mind-numbing enough; do you really want to do it for hours on end in late April? Think of it as procrastination.
 - The cite key (a citation's label) needs to be unique from the other entries.
