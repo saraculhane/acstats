@@ -40,7 +40,13 @@
 
 \usepackage{rotating}
 
-% Added by CII
+% Added by CII (Thanks, Hadley!)
+% Use ref for internal links
+\renewcommand{\hyperref}[2][???]{\autoref{#1}}
+\def\chapterautorefname{Chapter}
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Section}
+
 %\usepackage{hanging}
 %\usepackage{natbib}
 

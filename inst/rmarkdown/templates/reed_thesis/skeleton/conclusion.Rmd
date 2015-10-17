@@ -15,7 +15,7 @@ Here's a conclusion, demonstrating the use of all that manual incrementing and t
 So, if you remove all that stuff because you don't like it to say ``Chapter 4: Conclusion'', then you have to manually add all the things \LaTeX\ would normally do for you. Maybe someday we'll write a new chapter macro that doesn't add ``Chapter X'' to the beginning of every chapter title.
 -->
 
-\section{More info}
+## More info
 And here's some other random info: the first paragraph after a chapter title or section head _shouldn't be_ indented, because indents are to tell the reader that you're starting a new paragraph. Since that's obvious after a chapter or section title, proper typesetting doesn't add an indent there.
 
 <!--
@@ -23,5 +23,5 @@ If you feel it necessary to include an appendix, it goes here.
 -->
 
 \appendix
-\chapter{The First Appendix}
-\chapter{The Second Appendix, for Fun}
+# The First Appendix
+# The Second Appendix, for Fun

@@ -12,7 +12,7 @@ output: pdf_document
 
 \backmatter
 
-\chapter{References}
+# References
 
 <!--
 To remove the indentation of the first entry.
