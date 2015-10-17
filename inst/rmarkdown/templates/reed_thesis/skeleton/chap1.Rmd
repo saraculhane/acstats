@@ -12,9 +12,7 @@ Here is a brief introduction into using R Markdown. Markdown is a simple formatt
 
 ## Lists
 
-### Unordered versus ordered
-
-It's easy to create a list.  It can unordered like
+It's easy to create a list.  It can be unordered like
 
 * Item 1
 * Item 2
@@ -49,7 +47,7 @@ This should be a new paragraph.
 
 ## R chunks
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded **R** code chunks within the document. You can embed an R code chunk like this (using the built-in `cars` dataset in **R**):
 
 ```{r cars}
 summary(cars)
@@ -65,12 +63,17 @@ plot(pressure)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.  There are plenty of others way to add chunk options.  More information is available at <http://yihui.name/knitr/options/>.
 
-## Inline code / Mathematics
+## Inline code
 
 If you'd like to put the results of your analysis directly into your discussion, add inline code like this:
 
 The `cos` of $2 \pi$ is `r cos(2*pi)`.
 
+Mathematics can be added by surrounding the mathematical text with dollar signs.  More examples of this are in [](#math-sci).  
+
+<!--
+You'll see more details on this cross-referencing in Chapter 2.
+-->
 
 ## Loading data / Exploratory Data Analysis
 

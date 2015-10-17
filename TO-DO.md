@@ -2,6 +2,7 @@
 
 1. Create labels for figures/tables stored as pictures (not necessarily **R** created).
   - Likely taken care of by using this:  <https://github.com/lierdakil/pandoc-crossref>
+  - Might be better to use this but doesn't include links? <https://github.com/adletaw/captioner>
   - Maybe some guidance here?  <https://github.com/balachia/pandoc-filters>
   - Or here? <https://gist.github.com/balachia/d836f8829aec61cb4b54#file-pandoc-internalref-hs>
   - Or here? <https://github.com/tomduck/pandoc-fignos>

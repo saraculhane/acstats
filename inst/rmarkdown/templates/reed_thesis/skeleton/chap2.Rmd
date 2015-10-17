@@ -8,7 +8,7 @@ output: pdf_document
 \ref{chap:rmd_basics}
 -->
 
-Now that we've gone over some of the basics of getting used to using R Markdown in [](#rmd-basics), we will explore how to reference different spots in your document by using labels.  Anytime you enter a hashtag (or multiple hashtags) to begin a section or subsection, Markdown will automatically create a label for that section.  For example, in [](#rmd-basics), we had a subsection called "Unordered versus ordered."  Markdown created a label automatically (replacing spaces with hyphens).  We can create a link to this subsection (which will automatically correspond to the appropriate number of the subsection): [](#unordered-versus-ordered).
+Now that we've gone over some of the basics of getting used to using R Markdown in [](#rmd-basics), we will explore how to reference different spots in your document by using labels.  Anytime you enter a hashtag (or multiple hashtags) to begin a section or subsection, Markdown will automatically create a label for that section.  For example, in [](#rmd-basics), we had a section called "Additional resources."  Markdown created a label automatically (replacing spaces with hyphens).  We can create a link to this section (which will automatically correspond to the appropriate number of the section and also add the word "Section"): [](#additional-resources).
 
 <!--
 ## References, Labels, Custom Commands and Footnotes
