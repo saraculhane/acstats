@@ -8,7 +8,7 @@ output: pdf_document
 \ref{chap:rmd_basics}
 -->
 
-Now that we've gone over some of the basics of getting used to using R Markdown in [](#rmd-basics), we will explore how to reference different spots in your document by using labels.  Anytime you enter a hashtag (or multiple hashtags) to begin a section or subsection, Markdown will automatically create a label for that section.  For example, in [](#rmd-basics), we had a section called "Additional resources."  Markdown created a label automatically (replacing spaces with hyphens).  We can create a link to this section (which will automatically correspond to the appropriate number of the section and also add the word "Section"): [](#additional-resources).
+Now that we've gone over some of the basics of getting used to using R Markdown in [](#rmd-basics), we will explore how to reference different spots in your document by using labels.  Anytime you enter a hashtag (or multiple hashtags) to begin a chapter, a section, or a subsection, _Markdown_ will automatically create a label for that section.  For example, in [](#rmd-basics), we had a section called "Additional resources."  _Markdown_ created a label automatically (replacing spaces with hyphens) for this section since we didn't specify one directly.  We can create a link to this section (which will automatically correspond to the appropriate number of the section and also add the word "Section"): [](#additional-resources).
 
 <!--
 ## References, Labels, Custom Commands and Footnotes
@@ -24,13 +24,26 @@ As I showed in Table \ref{inheritance} many factors can be assumed to follow fro
 
 ### Footnotes and Endnotes
 
-You might want to footnote something. ^[footnote text] The footnote will be in a smaller font and placed appropriately. Endnotes work in much the same way. More information can be found about both on the CUS site or reach out to data@reed.edu.
+You might want to footnote something. ^[footnote text] The footnote will be in a smaller font and placed appropriately. Endnotes work in much the same way. More information can be found about both on the CUS site or feel free to reach out to data@reed.edu.
 
 
 ## Bibliographies
 
-R Markdown uses pandoc (<http://pandoc.org/>) to build bibliographies and it requires that you don't have to do a second compile to load in references as standard \LaTeX\ requires.
+_R Markdown_ uses pandoc (<http://pandoc.org/>) to build its bibliographies.  One nice caveat of this is that you won't have to do a second compile to load in references as standard \LaTeX\ requires.
 
-Of course you will need to cite things, and you will probably accumulate an armful of sources. To cite references place the reference name inside square brackets and precede it by the "at" symbol.  For example, here's a reference to a senior thesis:  [@noble2002].  This `noble2002` entry appears in a file called `thesis.bib` that was created by a program called BibTeX.  It's an incredibly valuable tool!  For more information about BibTeX and bibliographies, see our CUS site (<http://web.reed.edu/cis/help/latex/index.html>)^[@reedweb2007]. There are three pages on this topic:  _bibtex_ (which talks about using BibTeX, at <http://web.reed.edu/cis/help/latex/bibtex.html>), _bibtexstyles_} (about how to find and use the bibliography style that best suits your needs, at <http://web.reed.edu/cis/help/latex/bibtexstyles.html>) and _bibman_ (which covers how to make and maintain a bibliography by hand, without BibTeX, at <http://web.reed.edu/cis/help/latex/bibman.html>). The last page will not be useful unless you have only a few sources.
+Of course you will need to cite things, and you will probably accumulate an armful of sources. To cite references place the reference name inside square brackets and precede it by the "at" symbol.  For example, here's a reference to book about worrying:  [@Molina1994].  This `Molina1994` entry appears in a file called `thesis.bib` that was created by a program called BibTeX.  It's an incredibly valuable tool!  For more information about BibTeX and bibliographies, see our CUS site (<http://web.reed.edu/cis/help/latex/index.html>)^[@reedweb2007]. There are three pages on this topic:  _bibtex_ (which talks about using BibTeX, at <http://web.reed.edu/cis/help/latex/bibtex.html>), _bibtexstyles_} (about how to find and use the bibliography style that best suits your needs, at <http://web.reed.edu/cis/help/latex/bibtexstyles.html>) and _bibman_ (which covers how to make and maintain a bibliography by hand, without BibTeX, at <http://web.reed.edu/cis/help/latex/bibman.html>). The last page will not be useful unless you have only a few sources.
 
-If you look at the YAML header in the main .Rmd file you can see that we can specify the style of the bibliography by specifying the appropriate csl file.  You can download a variety of different style files at <https://github.com/citation-style-language/styles>.  Make sure to download the file in the same directory as where the main .Rmd file is stored.
+If you look at the YAML header at the top of the main .Rmd file you can see that we can specify the style of the bibliography by referencing the appropriate csl file.  You can download a variety of different style files at <https://github.com/citation-style-language/styles>.  Make sure to download the file in the same directory as where the main .Rmd file is stored.
+
+### Tips for Bibliographies
+
+- Like with thesis formatting, the sooner you start compiling your bibliography for something as large as thesis, the better. Typing in source after source is mind-numbing enough; do you really want to do it for hours on end in late April? Think of it as procrastination.
+- The cite key (a citation's label) needs to be unique from the other entries.
+- When you have more than one author or editor, you need to separate each author's name by the word "and" e.g. `Author = {Noble, Sam and Youngberg, Jessica},`.
+- Bibliographies made using BibTeX (whether manually or using a manager) accept \LaTeX\ markup, so you can italicize and add symbols as necessary.
+- To force capitalization in an article title or where all lowercase is generally used, bracket the capital letter in curly braces.
+- You can add a Reed Thesis citation^[@noble2002] option. The best way to do this is to use the phdthesis type of citation, and use the optional "type" field to enter "Reed thesis" or "Undergraduate thesis." 
+
+## Anything else?
+
+If you'd like to see examples of other things in this template, please contact the Data @ Reed team (email data@reed.edu) with your suggestions. We love to see people using _R Markdown_ for their theses, and are happy to help.

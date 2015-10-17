@@ -8,7 +8,7 @@ The {#rmd-basics} text after the chapter declaration will allow us to link throu
 
 # R Markdown Basics {#rmd-basics}
 
-Here is a brief introduction into using R Markdown. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.  Be careful with your spacing in Markdown documents.  While whitespace largely is ignored, it does at times give Markdown signals as to how to proceed.  As a habit, try to keep everything left aligned whenever possible, especially as you type a new paragraph.  In other words, there is no need to indent basic text in the Rmd document (in fact it might cause your text to do funny things).
+Here is a brief introduction into using _R Markdown_. _Markdown_ is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. _R Markdown_ provides the flexibility of _Markdown_ with the implementation of **R** input and output.  For more details on using _R Markdown_ see <http://rmarkdown.rstudio.com>.  Be careful with your spacing in _Markdown_ documents.  While whitespace largely is ignored, it does at times give _Markdown_ signals as to how to proceed.  As a habit, try to keep everything left aligned whenever possible, especially as you type a new paragraph.  In other words, there is no need to indent basic text in the Rmd document (in fact, it might cause your text to do funny things).
 
 ## Lists
 
@@ -22,7 +22,7 @@ or it can be ordered like
 1. Item 1
 4. Item 2
 
-Notice that I intentionally mislabeled Item 2 as number 4.  Markdown automatically figures this out!  You can put any numbers in the list and it will create the list.  Check it out below.
+Notice that I intentionally mislabeled Item 2 as number 4.  _Markdown_ automatically figures this out!  You can put any numbers in the list and it will create the list.  Check it out below.
 
 To create a sublist, just indent the values a bit (four spaces).  (Here's one case where indentation is key!)
 
@@ -53,7 +53,7 @@ When you click the **Knit** button a document will be generated that includes bo
 summary(cars)
 ```
 
-## Including Plots
+## Including plots
 
 You can also embed plots.  For example, here is a way to use the base **R** graphics package to produce a plot using the built-in `pressure` dataset:
 
@@ -61,7 +61,7 @@ You can also embed plots.  For example, here is a way to use the base **R** grap
 plot(pressure)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.  There are plenty of others way to add chunk options.  More information is available at <http://yihui.name/knitr/options/>.
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.  There are plenty of other ways to add chunk options.  More information is available at <http://yihui.name/knitr/options/>.
 
 ## Inline code
 
@@ -75,7 +75,7 @@ Mathematics can be added by surrounding the mathematical text with dollar signs.
 You'll see more details on this cross-referencing in Chapter 2.
 -->
 
-## Loading data / Exploratory Data Analysis
+## Loading and exploring data
 
 Included in this template is a file called `flights.csv`.  This file includes a subset of the larger dataset of information about all flights that departed from Seattle and Portland in 2014.  More information about this dataset and its **R** package is available at <http://github.com/ismayc/pnwflights14>.  This subset includes only Portland flights and only rows that were complete with no missing values.  Merges were also done with the `airports` and `airlines` data sets in the `pnwflights14` package to get more descriptive airport and airline names.
 
@@ -97,7 +97,7 @@ Another good idea is to take a look at the dataset in table form.  With this dat
 View(flights)
 ```
 
-While not required, it is highly recommended you use the `dplyr` package to manipulate and summarize your data set as needed.  It uses a syntax that is easy to understand using chaining operations.  Below I've created a few examples of using `dplyr` to get information from about the Portland flights in 2014.  You will also see the use of the `ggplot2` package, which produces beautiful high quality academic visuals.
+While not required, it is highly recommended you use the `dplyr` package to manipulate and summarize your data set as needed.  It uses a syntax that is easy to understand using chaining operations.  Below I've created a few examples of using `dplyr` to get information about the Portland flights in 2014.  You will also see the use of the `ggplot2` package, which produces beautiful, high-quality academic visuals.
 
 We begin by checking to ensure that needed packages are installed and then we load them into our current working environment:
 
@@ -121,9 +121,9 @@ library(knitr)
 
 The example we show here does the following:
 
-- Select the following variables from the `flights` dataset:  `carrier_name` and `arr_delay`.  Assign this subset to a new variable called `flights2`. 
+- Selects only the `carrier_name` and `arr_delay` from the `flights` dataset and then assigns this subset to a new variable called `flights2`. 
 
-- Using `flights2`, determine the largest arrival delay for each of the carriers.
+- Using `flights2`, we determine the largest arrival delay for each of the carriers.
 
 ```{r max_delays}
 flights2 <- flights %>% select(carrier_name, arr_delay)
@@ -131,13 +131,13 @@ max_delays <- flights2 %>% group_by(carrier_name) %>%
   summarize(max_arr_delay = max(arr_delay, na.rm = TRUE))
 ```
 
-We next introduce a useful function in the `knitr` package for making nice tables in R Markdown called `kable`.  It produces the \LaTeX\ code required and is much easier to use than manually entering values into the \LaTeX\ code.  This again goes to show how nice reproducible documents can be.  There is no need to copy-and-paste values to create a table.  There are functions written to print data frames from **R** in nice formats.
+We next introduce a useful function in the `knitr` package for making nice tables in _R Markdown_ called `kable`.  It produces the \LaTeX\ code required to make the table and is much easier to use than manually entering values into the \LaTeX\ code.  This again goes to show how nice reproducible documents can be.  There is no need to copy-and-paste values to create a table.  In addition to `kable`, there are many other functions written to print data frames from **R** in nice formats.
 
 ```{r table_out, results = "asis"}
-kable(max_delays, col.names = c("Airline", "Maximum Arrival Delay"))
+kable(max_delays, col.names = c("Airline", "Max Arrival Delay"))
 ```
 
-We can further look into the properties of the largest value here for American Airlines Inc.  To do so, we can isolate the row corresponding to the arrival delay of 1539 for American in our original `flights` dataset.
+We can further look into the properties of the largest value here for American Airlines Inc.  To do so, we can isolate the row corresponding to the arrival delay of 1539 minutes for American in our original `flights` dataset.
 
 ```{r max_props}
 flights %>% filter(arr_delay == 1539, 
@@ -169,9 +169,9 @@ flights %>% filter(month == 3, day == 3) %>%
 
 ## Additional resources
 
-- Markdown Cheatsheet - <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>
+- _Markdown_ Cheatsheet - <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>
 
-- R Markdown Reference Guide - <https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf>
+- _R Markdown_ Reference Guide - <https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf>
 
 - Introduction to `dplyr` - <https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html>
 

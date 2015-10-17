@@ -10,7 +10,7 @@ output:
 
 \TeX\ is the best way to typeset mathematics. Donald Knuth designed \TeX\ when he got frustrated at how long it was taking the typesetters to finish his book, which contained a lot of mathematics.  One nice feature of R Markdown is its ability to read \LaTeX\ code directly.
 
-If you are doing a thesis that will involve lots of math, you will want to read the following section which has been commented out. If you're not going to use math, skip over this next green section.
+If you are doing a thesis that will involve lots of math, you will want to read the following section which has been commented out. If you're not going to use math, skip over this next commented section.
 
 
 <!-- MATH and PHYSICS majors: Uncomment the following section -->
@@ -89,7 +89,7 @@ To stack numbers or letters as in $\mathrm{Fe_2^{2+}}$, the subscript is defined
 
 \noindent Bullet: CuCl $\bullet$ 7H${_2}$O
 
-\noindent Double Dagger: \ddag \/
+\noindent Double Dagger: \ddag
 
 \noindent Delta: $\Delta$
 
