@@ -18,15 +18,13 @@ It's easy to create a list.  It can unordered like
 
 * Item 1
 * Item 2
-* Item 3
 
 or it can be ordered like
 
 1. Item 1
-2. Item 2
-4. Item 3
+4. Item 2
 
-Notice that I intentionally mislabeled Item 3 as number 4.  Markdown automatically figures this out!  You can put any numbers in the list and it will create the list.  Check it out below.
+Notice that I intentionally mislabeled Item 2 as number 4.  Markdown automatically figures this out!  You can put any numbers in the list and it will create the list.  Check it out below.
 
 To create a sublist, just indent the values a bit (four spaces).  (Here's one case where indentation is key!)
 

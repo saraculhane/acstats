@@ -47,28 +47,9 @@
 \def\sectionautorefname{Section}
 \def\subsectionautorefname{Subsection}
 
-%\usepackage{hanging}
-%\usepackage{natbib}
-
-%\usepackage[backend=bibtex, sorting=none, style=authoryear]{biblatex}
-%\DeclareLanguageMapping{american}{american-apa}
-%\addbibresource{thesis}
-% \bibliographystyle{APA/apa-good}  % or
-%\bibliography{thesis}
-
-
-% Comment out the natbib line above and uncomment the following two lines to use the new
-% biblatex-chicago style, for Chicago A. Also make some changes at the end where the
-% bibliography is included.
-
-%\usepackage[backend=bibtex]{biblatex-chicago}
-%\addbibresource{thesis}
-%\bibliography{thesis}
-
 % \usepackage{times} % other fonts are available like times, bookman, charter, palatino
 
 \title{$title$}
-%\author{Your R. Name}
 \author{$author$}
 % The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
 \date{$date$}
@@ -87,10 +68,7 @@
 %\approvedforthe{Committee}
 
 \setlength{\parskip}{0pt}
-%%
-%% End Preamble
-%%
-%
+
 
 % Below added by CII
 
@@ -118,6 +96,11 @@ $preface$
 \Abstract{
 $abstract$
 }
+
+%%
+%% End Preamble
+%%
+%
 
 \begin{document}
 
@@ -170,20 +153,12 @@ $abstract$
     \end{dedication}
   $endif$
 
-%  $for(include-before)$
-%    $include-before$
-%  $endfor$
-
   \mainmatter % here the regular arabic numbering starts
   \pagestyle{fancyplain} % turns page numbering back on
 
   $body$
 
-
-%  \chapter{$bibname$}
-%  \printbibliography[heading=bibintoc, heading=none]
-
-    % Index?
+  % Index?
 
 \end{document}
 
