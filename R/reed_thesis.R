@@ -6,6 +6,7 @@ reed_thesis <- function(toc = TRUE) {
 
   base <- rmarkdown::pdf_document(template = template,
                                   toc = toc,
+                                  toc_depth = 3,
                                   keep_tex = TRUE,
                                   pandoc_args = "--chapters")
 
