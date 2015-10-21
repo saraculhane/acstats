@@ -1,15 +1,18 @@
 ### Things left to do with Reed Thesis template
 
 1. Create labels for figures/tables stored as pictures (not necessarily **R** created).
-  - Trying to use `captioner` package by `adletaw` and modified by `bbest`, forked into `ismayc`
+  - Trying to use `captioner` package by `adletaw` (<https://github.com/adletaw/captioner>) and modified by `bbest`, forked into `ismayc`
       - Has links built in (`bbest`) and can specify figures, tables, equations
       - Maybe use Hadley's `embed_png` function to correctly add captions and `\label` to plots?
       - Need to make sure subscripts/superscripts work in captions (<https://github.com/adletaw/captioner/issues/7>)
+
+<!--  Avoiding since might be a mess to install extra things on the user's end / I haven't tested these yet
   - Likely taken care of by using this (but will need to install pandoc filter...might not be capable in **R** package?):  <https://github.com/lierdakil/pandoc-crossref>
-  - Might be better to use this but doesn't include links? <https://github.com/adletaw/captioner>
   - Maybe some guidance here?  <https://github.com/balachia/pandoc-filters>
   - Or here? <https://gist.github.com/balachia/d836f8829aec61cb4b54#file-pandoc-internalref-hs>
   - Or here? <https://github.com/tomduck/pandoc-fignos>
+-->
+
 1. Number equations
   - Maybe using this? <https://github.com/tomduck/pandoc-eqnos>
 1. Show how to create tables using Markdown and other examples using **R** (Chapter 4)
