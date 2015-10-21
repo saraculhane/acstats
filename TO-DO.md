@@ -3,6 +3,7 @@
 1. Create labels for figures/tables stored as pictures (not necessarily **R** created).
   - Trying to use `captioner` package by `adletaw` (<https://github.com/adletaw/captioner>) and modified by `bbest`, forked into `ismayc`
       - Has links built in (`bbest`) and can specify figures, tables, equations
+      - Need to tweak a bit to get `\label` and `\caption` inside `\includegraphics` (<http://yihui.name/knitr/hooks/>)
       - Maybe use Hadley's `embed_png` function to correctly add captions and `\label` to plots (and scale images?) ?
       - Need to make sure subscripts/superscripts work in captions (<https://github.com/adletaw/captioner/issues/7>)
 2. Show how to create tables using Markdown and other examples using **R** (Chapter 4)
