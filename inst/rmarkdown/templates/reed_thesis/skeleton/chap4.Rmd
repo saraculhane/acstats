@@ -76,7 +76,7 @@ You can also scale and rotate figures.
 	 \label{subd2}
 \end{figure}
 
-\section{Even More Figure Stuff}
+## Even More Figure Stuff
 With some clever work you can crop a figure, which is handy if (for instance) your EPS or PDF is a little graphic on a whole sheet of paper. The viewport arguments are the lower-left and upper-right coordinates for the area you want to crop.
 
 \begin{figure}[h!]
@@ -87,9 +87,13 @@ With some clever work you can crop a figure, which is handy if (for instance) yo
 	 \label{subd3}
 \end{figure}
 
-\subsection{Common Modifications}
+<!-- Added by CII -->
 
-The following figure features the more popular changes thesis students want to their figures. This information is also on the web at \url{web.reed.edu/cis/help/latex/graphics.html}.
+Here is the link to the previous figure:  \ref{subd3}.
+
+### Common Modifications
+
+The following figure features the more popular changes thesis students want to their figures. This information is also on the web at <http://web.reed.edu/cis/help/latex/graphics.html>.
       
 <!-- \renewcommand{\thefigure}{0.\arabic{figure}} 	 Renumbers the figure to the type 0.x 
 \addtocounter{figure}{4} 						 starts the figure numbering at 4 -->

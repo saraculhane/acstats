@@ -20,6 +20,8 @@ output:
     toc: true
 #lot: true
 #lof: true
+#header-includes:
+# Put your custom commands here if you have them
 ---
 
 <!--

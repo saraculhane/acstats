@@ -1,0 +1,172 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={},
+            pdftitle={},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{}
+  \pretitle{\vspace{\droptitle}}
+  \posttitle{}
+  \author{}
+  \preauthor{}\postauthor{}
+  \date{}
+  \predate{}\postdate{}
+
+
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\begin{document}
+\maketitle
+
+\section{Mathematics and Science}\label{math-sci}
+
+\subsection{Math}\label{math}
+
+\TeX~is the best way to typeset mathematics. Donald Knuth designed
+\TeX~when he got frustrated at how long it was taking the typesetters to
+finish his book, which contained a lot of mathematics. One nice feature
+of R Markdown is its ability to read \LaTeX~code directly.
+
+If you are doing a thesis that will involve lots of math, you will want
+to read the following section which has been commented out. If you're
+not going to use math, skip over this next commented section.
+
+\subsection{Chemistry 101: Symbols}\label{chemistry-101-symbols}
+
+Chemical formulas will look best if they are not italicized. Get around
+math mode's automatic italicizing by using the argument
+\texttt{\$\textbackslash{}mathrm\{formula\ here\}\$}, with your formula
+inside the curly brackets.
+
+So, \(\mathrm{Fe_2^{2+}Cr_2O_4}\) is written
+\texttt{\$\textbackslash{}mathrm\{Fe\_2\^{}\{2+\}Cr\_2O\_4\}\$}
+
+\noindent Exponent or Superscript: O\(^{-}\)
+
+\noindent Subscript: CH\(_{4}\)
+
+To stack numbers or letters as in \(\mathrm{Fe_2^{2+}}\), the subscript
+is defined first, and then the superscript is defined.
+
+\noindent Angstrom: \{\AA\}
+
+\noindent Bullet: CuCl \(\bullet\) 7H\({_2}\)O
+
+\noindent Double Dagger: \ddag
+
+\noindent Delta: \(\Delta\)
+
+\noindent Reaction Arrows: \(\longrightarrow\) or
+\(\xrightarrow{solution}\)
+
+\noindent Resonance Arrows: \(\leftrightarrow\)
+
+\noindent Reversible Reaction Arrows: \(\rightleftharpoons\) or
+\(\xrightleftharpoons[ ]{solution}\) (the latter requires the
+\texttt{chemarr} \LaTeX~package which is automatically loaded in this
+template)
+
+\subsubsection{Typesetting reactions}\label{typesetting-reactions}
+
+You may wish to put your reaction in a figure environment, which means
+that LaTeX will place the reaction where it fits and you can have a
+figure legend if desired:
+
+\begin{figure}[htbp]
+\begin{center}
+$\mathrm{C_6H_{12}O_6  + 6O_2} \longrightarrow \mathrm{6CO_2 + 6H_2O}$
+\caption{Combustion of glucose}
+\label{combustion of glucose}
+\end{center}
+\end{figure}
+
+\subsection{Other examples of reactions}
+
+\(\mathrm{NH_4Cl_{(s)}} \rightleftharpoons \mathrm{NH_{3(g)}+HCl_{(g)}}\)
+
+\noindent \(\mathrm{MeCH_2Br + Mg} \xrightarrow[below]{above} \mathrm{MeCH_2\bullet Mg \bullet Br}\)
+
+\subsection{Physics}\label{physics}
+
+Many of the symbols you will need can be found on the math page
+\url{http://web.reed.edu/cis/help/latex/math.html} and the Comprehensive
+\LaTeX~Symbol Guide
+(\url{http://mirror.utexas.edu/ctan/info/symbols/comprehensive/symbols-letter.pdf}).
+
+\section{Biology}
+
+You will probably find the resources at
+\url{http://www.lecb.ncifcrf.gov/~toms/latex.html} helpful, particularly
+the links to bsts for various journals. You may also be interested in
+TeXShade for nucleotide typesetting
+(\url{http://homepages.uni-tuebingen.de/beitz/txe.html}). Be sure to
+read the proceeding chapter on graphics and tables.
+
+\end{document}

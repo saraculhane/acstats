@@ -70,9 +70,9 @@ $$
 
 ## Chemistry 101: Symbols
 
-Chemical formulas will look best if they are not italicized. Get around math mode's automatic italicizing by using the argument \verb=$\mathrm{formula here}$=, with your formula inside the curly brackets.
+Chemical formulas will look best if they are not italicized. Get around math mode's automatic italicizing by using the argument `$\mathrm{formula here}$`, with your formula inside the curly brackets.  (Notice the use of the backticks here which enclose text that acts as code.)
 
-So, $\mathrm{Fe_2^{2+}Cr_2O_4}$ is written \verb=$\mathrm{Fe_2^{2+}Cr_2O_4}$=
+So, $\mathrm{Fe_2^{2+}Cr_2O_4}$ is written `$\mathrm{Fe_2^{2+}Cr_2O_4}$`.
 
 <!--
 The \noindent command does what you'd expect:  it forces the current line/paragraph to not indent.
@@ -102,7 +102,7 @@ To stack numbers or letters as in $\mathrm{Fe_2^{2+}}$, the subscript is defined
 
 ### Typesetting reactions
 
-You may wish to put your reaction in a figure environment, which means that LaTeX will place the reaction where it fits and you can have a figure legend if desired:
+You may wish to put your reaction in a figure environment, which means that \LaTeX\ will place the reaction where it fits and you can have a figure legend if desired:
 
 \begin{figure}[htbp]
 \begin{center}
