@@ -2,11 +2,11 @@
 
 1. Create labels for figures/tables stored as pictures (not necessarily **R** created).
   - Trying to use `captioner` package by `adletaw` (<https://github.com/adletaw/captioner>) and modified by `bbest`, forked into `ismayc`
-      - Has links built in (`bbest`) and can specify figures, tables, equations
+      - Has links built in (`bbest`) and can specify figures, tables, equations (Only works with HTML?)
       - Need to tweak a bit to get `\label` and `\caption` inside `\includegraphics` (<http://yihui.name/knitr/hooks/>)
       - Maybe use Hadley's `embed_png` function to correctly add captions and `\label` to plots (and scale images?) ?
       - Need to make sure subscripts/superscripts work in captions (<https://github.com/adletaw/captioner/issues/7>)
-2. Show how to create tables using Markdown and other examples using **R** (Chapter 4)
+2. Show how to create tables using _Markdown_ and other examples using **R** (Chapter 4)
 3. Add `header-includes` option for those that would like to create Custom Commands using \LaTeX\
   - Some disciplines like Biology (TeXShade) may need to include packages here too
   - Check to make sure working now by adding custom command?
@@ -22,6 +22,7 @@
   - Maybe using this? <https://github.com/tomduck/pandoc-eqnos>
   
   Useful reference:  <http://pandoc.org/README.html#options>
+
 -->
 
 
@@ -30,4 +31,6 @@
 1. Test other citation styles and make sure they match Reed College library requirements
 1. Check with library about shading code
 
-
+<!-- Useful LaTeX reference
+  <https://upload.wikimedia.org/wikipedia/commons/2/2d/LaTeX.pdf>
+-->
