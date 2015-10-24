@@ -1,5 +1,19 @@
 ### Things left to do with Reed Thesis template
 
+#### Down the road
+
+1. Test other citation styles and make sure they match Reed College library requirements
+1. Check with library about shading code
+1. Add abbreviation links like at <https://michelf.ca/projects/php-markdown/extra/> for Table of Abbreviations 
+1. Use index features like Hadley did in adv-r
+1. Allow for documents to be produced in epub/html formats as well as PDF format
+
+<!-- Useful LaTeX reference
+  <https://upload.wikimedia.org/wikipedia/commons/2/2d/LaTeX.pdf>
+-->
+
+<!-- COMPLETED
+
 1. Create labels for figures/tables stored as pictures (not necessarily **R** created).
   - Trying to use `captioner` package by `adletaw` (<https://github.com/adletaw/captioner>) and modified by `bbest`, forked into `ismayc`
       - Has links built in (`bbest`) and can specify figures, tables, equations (Only works with HTML?)
@@ -26,14 +40,4 @@
 -->
 
 
-#### Down the road
-
-1. Test other citation styles and make sure they match Reed College library requirements
-1. Check with library about shading code
-1. Add abbreviation links like at <https://michelf.ca/projects/php-markdown/extra/> for Table of Abbreviations 
-1. Use index features like Hadley did in adv-r
-1. Allow for documents to be produced in epub/html formats as well as PDF format
-
-<!-- Useful LaTeX reference
-  <https://upload.wikimedia.org/wikipedia/commons/2/2d/LaTeX.pdf>
 -->
