@@ -8,8 +8,6 @@ output: pdf_document
 \ref{chap:rmd_basics}
 -->
 
-Now that we've gone over some of the basics of getting used to using _R Markdown_ in [](#rmd-basics), we will explore how to reference different spots in your document by using labels.  Anytime you enter a hashtag (or multiple hashtags) to begin a chapter, a section, or a subsection, _Markdown_ will automatically create a label for that section.  For example, in [](#rmd-basics), we had a section called "Additional resources."  _Markdown_ created a label automatically (replacing spaces with hyphens) for this section since we didn't specify one directly.  We can create a link to this section (which will automatically correspond to the appropriate number of the section and also add the word "Section"): [](#additional-resources).
-
 <!--
 ## References, Labels, Custom Commands and Footnotes
 It is easy to refer to anything within your document using the `label` and `ref` tags.  Labels must be unique and shouldn't use any odd characters; generally sticking to letters and numbers (no spaces) should be fine. Put the label on whatever you want to refer to, and put the reference where you want the reference. We will use \LaTeX\ for most of the references and labels, but we will use the `kfigr` **R** package to reference chunks of code and the resulting figures/tables/analysis output.  As one benefit, this will allow figures to automatically be numbered and then referenced via their label.  
@@ -29,7 +27,7 @@ You might want to footnote something. ^[footnote text] The footnote will be in a
 
 ## Bibliographies
 
-_R Markdown_ uses pandoc (<http://pandoc.org/>) to build its bibliographies.  One nice caveat of this is that you won't have to do a second compile to load in references as standard \LaTeX\ requires.
+_R Markdown_ uses _pandoc_ (<http://pandoc.org/>) to build its bibliographies.  One nice caveat of this is that you won't have to do a second compile to load in references as standard \LaTeX\ requires.
 
 Of course you will need to cite things, and you will probably accumulate an armful of sources. To cite references place the reference name inside square brackets and precede it by the "at" symbol.  For example, here's a reference to book about worrying:  [@Molina1994].  This `Molina1994` entry appears in a file called `thesis.bib` that was created by a program called BibTeX.  It's an incredibly valuable tool!  For more information about BibTeX and bibliographies, see our CUS site (<http://web.reed.edu/cis/help/latex/index.html>)^[@reedweb2007]. There are three pages on this topic:  _bibtex_ (which talks about using BibTeX, at <http://web.reed.edu/cis/help/latex/bibtex.html>), _bibtexstyles_} (about how to find and use the bibliography style that best suits your needs, at <http://web.reed.edu/cis/help/latex/bibtexstyles.html>) and _bibman_ (which covers how to make and maintain a bibliography by hand, without BibTeX, at <http://web.reed.edu/cis/help/latex/bibman.html>). The last page will not be useful unless you have only a few sources.
 
@@ -46,4 +44,4 @@ If you look at the YAML header at the top of the main .Rmd file you can see that
 
 ## Anything else?
 
-If you'd like to see examples of other things in this template, please contact the Data @ Reed team (email data@reed.edu) with your suggestions. We love to see people using _R Markdown_ for their theses, and are happy to help.
+If you'd like to see examples of other things in this template, please contact the Data @ Reed team (email <data@reed.edu>) with your suggestions. We love to see people using _R Markdown_ for their theses, and are happy to help.

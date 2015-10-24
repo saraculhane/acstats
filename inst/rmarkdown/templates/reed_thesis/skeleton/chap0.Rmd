@@ -2,18 +2,10 @@
 output: pdf_document
 ---
 
-<!--
-\chapter*{Introduction}
-\addcontentsline{toc}{chapter}{Introduction}
-\chaptermark{Introduction}
-\markboth{Introduction}{Introduction}
--->
+<!-- The {.unnumbered} option here means that the introduction will be "Chapter 0". -->
 
 # Introduction {.unnumbered}
 
-<!--
-	% The three lines above are LaTeX code to make sure that the headers are right, that the intro gets included in the table of contents, and that it doesn't get numbered 1 so that chapter one is 1.
--->
 
 Welcome to the _R Markdown_ thesis template. This template is based on (and in many places copied directly from) the \LaTeX\ template, but hopefully it will provide a nicer interface for those that have never used \TeX\ or \LaTeX\ before.  (You'll see \LaTeX\ code here and there, but it won't make up a large chunk of your thesis.)  Using _R Markdown_ will also allow you to easily keep track of your analyses in **R** chunks of code, with the resulting plots and output included as well.  The hope is this _R Markdown_ template gets you in the habit of doing reproducible research, which benefits you long-term as a researcher, but also will greatly help anyone that is trying to reproduce or build onto your results down the road.
 
