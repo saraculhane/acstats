@@ -89,7 +89,7 @@ As another example, here is a reference to this figure: `r ref("subd2", type = "
 
 ### Common Modifications
 
-The following figure features the more popular changes thesis students want to their figures. We can add math to the caption that displays below the picture, have that caption be smaller by using the `tinycap` parameter, and also specify that a different caption be what appears in the Table of Figures for this figure.
+The following figure features the more popular changes thesis students want to their figures. We can add math to the caption that displays below the picture, specify the size of our caption to display below the figure (list of sizes at [here](http://www.emerson.emory.edu/services/latex/latex_169.html#SEC169), and also specify that a different caption `alt.cap` be what appears in the Table of Figures for this figure.
 
 This information is also on the web at <http://web.reed.edu/cis/help/latex/graphics.html>.  If you'd like to make further tweaks to figures, you might need to invoke some \LaTeX\ code.  Please email us at <data@reed.edu> if you need assistance.
       
@@ -97,8 +97,9 @@ This information is also on the web at <http://web.reed.edu/cis/help/latex/graph
 ```{r tinymathcap, results = "asis"}
 label("subdivision.pdf", 
       caption = "Subdivision of arc segments",
-      tinycap = "Subdivision of arc segments. You can see that $ p_3 = p_6^\prime$",
+      alt.cap = "Subdivision of arc segments. You can see that $p_3 = p_6^\\prime$",
+      cap.size = "footnotesize",
       label = "subd3")
 ```
 
-
+<!-- Note here that you need to have two backslashes before LaTeX commands such as prime -->
