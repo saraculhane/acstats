@@ -47,10 +47,10 @@ reed_thesis <- function(toc = TRUE) {
 #' @export
 label <- function(path = NULL,
                   caption = "Default caption",
-                  scale = 1,
-                  angle = 0,
                   label = "def",
                   type = "figure",
+                  scale = 1,
+                  angle = 0,
                   options = "htbp"){
   if(type == "figure"){
     cat(
