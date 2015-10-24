@@ -1,5 +1,9 @@
 ---
 output: pdf_document
+header-includes: 
+- \usepackage{graphicx,latexsym}
+- \usepackage{amssymb,amsthm,amsmath}
+- \usepackage{longtable,booktabs,setspace}
 ---
 
 # Tables and Graphics
@@ -19,29 +23,23 @@ And for the subdiv: `r ref("subdiv")`.
 
 The following section contains examples of tables.  
 
-In addition to the tables that can be automatically generated from a data frame in **R** that you saw in [](#rmd-basics), you can also create tables using _Markdown_.  This might be useful if you don't have values specifically stored in **R**, but you'd like to display them in table form.
+In addition to the tables that can be automatically generated from a data frame in **R** that you saw in [](#rmd-basics) using the `kable` function, you can also create tables using _pandoc_. (More information is available at <http://pandoc.org/README.html#tables>.)  This might be useful if you don't have values specifically stored in **R**, but you'd like to display them in table form.  Below is an example.
 
+----------------------------------------------------------------------------------
+  Factors                    Correlation between Parents & Child      Inherited
+------------------------- ----------------------------------------- --------------
+  Education                                -0.49                         Yes
+  
+  Socio-Economic Status                     0.28                        Slight   
+  
+  Income                                    0.08                          No
+  
+  Family Size                               0.18                        Slight
+  
+  Occupational Prestige                     0.21                        Slight
+------------------------- ----------------------------------------- --------------
+Table: Correlation of Inheritance Factors for Parents and Child
 
-\begin{table}[htp] % begins the table floating environment. This enables LaTeX to fit the table where it works best and lets you add a caption.
-\caption[Correlation of Inheritance Factors between Parents and Child]{Correlation of Inheritance Factors between Parents and Child}
-% The words in square brackets of the caption command end up in the Table of Tables. The words in curly braces are the caption directly over the table.
-\begin{center}
-% makes the table centered
-\begin{tabular}{c c c c}
-% the tabular environment is used to make the table itself. The {c c c c} specify that the table will have four columns and they will all be center-aligned. You can make the cell contents left aligned by replacing the Cs with Ls or right aligned by using Rs instead. Add more letters for more columns, and pipes (the vertical line above the backslash) for vertical lines. Another useful type of column is the p{width} column, which forces text to wrap within whatever width you specify e.g. p{1in}. Text will wrap badly in narrow columns though, so beware.
-\toprule % a horizontal line, slightly thicker than \hline, depends on the booktabs package
-  Factors &  Correlation between Parents \& Child & Inherited \\ % the first row of the table. Separate columns with ampersands and end the line with two backslashes. An environment begun in one cell will not carry over to adjacent rows.
-  \midrule % another horizontal line
-	Education 				& -0.49 & Yes 	 \\ % another row
-	Socio-Economic Status 	& 0.28 	& Slight \\
-	Income 					& 0.08 	& No	 \\
-	Family Size 			& 0.19 	& Slight \\
-	Occupational Prestige 	& 0.21 	& Slight \\
-\bottomrule % yet another horizontal line
-\end{tabular}
-\end{center}
-\label{inheritance} % labels are useful when you have more than one table or figure in your document. See our online documentation for more on this.
-\end{table}
 
 	\clearpage
 <!-- clearpage ends the page, and also dumps out all floats.

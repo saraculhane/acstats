@@ -18,7 +18,7 @@ label <- function(path = NULL,
     )
   )
   }
-  if(type == "table"){
+  if(type == "equation"){
 
 
 
@@ -30,9 +30,7 @@ label <- function(path = NULL,
 ref <- function(label = "def", type = "figure"){
   paste0("\\autoref{",
          ifelse(type == "figure", "fig:",
-                ifelse(type == "table", "tab:",
                        ifelse(type == "equation", "eq:","")
-                )
          ),
          label, "}")
 }

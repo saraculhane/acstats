@@ -100,6 +100,8 @@ To stack numbers or letters as in $\mathrm{Fe_2^{2+}}$, the subscript is defined
 \noindent Reversible Reaction Arrows: $\rightleftharpoons$ or $\xrightleftharpoons[ ]{solution}$ (the latter requires the `chemarr` \LaTeX\ package which is automatically loaded in this template)
 
 
+<!-- Need to update this to label the equation instead! -->
+
 ### Typesetting reactions
 
 You may wish to put your reaction in a figure environment, which means that \LaTeX\ will place the reaction where it fits and you can have a figure legend if desired:
@@ -112,7 +114,8 @@ $\mathrm{C_6H_{12}O_6  + 6O_2} \longrightarrow \mathrm{6CO_2 + 6H_2O}$
 \end{center}
 \end{figure}
 
-\subsection{Other examples of reactions}
+### Other examples of reactions
+
 $\mathrm{NH_4Cl_{(s)}} \rightleftharpoons \mathrm{NH_{3(g)}+HCl_{(g)}}$
 
 \noindent $\mathrm{MeCH_2Br + Mg} \xrightarrow[below]{above} \mathrm{MeCH_2\bullet Mg \bullet Br}$
@@ -121,6 +124,7 @@ $\mathrm{NH_4Cl_{(s)}} \rightleftharpoons \mathrm{NH_{3(g)}+HCl_{(g)}}$
 
 Many of the symbols you will need can be found on the math page <http://web.reed.edu/cis/help/latex/math.html> and the Comprehensive \LaTeX\ Symbol Guide (<http://mirror.utexas.edu/ctan/info/symbols/comprehensive/symbols-letter.pdf>).
 
-\section{Biology}
+## Biology
+
 You will probably find the resources at <http://www.lecb.ncifcrf.gov/~toms/latex.html> helpful, particularly the links to bsts for various journals. You may also be interested in TeXShade for nucleotide typesetting (<http://homepages.uni-tuebingen.de/beitz/txe.html>).  Be sure to read the proceeding chapter on graphics and tables.
 
