@@ -8,7 +8,9 @@ The {#rmd-basics} text after the chapter declaration will allow us to link throu
 
 # R Markdown Basics {#rmd-basics}
 
-Here is a brief introduction into using _R Markdown_. _Markdown_ is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. _R Markdown_ provides the flexibility of _Markdown_ with the implementation of **R** input and output.  For more details on using _R Markdown_ see <http://rmarkdown.rstudio.com>.  Be careful with your spacing in _Markdown_ documents.  While whitespace largely is ignored, it does at times give _Markdown_ signals as to how to proceed.  As a habit, try to keep everything left aligned whenever possible, especially as you type a new paragraph.  In other words, there is no need to indent basic text in the Rmd document (in fact, it might cause your text to do funny things).
+Here is a brief introduction into using _R Markdown_. _Markdown_ is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. _R Markdown_ provides the flexibility of _Markdown_ with the implementation of **R** input and output.  For more details on using _R Markdown_ see <http://rmarkdown.rstudio.com>.  
+
+Be careful with your spacing in _Markdown_ documents.  While whitespace largely is ignored, it does at times give _Markdown_ signals as to how to proceed.  As a habit, try to keep everything left aligned whenever possible, especially as you type a new paragraph.  In other words, there is no need to indent basic text in the Rmd document (in fact, it might cause your text to do funny things if you do).
 
 ## Lists
 
@@ -24,7 +26,7 @@ or it can be ordered like
 
 Notice that I intentionally mislabeled Item 2 as number 4.  _Markdown_ automatically figures this out!  You can put any numbers in the list and it will create the list.  Check it out below.
 
-To create a sublist, just indent the values a bit (four spaces).  (Here's one case where indentation is key!)
+To create a sublist, just indent the values a bit (at least four spaces or a tab).  (Here's one case where indentation is key!)
 
 1. Item 1
 1. Item 2
@@ -47,7 +49,7 @@ This should be a new paragraph.
 
 ## R chunks
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded **R** code chunks within the document. You can embed an R code chunk like this (using the built-in `cars` dataset in **R**):
+When you click the **Knit** button above a document will be generated that includes both content as well as the output of any embedded **R** code chunks within the document. You can embed an **R** code chunk like this (using the built-in `cars` dataset in **R**):
 
 ```{r cars}
 summary(cars)
@@ -57,11 +59,11 @@ summary(cars)
 
 You can also embed plots.  For example, here is a way to use the base **R** graphics package to produce a plot using the built-in `pressure` dataset:
 
-```{r pressure, echo=FALSE}
+```{r pressure, echo = FALSE}
 plot(pressure)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.  There are plenty of other ways to add chunk options.  More information is available at <http://yihui.name/knitr/options/>.
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the **R** code that generated the plot.  There are plenty of other ways to add chunk options.  More information is available at <http://yihui.name/knitr/options/>.
 
 ## Inline code
 
@@ -82,12 +84,13 @@ flights <- read.csv("flights.csv")
 ```
 
 The data is now stored in the data frame called `flights` in **R**.  To get a better feel for the variables included in this dataset we can use a variety of functions.  Here we can see the dimensions (rows by columns) and also the names of the columns.
+
 ```{r str}
 dim(flights)
 names(flights)
 ```
 
-Another good idea is to take a look at the dataset in table form.  With this dataset having more than 50,000 rows, we won't explicitly show the results of the command below.  I recommend you enter the command into the Console **_after_** you have loaded the **R** chunks above to load the data into **R**.
+Another good idea is to take a look at the dataset in table form.  With this dataset having more than 50,000 rows, we won't explicitly show the results of the command here.  I recommend you enter the command into the Console **_after_** you have run the **R** chunks above to load the data into **R**.
 
 ```{r view_flights, eval = FALSE}
 View(flights)
@@ -127,7 +130,7 @@ max_delays <- flights2 %>% group_by(carrier_name) %>%
   summarize(max_arr_delay = max(arr_delay, na.rm = TRUE))
 ```
 
-We next introduce a useful function in the `knitr` package for making nice tables in _R Markdown_ called `kable`.  It produces the \LaTeX\ code required to make the table and is much easier to use than manually entering values into the \LaTeX\ code.  This again goes to show how nice reproducible documents can be.  There is no need to copy-and-paste values to create a table.  (Note the use of `results = "asis"` here which will produce the table instead of the code to create the table.)
+We next introduce a useful function in the `knitr` package for making nice tables in _R Markdown_ called `kable`.  It produces the \LaTeX\ code required to make the table and is much easier to use than manually entering values into a table by copying and pasting values into Excel or \LaTeX.  This again goes to show how nice reproducible documents can be!  There is no need to copy-and-paste values to create a table.  (Note the use of `results = "asis"` here which will produce the table instead of the code to create the table.  You'll learn more about the `\\label` later.)
 
 ```{r table_out, results = "asis"}
 kable(max_delays, col.names = c("Airline", "Max Arrival Delay"),

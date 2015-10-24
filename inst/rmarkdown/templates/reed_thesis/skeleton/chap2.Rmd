@@ -8,9 +8,9 @@ output:
 
 ## Math
 
-\TeX\ is the best way to typeset mathematics. Donald Knuth designed \TeX\ when he got frustrated at how long it was taking the typesetters to finish his book, which contained a lot of mathematics.  One nice feature of R Markdown is its ability to read \LaTeX\ code directly.
+\TeX\ is the best way to typeset mathematics. Donald Knuth designed \TeX\ when he got frustrated at how long it was taking the typesetters to finish his book, which contained a lot of mathematics.  One nice feature of _R Markdown_ is its ability to read \LaTeX\ code directly.
 
-If you are doing a thesis that will involve lots of math, you will want to read the following section which has been commented out. If you're not going to use math, skip over this next commented section.
+If you are doing a thesis that will involve lots of math, you will want to read the following section which has been commented out. If you're not going to use math, skip over or delete this next commented section.
 
 
 <!-- MATH and PHYSICS majors: Uncomment the following section -->
@@ -70,13 +70,12 @@ $$
 
 ## Chemistry 101: Symbols
 
-Chemical formulas will look best if they are not italicized. Get around math mode's automatic italicizing by using the argument `$\mathrm{formula here}$`, with your formula inside the curly brackets.  (Notice the use of the backticks here which enclose text that acts as code.)
+Chemical formulas will look best if they are not italicized. Get around math mode's automatic italicizing in \LaTeX\ by using the argument `$\mathrm{formula here}$`, with your formula inside the curly brackets.  (Notice the use of the backticks here which enclose text that acts as code.)
 
 So, $\mathrm{Fe_2^{2+}Cr_2O_4}$ is written `$\mathrm{Fe_2^{2+}Cr_2O_4}$`.
 
 <!--
-The \noindent command does what you'd expect:  it forces the current line/paragraph to not indent.
-This was done here to match the format of the LaTeX thesis PDF.
+The \noindent command below does what you'd expect:  it forces the current line/paragraph to not indent. This was done here to match the format of the LaTeX thesis PDF.
 -->
 
 \noindent Exponent or Superscript: O$^{-}$
@@ -99,15 +98,12 @@ To stack numbers or letters as in $\mathrm{Fe_2^{2+}}$, the subscript is defined
 
 \noindent Reversible Reaction Arrows: $\rightleftharpoons$ or $\xrightleftharpoons[ ]{solution}$ (the latter requires the `chemarr` \LaTeX\ package which is automatically loaded in this template)
 
-
-<!-- Need to update this to label the equation instead! -->
-
 ### Typesetting reactions
 
-You may wish to put your reaction in a figure environment, which means that \LaTeX\ will place the reaction where it fits and you can have a figure legend if desired.  You'll see further description of this **R** `label` function in [](#references). (Note the use of the double backslash here.)
+You may wish to put your reaction in a figure environment, which means that \LaTeX\ will place the reaction where it fits and you can have a figure caption.  You'll see further description of this **R** `label` function in [](#ref_labels). (Note the use of the double backslash here as well as the `echo = FALSE` which hides the code from the output.)
 
-```{r chem_reac_figure, results = "asis", tidy = TRUE}
-label(path = "\\mathrm{C_6H_{12}O_6  + 6O_2} \\longrightarrow \\mathrm{6CO_2 + 6H_2O}", 
+```{r chem_reac_figure, results = "asis", echo = FALSE}
+label(path = "$\\mathrm{C_6H_{12}O_6  + 6O_2} \\longrightarrow \\mathrm{6CO_2 + 6H_2O}$", 
       caption = "Combustion of glucose", 
       label = "comb-gluc", 
       type = "chem.reac")

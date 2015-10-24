@@ -2,8 +2,6 @@
 reed_thesis <- function(toc = TRUE) {
   template <- find_resource("reed_thesis", "template.tex")
 
-#  base <- rmarkdown::pdf_document(template = template, toc = toc, keep_tex = TRUE)
-
   base <- rmarkdown::pdf_document(template = template,
                                   toc = toc,
                                   toc_depth = 3,
@@ -83,9 +81,6 @@ label <- function(path = NULL,
     )
   }
 
-  if(type == "equation"){
-
-  }
 }
 
 #' @export

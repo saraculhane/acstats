@@ -6,13 +6,11 @@ header-includes:
 - \usepackage{longtable,booktabs,setspace}
 ---
 
-# Tables, Graphics, References, and Labels {#references}
+# Tables, Graphics, References, and Labels {#ref_labels}
 
 ## Tables
 
-The following section contains examples of tables.  
-
-In addition to the tables that can be automatically generated from a data frame in **R** that you saw in [](#rmd-basics) using the `kable` function, you can also create tables using _pandoc_. (More information is available at <http://pandoc.org/README.html#tables>.)  This might be useful if you don't have values specifically stored in **R**, but you'd like to display them in table form.  Below is an example.
+In addition to the tables that can be automatically generated from a data frame in **R** that you saw in [](#rmd-basics) using the `kable` function, you can also create tables using _pandoc_. (More information is available at <http://pandoc.org/README.html#tables>.)  This might be useful if you don't have values specifically stored in **R**, but you'd like to display them in table form.  Below is an example.  Pay careful attention to the alignment in the table and the use of the hyphens to create the rows and columns of the table.
 
 ----------------------------------------------------------------------------------
   Factors                    Correlation between Parents & Child      Inherited
@@ -29,9 +27,9 @@ In addition to the tables that can be automatically generated from a data frame 
 ------------------------- ----------------------------------------- --------------
 Table: Correlation of Inheritance Factors for Parents and Child \label{tab:inher_table}
 
-We can also create a link to the table by doing the following:  \autoref{tab:inher_table}.  If you go back to [](#loading-and-exploring-data) and look at the `kable` function, you'll see that I added in a similar `\label` to be able to reference that table later.  (The extra backslash there is a way that _Markdown_ interfaces with \LaTeX\.) We can create a reference to the max delays table: \autoref{tab:max_delay}.
+We can also create a link to the table by doing the following:  \autoref{tab:inher_table}.  If you go back to [](#loading-and-exploring-data) and look at the `kable` function code, you'll see that I added in a similar `\\label` to be able to reference that table later.  (The extra backslash there is a way that _Markdown_ interfaces with \LaTeX\.) We can create a reference to the max delays table: \autoref{tab:max_delay}.
 
-Note the addition of the `\label{}` option to the end of the table caption.  We can then use the \LaTeX\ `autoref` function to produce the link. `autoref` will automatically add "Table" before your number if you add the "tab:" prefix to your label. Note that this reference could appear anywhere throughout the document, not necessarily right next to the table like we have here.  We will next explore ways to create this label-ref link using figures and equations.
+The addition of the `\label{}` option to the end of the table caption allows us to then use the \LaTeX\ `autoref` function to produce the link. `autoref` will automatically add "Table" before your number if you add the "tab:" prefix to your label. Note that this reference could appear anywhere throughout the document, not necessarily right next to the table like we have here.  We will next explore ways to create this label-ref link using figures and equations.
 
 \clearpage
 
@@ -41,7 +39,7 @@ Note the addition of the `\label{}` option to the end of the table caption.  We 
 
 ## Figures
 
-If your thesis has a lot of figures, _R Markdown_ might behave better for you than that other word processor.  One perk is that it will automatically number the figures accordingly in each chapter.  You'll also be able to create a label for each figure, add a caption, and then reference the figure in a way similar to what we saw with tables earlier.  So that you don't have to get too far into \LaTeX\ to do this, a couple **R** functions have been created for you to assist.  You'll see their use below.
+If your thesis has a lot of figures, _R Markdown_ might behave better for you than that other word processor.  One perk is that it will automatically number the figures accordingly in each chapter.    You'll also be able to create a label for each figure, add a caption, and then reference the figure in a way similar to what we saw with tables earlier.  If you label your figures, you can move the figures around and _R Markdown_ will automatically adjust the numbering for you.  No need for you to remember!  So that you don't have to get too far into \LaTeX\ to do this, a couple **R** functions have been created for you to assist.  You'll see their use below.
 
 <!--
 
@@ -53,7 +51,7 @@ Below we have put a few examples of figures. For more help using graphics and th
 -->
 
 
-In the **R** chunk below, we will load in a picture stored as `reed.jpg` in our main directory.  We then give it the caption of "Reed logo", the label of "reed", and specify that this is a figure and not an equation.  Note again the use of the `results = "asis"` specification to automatically include and compile the \LaTeX\ code.
+In the **R** chunk below, we will load in a picture stored as `reed.jpg` in our main directory.  We then give it the caption of "Reed logo", the label of "reed", and specify that this is a figure.  Note again the use of the `results = "asis"` specification to automatically include and compile the \LaTeX\ code.
 
 ```{r reed_logo, results = "asis"}
 label(path = "reed.jpg", caption = "Reed logo", 
@@ -66,13 +64,13 @@ Here is a reference to the Reed logo: `r ref("reed")`.  Note the use of the inli
 
 <!-- starts a new page and stops trying to place floats such as tables and figures -->
 
-Next, we will explore the use of the `scale` parameter which can be used to shrink or expand an image.  Here we use mathematical graph stored in the "subdivision.pdf" file.  Note that we didn't specify the `caption =` or `label =` here.
+Next, we will explore the use of the `scale` parameter which can be used to shrink or expand an image.  Here we use the mathematical graph stored in the "subdivision.pdf" file.  Note that we didn't specify the `caption =` or `label =` here, but we could have.
 
 ```{r subdiv1, results = "asis"}
-label("subdivision.pdf", "Subdiv. graph", scale = 0.75, "subd")
+label("subdivision.pdf", "Subdiv. graph", "subd", scale = 0.75)
 ```
 
-Here is a reference to this image: `r ref("subd")`.
+Here is a reference to this image: `r ref("subd")`.  (Move this around throughout the document as you wish.)
 
 #### More Figure Stuff
 
@@ -89,10 +87,9 @@ As another example, here is a reference to this figure: `r ref("subd2", type = "
 
 #### Common Modifications
 
-The following figure features the more popular changes thesis students want to their figures. We can add math to the caption that displays below the picture, specify the size of our caption to display below the figure (list of sizes at [here](http://www.emerson.emory.edu/services/latex/latex_169.html#SEC169), and also specify that a different caption `alt.cap` be what appears in the Table of Figures for this figure.
+The following figure features the more popular changes thesis students want to their figures. We can add math to the caption that displays below the picture, specify the size of our caption to display below the figure (list of sizes available at this [link](http://www.emerson.emory.edu/services/latex/latex_169.html#SEC169), and also specify that a different caption `alt.cap` be what appears in the Table of Figures for this figure.
 
-This information is also on the web at <http://web.reed.edu/cis/help/latex/graphics.html>.  If you'd like to make further tweaks to figures, you might need to invoke some \LaTeX\ code.  Please email us at <data@reed.edu> if you need assistance.
-      
+If you'd like to make further tweaks to figures, you might need to invoke some \LaTeX\ code.  Please email us at <data@reed.edu> if you need assistance.
 
 ```{r tinymathcap, results = "asis"}
 label("subdivision.pdf", 
@@ -106,14 +103,13 @@ label("subdivision.pdf",
 
 ## Footnotes and Endnotes
 
-You might want to footnote something. ^[footnote text] The footnote will be in a smaller font and placed appropriately. Endnotes work in much the same way. More information can be found about both on the CUS site or feel free to reach out to data@reed.edu.
-
+You might want to footnote something. ^[footnote text] The footnote will be in a smaller font and placed appropriately. Endnotes work in much the same way. More information can be found about both on the CUS site or feel free to reach out to <data@reed.edu>.
 
 ## Bibliographies
 
 _R Markdown_ uses _pandoc_ (<http://pandoc.org/>) to build its bibliographies.  One nice caveat of this is that you won't have to do a second compile to load in references as standard \LaTeX\ requires.
 
-Of course you will need to cite things, and you will probably accumulate an armful of sources. To cite references place the reference name inside square brackets and precede it by the "at" symbol.  For example, here's a reference to book about worrying:  [@Molina1994].  This `Molina1994` entry appears in a file called `thesis.bib` that was created by a program called BibTeX.  It's an incredibly valuable tool!  For more information about BibTeX and bibliographies, see our CUS site (<http://web.reed.edu/cis/help/latex/index.html>)^[@reedweb2007]. There are three pages on this topic:  _bibtex_ (which talks about using BibTeX, at <http://web.reed.edu/cis/help/latex/bibtex.html>), _bibtexstyles_} (about how to find and use the bibliography style that best suits your needs, at <http://web.reed.edu/cis/help/latex/bibtexstyles.html>) and _bibman_ (which covers how to make and maintain a bibliography by hand, without BibTeX, at <http://web.reed.edu/cis/help/latex/bibman.html>). The last page will not be useful unless you have only a few sources.
+Of course you will need to cite things, and you will probably accumulate an armful of sources. To cite references place the reference name inside square brackets and precede it by the "at" symbol.  For example, here's a reference to a book about worrying:  [@Molina1994].  This `Molina1994` entry appears in a file called `thesis.bib` that was created by a program called BibTeX.  It's an incredibly valuable tool!  For more information about BibTeX and bibliographies, see our CUS site (<http://web.reed.edu/cis/help/latex/index.html>)^[@reedweb2007]. There are three pages on this topic:  _bibtex_ (which talks about using BibTeX, at <http://web.reed.edu/cis/help/latex/bibtex.html>), _bibtexstyles_ (about how to find and use the bibliography style that best suits your needs, at <http://web.reed.edu/cis/help/latex/bibtexstyles.html>) and _bibman_ (which covers how to make and maintain a bibliography by hand, without BibTeX, at <http://web.reed.edu/cis/help/latex/bibman.html>). The last page will not be useful unless you have only a few sources.
 
 If you look at the YAML header at the top of the main .Rmd file you can see that we can specify the style of the bibliography by referencing the appropriate csl file.  You can download a variety of different style files at <https://github.com/citation-style-language/styles>.  Make sure to download the file in the same directory as where the main .Rmd file is stored.
 
