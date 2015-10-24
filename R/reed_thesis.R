@@ -44,6 +44,7 @@ reed_thesis <- function(toc = TRUE) {
   base
 }
 
+#' @export
 label <- function(path = NULL,
                   caption = "Default caption",
                   scale = 1,
@@ -70,6 +71,7 @@ label <- function(path = NULL,
   }
 }
 
+#' @export
 ref <- function(label = "def", type = "figure"){
   paste0("\\autoref{",
          ifelse(type == "figure", "fig:",

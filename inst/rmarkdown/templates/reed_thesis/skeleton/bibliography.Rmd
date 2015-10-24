@@ -1,16 +1,13 @@
 ---
 output: pdf_document
 ---
-<!--
-\def\bibindent{1em}
-\parskip=2\baselineskip \advance\parskip by 0pt plus 2pt
-\setlength{\parindent}{0cm}
 
-\setlength{\bibhang}{1em}
 \backmatter
+
+<!-- 
+If you'd like to change the name of the bibliography to something else,
+delete "References" and replace it.
 -->
-
-\backmatter
 
 # References
 
