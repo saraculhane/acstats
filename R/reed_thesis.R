@@ -49,6 +49,7 @@ label <- function(path = NULL,
                   caption = "Default caption",
                   label = "def",
                   type = "figure",
+                  tinycap = caption,
                   scale = 1,
                   angle = 0,
                   options = "htbp"){
@@ -60,7 +61,7 @@ label <- function(path = NULL,
         "\\includegraphics[scale = ", scale, ",",
         "angle = ", angle, "]{",
         path, "}\n",
-        "\\caption{", caption,"}\n",
+        "\\caption[", caption,"]{\footnotesize{", tinycap,"}}\n",
         "\\label{fig:", label, "}\n",
         "\\end{figure}"
       )

@@ -52,16 +52,6 @@ If you need a graphic or tabular material to be part of the text, you can just p
 Below we have put a few examples of figures. For more help using graphics and the float environment, see our online documentation.
 -->
 
-```{r include_rticles, include = FALSE}
-# This chunk ensures that the rticles package is installed and loaded
-# This rticles package includes the template files for the thesis and also
-# two functions used for labeling and referencing
-if(!require(rticles)){
-  library(devtools)
-  devtools::install_github("ismayc/rticles")
-  }
-library(rticles)
-```
 
 In the **R** chunk below, we will load in a picture stored as `reed.jpg` in our main directory.  We then give it the caption of "Reed logo", the label of "reed", and specify that this is a figure and not an equation.  Note again the use of the `results = "asis"` specification to automatically include and compile the \LaTeX\ code.
 
@@ -86,11 +76,11 @@ Here is a reference to this image: `r ref("subd")`.
 
 ## More Figure Stuff
 
-Lastly, we will explore how to rotate figures using the `angel` parameter.
+Lastly, we will explore how to rotate figures using the `angle` parameter.
 
 ```{r subdiv1_180, results = "asis"}
-label("subdivision.pdf", "A Smaller Figure, Flipped Upside Down", 
-      scale = 0.5,
+label("subdivision.pdf", "A Larger Figure, Flipped Upside Down", 
+      scale = 1.5,
       angle = 180,
       label = "subd2")
 ```
@@ -99,15 +89,16 @@ As another example, here is a reference to this figure: `r ref("subd2", type = "
 
 ### Common Modifications
 
-The following figure features the more popular changes thesis students want to their figures. This information is also on the web at <http://web.reed.edu/cis/help/latex/graphics.html>.
+The following figure features the more popular changes thesis students want to their figures. We can add math to the caption that displays below the picture, have that caption be smaller by using the `tinycap` parameter, and also specify that a different caption be what appears in the Table of Figures for this figure.
+
+This information is also on the web at <http://web.reed.edu/cis/help/latex/graphics.html>.  If you'd like to make further tweaks to figures, you might need to invoke some \LaTeX\ code.  Please email us at <data@reed.edu> if you need assistance.
       
-<!-- \renewcommand{\thefigure}{0.\arabic{figure}} 	 Renumbers the figure to the type 0.x 
-\addtocounter{figure}{4} 						 starts the figure numbering at 4 -->
-    
-\begin{figure}[htbp]
-    \begin{center}
-        \includegraphics[scale=0.5]{subdivision}
-    \caption[Subdivision of arc segments]{\footnotesize{Subdivision of arc segments. You can see that $ p_3 = p_6^\prime$.}} %the special ToC caption is in square brackets. The \footnotesize makes the figure caption smaller
-    \label{barplot}
-    \end{center}
-\end{figure}
+
+```{r tinymathcap, results = "asis"}
+label("subdivision.pdf", 
+      caption = "Subdivision of arc segments",
+      tinycap = "Subdivision of arc segments. You can see that $ p_3 = p_6^\prime$",
+      label = "subd3")
+```
+
+
