@@ -48,6 +48,7 @@ reed_thesis <- function(toc = TRUE) {
 label <- function(path = NULL,
                   caption = "Default caption",
                   scale = 1,
+                  angle = 0,
                   label = "def",
                   type = "figure",
                   options = "htbp"){
@@ -56,7 +57,8 @@ label <- function(path = NULL,
       paste0(
         "\n\\begin{figure}[", options, "]\n",
         "\\centering\n",
-        "\\includegraphics[scale = ", scale, "]{",
+        "\\includegraphics[scale = ", scale,
+        "angle = ", angle, "]{",
         path, "}\n",
         "\\caption{", caption,"}\n",
         "\\label{fig:", label, "}\n",

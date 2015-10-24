@@ -52,63 +52,50 @@ If you need a graphic or tabular material to be part of the text, you can just p
 Below we have put a few examples of figures. For more help using graphics and the float environment, see our online documentation.
 -->
 
-```{r, results = "asis"}
-#source("insert.R")
+```{r include_rticles, include = FALSE}
+# This chunk ensures that the rticles package is installed and loaded
+# This rticles package includes the template files for the thesis and also
+# two functions used for labeling and referencing
+if(!require(rticles)){
+  library(devtools)
+  devtools::install_github("ismayc/rticles")
+  }
 library(rticles)
-rticles::label("reed.jpg", "Reed logo", 0.5, "reed", "figure")
-rticles::label("subdivision.pdf", "Subdiv figure", 0.75, "subdiv")
 ```
 
-Here is a reference to the Reed logo: `r ref("reed")`.
+In the **R** chunk below, we will load in a picture stored as `reed.jpg` in our main directory.  We then give it the caption of "Reed logo", the label of "reed", and specify that this is a figure and not an equation.  Note again the use of the `results = "asis"` specification to automatically include and compile the \LaTeX\ code.
 
-And for the subdiv: `r ref("subdiv")`.
+```{r reed_logo, results = "asis"}
+label(path = "reed.jpg", caption = "Reed logo", 
+      label = "reed", type = "figure")
+```
 
-
-
-And this is how you add a figure with a graphic:
-\begin{figure}[h]
-% the options are h = here, t = top, b = bottom, p = page of figures.
-% you can add an exclamation mark to make it try harder, and multiple
-% options if you have an order of preference, e.g.
-% \begin{figure}[h!tbp]
-	   \centering
-	    % DO NOT ADD A FILENAME EXTENSION TO THE GRAPHIC FILE
-	    \includegraphics{subdivision}
-	     \caption{A Figure}
-	 \label{subd}
-	\end{figure}
+Here is a reference to the Reed logo: `r ref("reed")`.  Note the use of the inline **R** code here.  By default "figure" is specified as the type.  For clarity, we could have also added the `label` and `type` to the parameter specifications and this would give us the same result: `r ref(label = "reed", type = "figure")`.
 
 \clearpage 
 
 <!-- starts a new page and stops trying to place floats such as tables and figures -->
 
-\section{More Figure Stuff}
+Next, we will explore the use of the `scale` parameter which can be used to shrink or expand an image.  Here we use mathematical graph stored in the "subdivision.pdf" file.  Note that we didn't specify the `caption =` or `label =` here.
 
-You can also scale and rotate figures.
+```{r subdiv1, results = "asis"}
+label("subdivision.pdf", "Subdivision graph", scale = 0.75, "subd")
+```
 
- \begin{figure}[h!]
-	       \centering
-	    % DO NOT ADD A FILENAME EXTENSION TO THE GRAPHIC FILE
-	    \includegraphics[scale=0.5,angle=180]{subdivision}
-	    % if your figure shows up not where you want it, it may just be too big to fit. You can use the scale argument to shrink it, e.g. scale=0.85 is 85 percent of the original size.
-	     \caption{A Smaller Figure, Flipped Upside Down}
-	 \label{subd2}
-\end{figure}
+Here is a reference to this image: `r ref("subd")`.
 
-## Even More Figure Stuff
-With some clever work you can crop a figure, which is handy if (for instance) your EPS or PDF is a little graphic on a whole sheet of paper. The viewport arguments are the lower-left and upper-right coordinates for the area you want to crop.
+## More Figure Stuff
 
-\begin{figure}[h!]
-	    	       \centering
-	    % DO NOT ADD A FILENAME EXTENSION TO THE GRAPHIC FILE
-	   \includegraphics[clip=true, viewport=.0in .0in 1in 1in]{subdivision}
-	    \caption{A Cropped Figure}
-	 \label{subd3}
-\end{figure}
+Lastly, we will explore how to rotate figures using the `angel` parameter.
 
-<!-- Added by CII -->
+```{r subdiv1_180, results = "asis"}
+label("subdivision.pdf", "A Smaller Figure, Flipped Upside Down", 
+      scale = 0.5,
+      angle = 180,
+      label = "subd2")
+```
 
-Here is the link to the previous figure:  \ref{subd3}.
+As another example, here is a reference to this figure: `r ref("subd2", type = "figure")`.
 
 ### Common Modifications
 
