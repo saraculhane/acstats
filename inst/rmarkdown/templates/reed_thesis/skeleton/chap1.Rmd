@@ -65,11 +65,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 ## Inline code
 
-If you'd like to put the results of your analysis directly into your discussion, add inline code like this:
-
-The `cos` of $2 \pi$ is `r cos(2*pi)`.
-
-Mathematics can be added by surrounding the mathematical text with dollar signs.  More examples of this are in [](#math-sci).  
+If you'd like to put the results of your analysis directly into your discussion, add inline code like this: The `cos` of $2 \pi$ is `r cos(2*pi)`.  Mathematics can be added by surrounding the mathematical text with dollar signs.  More examples of this are in [](#math-sci).  
 
 <!--
 You'll see more details on this cross-referencing in Chapter 2.
@@ -135,7 +131,7 @@ We next introduce a useful function in the `knitr` package for making nice table
 
 ```{r table_out, results = "asis"}
 kable(max_delays, col.names = c("Airline", "Max Arrival Delay"),
-      caption = "Max Delays by Airline")
+      caption = "Max Delays by Airline \\label{tab:max_delay}")
 ```
 
 We can further look into the properties of the largest value here for American Airlines Inc.  To do so, we can isolate the row corresponding to the arrival delay of 1539 minutes for American in our original `flights` dataset.

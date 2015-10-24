@@ -68,9 +68,22 @@ label <- function(path = NULL,
       )
     )
   }
+
+  if(type == "chem.reac"){
+    cat(
+      paste0(
+        "\n\\begin{figure}[", options, "]\n",
+        "\\begin{center}\n",
+        path, "\n",
+        "\\caption{", caption,"}\n",
+        "\\label{fig:", label, "}\n",
+        "\\end{center}\n",
+        "\\end{figure}"
+      )
+    )
+  }
+
   if(type == "equation"){
-
-
 
   }
 }
