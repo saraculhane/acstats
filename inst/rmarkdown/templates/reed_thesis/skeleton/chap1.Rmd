@@ -103,7 +103,7 @@ We begin by checking to ensure that needed packages are installed and then we lo
 
 ```{r load_pkgs, message = FALSE}
 # List of packages required for this analysis
-pkg <- c("dplyr", "ggplot2", "knitr")
+pkg <- c("dplyr", "ggplot2", "knitr", "xtable")
 
 # Check if packages are not installed and assign the
 # names of the packages not installed to the variable new.pkg
@@ -117,6 +117,7 @@ if (length(new.pkg))
 library(dplyr)
 library(ggplot2)
 library(knitr)
+library(xtable)
 ```
 
 The example we show here does the following:
@@ -131,10 +132,18 @@ max_delays <- flights2 %>% group_by(carrier_name) %>%
   summarize(max_arr_delay = max(arr_delay, na.rm = TRUE))
 ```
 
-We next introduce a useful function in the `knitr` package for making nice tables in _R Markdown_ called `kable`.  It produces the \LaTeX\ code required to make the table and is much easier to use than manually entering values into the \LaTeX\ code.  This again goes to show how nice reproducible documents can be.  There is no need to copy-and-paste values to create a table.  In addition to `kable`, there are many other functions written to print data frames from **R** in nice formats.
+We next introduce a useful function in the `knitr` package for making nice tables in _R Markdown_ called `kable`.  It produces the \LaTeX\ code required to make the table and is much easier to use than manually entering values into the \LaTeX\ code.  This again goes to show how nice reproducible documents can be.  There is no need to copy-and-paste values to create a table.  
 
 ```{r table_out, results = "asis"}
 kable(max_delays, col.names = c("Airline", "Max Arrival Delay"))
+```
+
+In addition to `kable`, there are many other functions written to print data frames from **R** in nice formats.  If we'd like to have our table automatically be labelled and numbered, we can use the `xtable` package and its corresponding function.  (Note the use of `results = "asis"` here which will produce the table instead of the code to create the table.)
+
+```{r xtable_out, results = "asis"}
+colnames(max_delays) <- c("Airline", "Max Arrival Delay")
+print(xtable(max_delays, caption = "Max Delays by Airline"),
+      comment = FALSE)
 ```
 
 We can further look into the properties of the largest value here for American Airlines Inc.  To do so, we can isolate the row corresponding to the arrival delay of 1539 minutes for American in our original `flights` dataset.
@@ -153,19 +162,6 @@ flights %>% filter(month == 3, day == 3) %>%
   ggplot(aes(x = dep_time, y = arr_delay)) +
   geom_point()
 ```
-
-<!--
-`kfigr` stuff no longer useful since it doesn't work with PDF.
-
-
- ```{r march3plot-code, ref.label = 'march3plot', anchor = "block", eval = FALSE, include = FALSE}
- ```
-
- ```{r march3-plot, ref.label='march3plot', anchor = "figure", echo = FALSE, include = FALSE}
- ```
- 
- If we'd like to reference the plot we made there, we enter the following inline **R** code:  (backtick)r figr('march3-plot', type = "figure", link = TRUE)(backtick).
--->
 
 ## Additional resources
 

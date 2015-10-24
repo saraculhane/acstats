@@ -30,6 +30,7 @@ Above is the YAML (YAML Ain't Markup Language) header that includes a lot of met
 If you'd like to include a comment that won't be produced in your resulting PDF file enclose it in a block like this.
 -->
 
+
 <!--
 This is the way to split your thesis into chapters and then include each of the chapters seperately.  You can Knit the Rmd files corresponding to each chapter individually and then put them all back together by Knit-ing this document.
 

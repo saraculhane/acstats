@@ -30,6 +30,9 @@
 
 1. Test other citation styles and make sure they match Reed College library requirements
 1. Check with library about shading code
+1. Add abbreviation links like at <https://michelf.ca/projects/php-markdown/extra/> for Table of Abbreviations 
+1. Use index features like Hadley did in adv-r
+1. Allow for documents to be produced in epub/html formats as well as PDF format
 
 <!-- Useful LaTeX reference
   <https://upload.wikimedia.org/wikipedia/commons/2/2d/LaTeX.pdf>

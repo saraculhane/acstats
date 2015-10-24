@@ -2,10 +2,14 @@
 output: pdf_document
 ---
 
+<!--
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 \chaptermark{Introduction}
 \markboth{Introduction}{Introduction}
+-->
+
+# Introduction {.unnumbered}
 
 <!--
 	% The three lines above are LaTeX code to make sure that the headers are right, that the intro gets included in the table of contents, and that it doesn't get numbered 1 so that chapter one is 1.

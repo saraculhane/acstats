@@ -4,9 +4,22 @@ output: pdf_document
 
 # Tables and Graphics
 
+```{r, results = "asis"}
+source("insert.R")
+label("reed.jpg", "Reed logo", 0.5, "reed", "figure")
+label("subdivision.pdf", "Subdiv figure", 0.75, "subdiv")
+```
+
+Here is a reference to the Reed logo: `r ref("reed")`.
+
+And for the subdiv: `r ref("subdiv")`.
+
+
 ## Tables
 
 The following section contains examples of tables.  
+
+In addition to the tables that can be automatically generated from a data frame in **R** that you saw in [](#rmd-basics), you can also create tables using _Markdown_.  This might be useful if you don't have values specifically stored in **R**, but you'd like to display them in table form.
 
 
 \begin{table}[htp] % begins the table floating environment. This enables LaTeX to fit the table where it works best and lets you add a caption.
@@ -38,11 +51,9 @@ The following section contains examples of tables.
 
 \section{Figures}
 
-If your thesis has a lot of figures, \LaTeX\ might behave better for you than that other word processor.  One thing that may be annoying is the way it handles ``floats'' like tables and figures. \LaTeX\ will try to find the best place to put your object based on the text around it and until you're really, truly done writing you should just leave it where it lies.   There are some optional arguments to the figure and table environments to specify where you want it to appear; see the comments in the first figure.
+If your thesis has a lot of figures, \LaTeX\ might behave better for you than that other word processor.  One thing that may be annoying is the way it handles "floats" like tables and figures. \LaTeX\ will try to find the best place to put your object based on the text around it and until you're really, truly done writing you should just leave it where it lies.   There are some optional arguments to the figure and table environments to specify where you want it to appear; see the comments in the first figure.
 
 If you need a graphic or tabular material to be part of the text, you can just put it inline. If you need it to appear in the list of figures or tables, it should be placed in the floating environment.
-
-To get a figure from StatView, JMP, SPSS or other statistics program into a figure, you can print to pdf or save the image as a jpg or png. Precisely how you will do this depends on the program: you may need to copy-paste figures into Photoshop or other graphic program, then save in the appropriate format.
 
 Below we have put a few examples of figures. For more help using graphics and the float environment, see our online documentation.
 

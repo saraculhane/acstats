@@ -294,12 +294,12 @@
 \newcommand{\Preface}[1]{\def\@Preface{#1}}
 
 %% Sweave(-like)
-\DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl}
+\DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl, frame=single}
 \DefineVerbatimEnvironment{Soutput}{Verbatim}{}
-\DefineVerbatimEnvironment{Scode}{Verbatim}{fontshape=sl}
+\DefineVerbatimEnvironment{Scode}{Verbatim}{fontshape=sl, frame=single}
 \newenvironment{Schunk}{}{}
 \DefineVerbatimEnvironment{Code}{Verbatim}{}
-\DefineVerbatimEnvironment{CodeInput}{Verbatim}{fontshape=sl}
+\DefineVerbatimEnvironment{CodeInput}{Verbatim}{fontshape=sl, frame=single}
 \DefineVerbatimEnvironment{CodeOutput}{Verbatim}{}
 \newenvironment{CodeChunk}{}{}
 % \setkeys{Gin}{width=0.8\textwidth}
