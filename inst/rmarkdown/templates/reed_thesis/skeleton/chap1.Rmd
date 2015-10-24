@@ -49,7 +49,7 @@ This should be a new paragraph.
 
 ## R chunks
 
-When you click the **Knit** button above a document will be generated that includes both content as well as the output of any embedded **R** code chunks within the document. You can embed an **R** code chunk like this (using the built-in `cars` dataset in **R**):
+When you click the **Knit** button above a document will be generated that includes both content as well as the output of any embedded **R** code chunks within the document. You can embed an **R** code chunk like this (using a built-in **R** dataset):
 
 ```{r cars}
 summary(cars)
