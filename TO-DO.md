@@ -1,9 +1,11 @@
 ### Things left to do with Reed Thesis template
+1. Change coloring of R input to match Knit HTML output (Check with library about shading code)
+2. Describe use of `cache = TRUE`
+3. Describe saving R plot output and label
 
 #### Down the road
 
 1. Test other citation styles and make sure they match Reed College library requirements
-1. Check with library about shading code
 1. Add abbreviation links like at <https://michelf.ca/projects/php-markdown/extra/> for Table of Abbreviations 
 1. Use index features like Hadley did in adv-r
 1. Allow for documents to be produced in epub/html formats as well as PDF format
@@ -36,8 +38,5 @@
   - Maybe using this? <https://github.com/tomduck/pandoc-eqnos>
   
   Useful reference:  <http://pandoc.org/README.html#options>
-
--->
-
 
 -->
