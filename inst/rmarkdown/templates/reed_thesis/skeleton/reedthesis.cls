@@ -302,7 +302,7 @@
 %\newenvironment{Schunk}{}{}
 %\DefineVerbatimEnvironment{Code}{Verbatim}{}
 %\DefineVerbatimEnvironment{CodeInput}{Verbatim}{fontshape=sl, frame=single}
-%\DefineVerbatimEnvironment{CodeOutput}{Verbatim}{}
+\DefineVerbatimEnvironment{CodeOutput}{Verbatim}{}
 %\newenvironment{CodeChunk}{}{}
 % \setkeys{Gin}{width=0.8\textwidth}
 
