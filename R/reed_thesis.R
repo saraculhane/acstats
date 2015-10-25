@@ -25,7 +25,7 @@ reed_thesis <- function(toc = TRUE) {
 #    paste0('\\begin{CodeChunk}\n', x, '\\end{CodeChunk}')
 #  }
 #  hook_input <- function(x, options) {
-#    paste0(c('\\begin{Shaded}', x, '\\end{Shaded}', ''),
+#    paste0(c('\\begin{CodeInput}', x, '\\end{CodeInput}', ''),
 #           collapse = '\n')
 #  }
 #  hook_output <- function(x, options) {

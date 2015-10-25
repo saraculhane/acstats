@@ -362,8 +362,8 @@
 %\DefineVerbatimEnvironment{Soutput}{Verbatim}{}
 %\DefineVerbatimEnvironment{Scode}{Verbatim}{fontshape=sl, frame=single}
 %\newenvironment{Schunk}{}{}
-%\DefineVerbatimEnvironment{Code}{Verbatim}{}
-%\DefineVerbatimEnvironment{CodeInput}{Verbatim}{fontshape=sl, frame=single}
+\DefineVerbatimEnvironment{Code}{Verbatim}{}
+\DefineVerbatimEnvironment{CodeInput}{Verbatim}{fontshape=sl, frame=single, commandchars=\\\{\}}}
 \DefineVerbatimEnvironment{CodeOutput}{Verbatim}{}
 \newenvironment{CodeChunk}{}{}
 % \setkeys{Gin}{width=0.8\textwidth}
