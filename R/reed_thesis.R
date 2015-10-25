@@ -22,7 +22,7 @@ reed_thesis <- function(toc = TRUE) {
 
   hook_chunk <- function(x, options) {
     if (knitr:::output_asis(x, options)) return(x)
-    paste0('\\begin{CodeChunk}\n', x, '\\end{CodeChunk}')
+    paste0('\\begin{Shaded}\n', x, '\\end{Shaded}')
   }
   hook_input <- function(x, options) {
     paste0(c('\\begin{Shaded}', x, '\\end{Shaded}', ''),
