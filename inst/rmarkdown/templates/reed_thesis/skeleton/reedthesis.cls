@@ -356,8 +356,6 @@
 \newcommand{\Dedication}[1]{\def\@Dedication{#1}}
 \newcommand{\Preface}[1]{\def\@Preface{#1}}
 
-\usepackage{minted}
-
 %% Sweave(-like)
 %\DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl, frame=single}
 %\DefineVerbatimEnvironment{Soutput}{Verbatim}{}
@@ -365,6 +363,7 @@
 %\newenvironment{Schunk}{}{}
 \DefineVerbatimEnvironment{Code}{Verbatim}{}
 \DefineVerbatimEnvironment{CodeInput}{Verbatim}{frame=single}
+%\usepackage{minted}
 %\renewenvironment{CodeInput}{\minted[frame=single]{r}}{\endminted}
 \DefineVerbatimEnvironment{CodeOutput}{Verbatim}{}
 \newenvironment{CodeChunk}{}{}
