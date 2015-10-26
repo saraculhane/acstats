@@ -24,14 +24,14 @@ reed_thesis <- function(toc = TRUE) {
     if (knitr:::output_asis(x, options)) return(x)
     paste0('\\begin{CodeChunk}\n', x, '\\end{CodeChunk}')
   }
-  # hook_input <- function(x, options) {
-  #   paste0(c('\\begin{CodeInput}', x, '\\end{CodeInput}', ''),
-  #          collapse = '\n')
-  # }
   hook_input <- function(x, options) {
-    paste0(c('\\begin{minted}{r}', x, '\\end{minted}', ''),
+    paste0(c('\\begin{CodeInput}', x, '\\end{CodeInput}', ''),
            collapse = '\n')
   }
+  #hook_input <- function(x, options) {
+  #  paste0(c('\\begin{minted}{r}', x, '\\end{minted}', ''),
+  #         collapse = '\n')
+  #}
   hook_output <- function(x, options) {
     paste0('\\begin{CodeOutput}\n', x, '\\end{CodeOutput}\n')
   }
