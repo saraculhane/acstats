@@ -1,10 +1,9 @@
 ### Things left to do with Reed Thesis template
-1. Change coloring of R input to match Knit HTML output (Check with library about shading code)
-2. Describe use of `cache = TRUE`
 
 
 #### Down the road
 
+1. Check with library about shading code
 1. Test other citation styles and make sure they match Reed College library requirements
 1. Add Table of Abbreviations (maybe in a text file/Rmd file?)
 1. Use index features like Hadley did in adv-r
@@ -28,6 +27,8 @@
   - Check to make sure working now by adding custom command?
 4. Label figures as in Figure 3.1 of Chemistry using Markdown?
 5. Describe saving R plot output and label
+6. Change coloring of R input to match Knit output 
+7. Describe use of `cache = TRUE`
 
 
 <!--  Avoiding since might be a mess to install extra things on the user's end / I haven't tested these yet
