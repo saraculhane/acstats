@@ -14,8 +14,8 @@ reed_thesis <- function(toc = TRUE) {
   # List of available options at
   # http://yihui.name/knitr/options/#chunk_options
 
-  base$knitr$opts_chunk$fig.width <- 4.9 # 6.125" * 0.8, as in template
-  base$knitr$opts_chunk$fig.height <- 3.675 # 4.9 * 3:4
+  #base$knitr$opts_chunk$fig.width <- 4.9 # 6.125" * 0.8, as in template
+  #base$knitr$opts_chunk$fig.height <- 3.675 # 4.9 * 3:4
   base$knitr$opts_chunk$fig.align <- "center"
 
   # hook_chunk <- function(x, options) {
