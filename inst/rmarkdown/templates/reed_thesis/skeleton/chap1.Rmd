@@ -69,11 +69,13 @@ Mathematics can be added by surrounding the mathematical text with dollar signs.
 
 You can also embed plots.  For example, here is a way to use the base **R** graphics package to produce a plot using the built-in `pressure` dataset:
 
-```{r pressure, echo = FALSE}
+```{r pressure, echo = FALSE, cache = TRUE}
 plot(pressure)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the **R** code that generated the plot.  There are plenty of other ways to add chunk options.  More information is available at <http://yihui.name/knitr/options/>.  Later in this file, you'll see a way to reference plots created in **R** or external figures.
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the **R** code that generated the plot.  There are plenty of other ways to add chunk options.  More information is available at <http://yihui.name/knitr/options/>.  
+
+Another useful chunk option is the setting of `cache = TRUE` as you see here.  If document rendering becomes time consuming due to long computations or plots that are expensive to generate you can use knitr caching to improve performance.  Later in this file, you'll see a way to reference plots created in **R** or external figures.
 
 ## Loading and exploring data
 
