@@ -10,6 +10,7 @@ reed_thesis <- function(toc = TRUE) {
 
   # Mostly copied from knitr::render_sweave
   base$knitr$opts_knit$out.format <- "sweave"
+  base$knitr$opts_chunk$comment <- NA
 
   # List of available options at
   # http://yihui.name/knitr/options/#chunk_options
