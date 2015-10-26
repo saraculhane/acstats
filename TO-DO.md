@@ -1,12 +1,12 @@
 ### Things left to do with Reed Thesis template
 1. Change coloring of R input to match Knit HTML output (Check with library about shading code)
 2. Describe use of `cache = TRUE`
-3. Describe saving R plot output and label
+
 
 #### Down the road
 
 1. Test other citation styles and make sure they match Reed College library requirements
-1. Add abbreviation links like at <https://michelf.ca/projects/php-markdown/extra/> for Table of Abbreviations 
+1. Add Table of Abbreviations (maybe in a text file/Rmd file?)
 1. Use index features like Hadley did in adv-r
 1. Allow for documents to be produced in epub/html formats as well as PDF format
 
@@ -27,6 +27,8 @@
   - Some disciplines like Biology (TeXShade) may need to include packages here too
   - Check to make sure working now by adding custom command?
 4. Label figures as in Figure 3.1 of Chemistry using Markdown?
+5. Describe saving R plot output and label
+
 
 <!--  Avoiding since might be a mess to install extra things on the user's end / I haven't tested these yet
   - Likely taken care of by using this (but will need to install pandoc filter...might not be capable in **R** package?):  <https://github.com/lierdakil/pandoc-crossref>
