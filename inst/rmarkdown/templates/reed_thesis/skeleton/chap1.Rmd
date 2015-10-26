@@ -40,12 +40,12 @@ To create a sublist, just indent the values a bit (at least four spaces or a tab
 
 Make sure to add white space between lines if you'd like to start a new paragraph.  Look at what happens below in the outputted document if you don't:
 
-Here is the first sentence.  Here is another sentence to end the paragraph.
+Here is the first sentence.  Here is another sentence.  Here is the last sentence to end the paragraph.
 This should be a new paragraph.
 
-*Now for the correct way:*
+*Now for the correct way:* 
 
-Here is the first sentence.  Here is another sentence to end the paragraph.
+Here is the first sentence.  Here is another sentence.  Here is the last sentence to end the paragraph.
 
 This should be a new paragraph.
 
@@ -57,6 +57,14 @@ When you click the **Knit** button above a document will be generated that inclu
 summary(cars)
 ```
 
+## Inline code
+
+If you'd like to put the results of your analysis directly into your discussion, add inline code like this:
+
+The `cos` of $2 \pi$ is `r cos(2*pi)`. 
+
+Mathematics can be added by surrounding the mathematical text with dollar signs.  More examples of this are in [](#math-sci).  
+
 ## Including plots
 
 You can also embed plots.  For example, here is a way to use the base **R** graphics package to produce a plot using the built-in `pressure` dataset:
@@ -65,15 +73,7 @@ You can also embed plots.  For example, here is a way to use the base **R** grap
 plot(pressure)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the **R** code that generated the plot.  There are plenty of other ways to add chunk options.  More information is available at <http://yihui.name/knitr/options/>.
-
-## Inline code
-
-If you'd like to put the results of your analysis directly into your discussion, add inline code like this: The `cos` of $2 \pi$ is `r cos(2*pi)`.  Mathematics can be added by surrounding the mathematical text with dollar signs.  More examples of this are in [](#math-sci).  
-
-<!--
-You'll see more details on this cross-referencing in Chapter 2.
--->
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the **R** code that generated the plot.  There are plenty of other ways to add chunk options.  More information is available at <http://yihui.name/knitr/options/>.  Later in this file, you'll see a way to reference plots created in **R** or external figures.
 
 ## Loading and exploring data
 

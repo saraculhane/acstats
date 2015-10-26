@@ -75,10 +75,6 @@
 % Below added by CII
 
 \renewcommand{\contentsname}{Table of Contents}
-%\renewcommand{\bibname}{References}
-%\DefineBibliographyStrings{english}{%
-%  references = {Works Cited},% replace "references" with "bibliography"  for `book`/`report`
-%}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -99,14 +95,14 @@ $preface$
 $abstract$
 }
 
+$for(header-includes)$
+$header-includes$
+$endfor$
+
 %%
 %% End Preamble
 %%
 %
-
-$for(header-includes)$
-$header-includes$
-$endfor$
 
 \begin{document}
 
@@ -132,11 +128,9 @@ $endfor$
   % Add table of abbreviations?
 
   $if(toc)$
-  {
     \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
     \setcounter{tocdepth}{$toc-depth$}
     \tableofcontents
-  }
   $endif$
 
   $if(lot)$
