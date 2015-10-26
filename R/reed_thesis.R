@@ -5,7 +5,7 @@ reed_thesis <- function(toc = TRUE) {
   base <- rmarkdown::pdf_document(template = template,
                                   toc = toc,
                                   toc_depth = 3,
-                                  highlight = "tango",
+                                  highlight = "pygments",
                                   keep_tex = TRUE,
                                   pandoc_args = "--chapters")
 
