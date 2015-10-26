@@ -6,7 +6,7 @@ reed_thesis <- function(toc = TRUE) {
                                   toc = toc,
                                   toc_depth = 3,
                                   keep_tex = TRUE,
-                                  latex_engine = "pdflatex --shell-escape",
+                             #     highlight = "pygments",
                                   pandoc_args = "--chapters")
 
   # Mostly copied from knitr::render_sweave
@@ -14,7 +14,7 @@ reed_thesis <- function(toc = TRUE) {
 
   base$knitr$opts_chunk$prompt <- TRUE
   base$knitr$opts_chunk$comment <- NA
-  base$knitr$opts_chunk$highlight <- FALSE
+  #base$knitr$opts_chunk$highlight <- FALSE
 
   base$knitr$opts_chunk$dev.args <- list(pointsize = 11)
   base$knitr$opts_chunk$fig.width <- 4.9 # 6.125" * 0.8, as in template
@@ -29,10 +29,7 @@ reed_thesis <- function(toc = TRUE) {
     paste0(c('\\begin{CodeInput}', x, '\\end{CodeInput}', ''),
            collapse = '\n')
   }
-  #hook_input <- function(x, options) {
-  #  paste0(c('\\begin{minted}{r}', x, '\\end{minted}', ''),
-  #         collapse = '\n')
-  #}
+
   hook_output <- function(x, options) {
     paste0('\\begin{CodeOutput}\n', x, '\\end{CodeOutput}\n')
   }
