@@ -6,17 +6,14 @@ reed_thesis <- function(toc = TRUE) {
                                   toc = toc,
                                   toc_depth = 3,
                                   keep_tex = TRUE,
-                             #     highlight = "pygments",
                                   pandoc_args = "--chapters")
 
   # Mostly copied from knitr::render_sweave
   base$knitr$opts_knit$out.format <- "sweave"
 
-  #base$knitr$opts_chunk$prompt <- TRUE
-  #base$knitr$opts_chunk$comment <- NA
-  #base$knitr$opts_chunk$highlight <- FALSE
+  # List of available options at
+  # http://yihui.name/knitr/options/#chunk_options
 
- # base$knitr$opts_chunk$dev.args <- list(pointsize = 11)
   base$knitr$opts_chunk$fig.width <- 4.9 # 6.125" * 0.8, as in template
   base$knitr$opts_chunk$fig.height <- 3.675 # 4.9 * 3:4
   base$knitr$opts_chunk$fig.align <- "center"
