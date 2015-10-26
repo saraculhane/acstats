@@ -105,10 +105,10 @@
 % using explicit options in \includegraphics[width, height, ...]{}
 %\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
-\setlength{\emergencystretch}{3em}  % prevent overfull lines
+%\setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{0}
+%\setcounter{secnumdepth}{0}
 
 
 % This gives us rules below the headers
