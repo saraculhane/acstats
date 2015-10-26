@@ -6,6 +6,7 @@ reed_thesis <- function(toc = TRUE) {
                                   toc = toc,
                                   toc_depth = 3,
                                   keep_tex = TRUE,
+                                  latex_engine = "pdflatex --shell-escape",
                                   pandoc_args = "--chapters")
 
   # Mostly copied from knitr::render_sweave
