@@ -1,5 +1,6 @@
 ### Things left to do with Reed Thesis template
 
+1. Might need to turn off links? <http://tex.stackexchange.com/questions/823/remove-ugly-borders-around-clickable-cross-references-and-hyperlinks>
 
 #### Down the road
 
