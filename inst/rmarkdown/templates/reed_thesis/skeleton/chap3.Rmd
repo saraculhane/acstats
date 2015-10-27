@@ -132,7 +132,7 @@ As another example, here is a reference to this figure: `r ref("subd2", type = "
 
 #### Common Modifications
 
-The following figure features the more popular changes thesis students want to their figures. We can add math to the caption that displays below the picture, specify the size of our caption to display below the figure (list of sizes available at this [link](http://www.emerson.emory.edu/services/latex/latex_169.html#SEC169), and also specify that a different caption `alt.cap` be what appears in the Table of Figures for this figure.
+The following figure features the more popular changes thesis students want to their figures. We can add math to the caption that displays below the picture, specify the size of our caption to display below the figure (list of sizes available at this [link](http://www.emerson.emory.edu/services/latex/latex_169.html#SEC169 ), and also specify that a different caption `alt.cap` be what appears in the Table of Figures for this figure.
 
 If you'd like to make further tweaks to figures, you might need to invoke some \LaTeX\ code.  Please email us at <data@reed.edu> if you need assistance.
 
