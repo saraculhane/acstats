@@ -2,10 +2,11 @@
 
 1. Might need to turn off links? <http://tex.stackexchange.com/questions/823/remove-ugly-borders-around-clickable-cross-references-and-hyperlinks>
 1. Add capability to include abstract, dedication, etc. in a file instead of inline in the YAML header?
+1. Look into changing bibliography description to Zotero.  Albert Kim recommended the tutorial at <http://sites.middlebury.edu/zoteromiddlebury/>
 
 #### Down the road
 
-1. Create manual pages and vignettes
+1. Create manual pages and vignettes and documentation
 1. Test other citation styles as faculty/students request
 1. Add Table of Abbreviations (maybe in a text file/Rmd file?)
 1. Use index features like Hadley did in adv-r
