@@ -15,6 +15,7 @@ preface: >
   This is an example of a thesis setup to use the reed thesis document class.
 bibliography: thesis.bib
 csl: apa.csl
+# Download your specific csl file and refer to it in the line above.
 output: 
   rticles::reed_thesis:
     toc: true
@@ -50,6 +51,11 @@ This is the way to split your thesis into chapters and then include each of the 
 
 This is an R chunk and chap0.Rmd refers to the Introductory chapter.  Feel free to name this file as something else, but don't forget to change the argument to in `child = ` below!
 -->
+
+```{r abstract, child = 'abstract.Rmd'}
+```
+
+
 ```{r intro, child = 'chap0.Rmd'}
 ```
 
@@ -71,7 +77,7 @@ Immediately below is the chunk for Chapter 2.
 ```
 
 <!--
-Add other chunks here for other chapters in your thesis.  If you use the `child =` parameter you can't include anything else in your chunk.
+Add other chunks here for other chapters in your thesis.  Note that if you use the `child =` parameter, you can't include anything else in your chunk.
 -->
 
 ```{r conclusion, child = 'conclusion.Rmd'}

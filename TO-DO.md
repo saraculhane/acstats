@@ -1,13 +1,15 @@
 ### Things left to do with Reed Thesis template
 
 1. Might need to turn off links? <http://tex.stackexchange.com/questions/823/remove-ugly-borders-around-clickable-cross-references-and-hyperlinks>
+1. Add capability to include abstract, dedication, etc. in a file instead of inline in the YAML header?
 
 #### Down the road
 
-1. Check with library about shading code
-1. Test other citation styles and make sure they match Reed College library requirements
+1. Create manual pages and vignettes
+1. Test other citation styles as faculty/students request
 1. Add Table of Abbreviations (maybe in a text file/Rmd file?)
 1. Use index features like Hadley did in adv-r
+1. Submit to CRAN
 1. Allow for documents to be produced in epub/html formats as well as PDF format
 
 <!-- Useful LaTeX reference
