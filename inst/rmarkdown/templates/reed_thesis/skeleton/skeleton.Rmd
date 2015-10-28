@@ -13,8 +13,8 @@ dedication: >
   You can have a dedication here if you wish. 
 preface: >
   This is an example of a thesis setup to use the reed thesis document class.
-bibliography: thesis.bib
-csl: apa.csl
+bibliography: bib/thesis.bib
+csl: csl/apa.csl
 # Download your specific csl file and refer to it in the line above.
 output: 
   rticles::reed_thesis:

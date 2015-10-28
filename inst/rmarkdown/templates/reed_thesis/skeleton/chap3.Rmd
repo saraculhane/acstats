@@ -48,11 +48,11 @@ In addition to the tables that can be automatically generated from a data frame 
   
   Occupational Prestige                     0.21                        Slight
 ------------------------- ----------------------------------------- --------------
-Table: Correlation of Inheritance Factors for Parents and Child \label{tab:inher_table}
+Table: Correlation of Inheritance Factors for Parents and Child \label{tab:inher}
 
-We can also create a link to the table by doing the following:  \autoref{tab:inher_table}.  If you go back to [](#loading-and-exploring-data) and look at the `kable` function code, you'll see that I added in a similar `\\label` to be able to reference that table later.  (The extra backslash there is a way that _Markdown_ interfaces with \LaTeX\.) We can create a reference to the max delays table: \autoref{tab:max_delay}.
+We can also create a link to the table by doing the following: `r ref("inher", type = "table")`.  If you go back to [](#loading-and-exploring-data) and look at the `kable` function code, you'll see that I added in a similar `\\label` to be able to reference that table later.  (The extra backslash there is a way that _Markdown_ interfaces with \LaTeX\.) We can create a reference to the max delays table: `r ref("max_delay", type = "table")`.
 
-The addition of the `\label{}` option to the end of the table caption allows us to then use the \LaTeX\ `autoref` function to produce the link. `autoref` will automatically add "Table" before your number if you add the "tab:" prefix to your label. Note that this reference could appear anywhere throughout the document, not necessarily right next to the table like we have here.  
+The addition of the `\label{}` option to the end of the table caption allows us to then use the \LaTeX\ `autoref` function to produce the link. The `ref` function allows for tables and figures to be referenced in the document.  It will automatically add "Table" before your number if you add the "tab:" prefix to your label. Note that this reference could appear anywhere throughout the document, not necessarily right next to the table like we have here.  
 
 <!-- We will next explore ways to create this label-ref link using figures. -->
 
