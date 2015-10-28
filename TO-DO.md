@@ -1,8 +1,9 @@
 ### Things left to do with Reed Thesis template
 
+1. Add links to download \LaTeX\ for Windows (<http://http://miktex.org/download>) and for Mac (<http://tug.org/mactex/mactex-download.html>) to README file.
 1. Might need to turn off links? <http://tex.stackexchange.com/questions/823/remove-ugly-borders-around-clickable-cross-references-and-hyperlinks>
 1. Add capability to include abstract, dedication, etc. in a file instead of inline in the YAML header?
-1. Look into changing bibliography description to Zotero.  Albert Kim recommended the tutorial at <http://sites.middlebury.edu/zoteromiddlebury/>
+1. Look into changing bibliography description to Zotero.  Albert Kim recommended the tutorial at <http://sites.middlebury.edu/zoteromiddlebury/>.
 
 #### Down the road
 
