@@ -33,7 +33,7 @@ flights <- read.csv("data/flights.csv")
 
 ## Tables
 
-In addition to the tables that can be automatically generated from a data frame in **R** that you saw in [](#rmd-basics) using the `kable` function, you can also create tables using _pandoc_. (More information is available at <http://pandoc.org/README.html#tables>.)  This might be useful if you don't have values specifically stored in **R**, but you'd like to display them in table form.  Below is an example.  Pay careful attention to the alignment in the table and the use of the hyphens to create the rows and columns of the table.
+In addition to the tables that can be automatically generated from a data frame in **R** that you saw in [R Markdown Basics] using the `kable` function, you can also create tables using _pandoc_. (More information is available at <http://pandoc.org/README.html#tables>.)  This might be useful if you don't have values specifically stored in **R**, but you'd like to display them in table form.  Below is an example.  Pay careful attention to the alignment in the table and the use of the hyphens to create the rows and columns of the table.
 
 ----------------------------------------------------------------------------------
   Factors                    Correlation between Parents & Child      Inherited
@@ -50,7 +50,7 @@ In addition to the tables that can be automatically generated from a data frame 
 ------------------------- ----------------------------------------- --------------
 Table: Correlation of Inheritance Factors for Parents and Child \label{tab:inher}
 
-We can also create a link to the table by doing the following: `r ref("inher", type = "table")`.  If you go back to [](#loading-and-exploring-data) and look at the `kable` function code, you'll see that I added in a similar `\\label` to be able to reference that table later.  (The extra backslash there is a way that _Markdown_ interfaces with \LaTeX\.) We can create a reference to the max delays table: `r ref("max_delay", type = "table")`.
+We can also create a link to the table by doing the following: `r ref("inher", type = "table")`.  If you go back to [Loading and exploring data] and look at the `kable` function code, you'll see that I added in a similar `\\label` to be able to reference that table later.  (The extra backslash there is a way that _Markdown_ interfaces with \LaTeX\.) We can create a reference to the max delays table: `r ref("max_delay", type = "table")`.
 
 The addition of the `\label{}` option to the end of the table caption allows us to then use the \LaTeX\ `autoref` function to produce the link. The `ref` function in **R** allows for tables and figures to be referenced in the document easily without having to directly use the `autoref` function.  It will automatically add "Table" before your number if you add the "tab:" prefix to your label. Note that this reference could appear anywhere throughout the document.  
 
@@ -86,7 +86,7 @@ Here is a reference to the Reed logo: `r ref("reed")`.  Note the use of the inli
 
 <!-- starts a new page and stops trying to place floats such as tables and figures -->
 
-Below we will investigate how to save the output of an **R** plot and label it in a way similar to that done above.  Recall the `flights` dataset from [](#rmd-basics).  We will next explore a bar graph with the mean flight departure delays by airline from Portland for 2014.  Note also the use of the `scale` parameter which is discussed on the next page.
+Below we will investigate how to save the output of an **R** plot and label it in a way similar to that done above.  Recall the `flights` dataset from [](#rmd-basics).  (Note that we've shown a different way to reference a section or chapter here.)  We will next explore a bar graph with the mean flight departure delays by airline from Portland for 2014.  Note also the use of the `scale` parameter which is discussed on the next page.
 
 ```{r boxplot, warnings = FALSE, messages = FALSE}
 delay_airline <- flights %>% group_by(carrier) %>%

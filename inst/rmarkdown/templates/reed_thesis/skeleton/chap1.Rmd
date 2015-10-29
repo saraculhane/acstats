@@ -71,7 +71,7 @@ One last neat feature is the use of the `ifelse` conditional statement which can
 
 Note the use of `>` here, which signifies a quotation environment that will be indented.
 
-As you see with `$2 \pi$` above, mathematics can be added by surrounding the mathematical text with dollar signs.  More examples of this are in [](#math-sci) if you uncomment the code in [](#math).  
+As you see with `$2 \pi$` above, mathematics can be added by surrounding the mathematical text with dollar signs.  More examples of this are in [Mathematics and Science] if you uncomment the code in [Math].  
 
 ## Including plots
 
