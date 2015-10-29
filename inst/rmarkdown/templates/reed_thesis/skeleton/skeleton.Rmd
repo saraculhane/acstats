@@ -5,8 +5,9 @@ division: 'Mathematics and Natural Sciences'
 advisor: 'Advisor F. Name'
 department: 'Mathematics'
 title: 'My Final College Paper'
-abstract: >
-  The preface pretty much says it all. 
+abstract: "`r paste(readLines('abstract.Rmd'), collapse = '\n')`"
+# If you'd rather include these preliminary documents in files instead of inline
+# like below use a command like that for the abstract above.
 acknowledgements: >
   I want to thank a few people.
 dedication: >
