@@ -4,7 +4,6 @@
 
 1. Change links inside document to be footnotes instead?
 1. Might need to turn off links? <http://tex.stackexchange.com/questions/823/remove-ugly-borders-around-clickable-cross-references-and-hyperlinks>
-1. Add capability to include abstract, dedication, etc. in a file instead of inline in the YAML header?
 1. Create a submodule of citation style styles repository in csl folder <http://stackoverflow.com/questions/5252450/using-someone-elses-repo-as-a-git-submodule-on-github>
 
 
@@ -37,7 +36,7 @@
 5. Describe saving R plot output and label
 6. Change coloring of R input to match Knit output 
 7. Describe use of `cache = TRUE`
-
+8. 1. Add capability to include abstract, dedication, etc. in a file instead of inline in the YAML header
 
 <!--  Avoiding since might be a mess to install extra things on the user's end / I haven't tested these yet
   - Likely taken care of by using this (but will need to install pandoc filter...might not be capable in **R** package?):  <https://github.com/lierdakil/pandoc-crossref>
