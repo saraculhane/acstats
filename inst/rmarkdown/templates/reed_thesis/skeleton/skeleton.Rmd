@@ -7,7 +7,7 @@ department: 'Mathematics'
 title: 'My Final College Paper'
 abstract: "`r paste(readLines('abstract.Rmd'), collapse = '\n')`"
 # If you'd rather include the preliminary content in files instead of inline
-# like below use a command like that for the abstract above.
+# like below, use a command like that for the abstract above.
 acknowledgements: >
   I want to thank a few people.
 dedication: >
