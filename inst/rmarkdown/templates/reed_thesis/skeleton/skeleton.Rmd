@@ -15,6 +15,7 @@ dedication: >
 preface: >
   This is an example of a thesis setup to use the reed thesis document class.
 bibliography: bib/thesis.bib
+# Download your specific bibliography database file and refer to it in the line above.
 csl: csl/apa.csl
 # Download your specific csl file and refer to it in the line above.
 output: 
