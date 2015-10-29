@@ -73,6 +73,19 @@
 
 % Below added by CII
 
+%%% Copied from knitr
+%% maxwidth is the original width if it's less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
 \renewcommand{\contentsname}{Table of Contents}
 
 \setlength{\parskip}{0pt}
