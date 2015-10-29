@@ -59,9 +59,19 @@ summary(cars)
 
 If you'd like to put the results of your analysis directly into your discussion, add inline code like this:
 
-The `cos` of $2 \pi$ is `r cos(2*pi)`. 
+> The `cos` of $2 \pi$ is `r cos(2*pi)`. 
 
-Mathematics can be added by surrounding the mathematical text with dollar signs.  More examples of this are in [](#math-sci).  
+Another example would be the direct calculation of the standard deviation:
+
+> The standard deviation of `speed` in `cars` is `r sd(cars$speed)`.
+
+One last neat feature is the use of the `ifelse` conditional statement which can be used to output text depending on the result of an **R** calculation:
+
+> `r ifelse(sd(cars$speed) < 6, "The standard deviation is less than 6.", "The standard deviation is equal to or greater than 6.")`
+
+Note the use of `>` here, which signifies a quotation environment that will be indented.
+
+As you see with `$2 \pi$` above, mathematics can be added by surrounding the mathematical text with dollar signs.  More examples of this are in [](#math-sci) if you uncomment the code in [](#math).  
 
 ## Including plots
 
