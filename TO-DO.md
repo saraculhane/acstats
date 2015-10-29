@@ -7,6 +7,8 @@
 1. Change links inside document to be footnotes instead?
 1. Might need to turn off links? <http://tex.stackexchange.com/questions/823/remove-ugly-borders-around-clickable-cross-references-and-hyperlinks>
 1. Add capability to include abstract, dedication, etc. in a file instead of inline in the YAML header?
+1. Create a submodule of citation style styles repository in csl folder <http://stackoverflow.com/questions/5252450/using-someone-elses-repo-as-a-git-submodule-on-github>
+
 
 #### Down the road
 
