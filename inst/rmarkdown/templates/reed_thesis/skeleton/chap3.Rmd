@@ -33,7 +33,7 @@ flights <- read.csv("data/flights.csv")
 
 ## Tables
 
-In addition to the tables that can be automatically generated from a data frame in **R** that you saw in [R Markdown Basics] using the `kable` function, you can also create tables using _pandoc_. (More information is available at <http://pandoc.org/README.html#tables>.)  This might be useful if you don't have values specifically stored in **R**, but you'd like to display them in table form.  Below is an example.  Pay careful attention to the alignment in the table and the use of the hyphens to create the rows and columns of the table.
+In addition to the tables that can be automatically generated from a data frame in **R** that you saw in [R Markdown Basics] using the `kable` function, you can also create tables using _pandoc_. (More information is available at <http://pandoc.org/README.html#tables>.)  This might be useful if you don't have values specifically stored in **R**, but you'd like to display them in table form.  Below is an example.  Pay careful attention to the alignment in the table and the use of the hyphens to create the rows and columns.
 
 ----------------------------------------------------------------------------------
   Factors                    Correlation between Parents & Child      Inherited
