@@ -1,7 +1,5 @@
 ## Things left to do with Reed Thesis template
 
-1. Look into changing bibliography description to Zotero.  Albert Kim recommended the tutorial at <http://sites.middlebury.edu/zoteromiddlebury/>.
-
 ### Possible enhancements
 
 1. Change links inside document to be footnotes instead?
