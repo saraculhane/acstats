@@ -25,7 +25,7 @@ if(!require(rticles)){
   devtools::install_github("ismayc/rticles")
   }
 library(rticles)
-flights <- read.csv("flights.csv")
+flights <- read.csv("data/flights.csv")
 ```
 
 
@@ -76,7 +76,7 @@ If you need a graphic or tabular material to be part of the text, you can just p
 In the **R** chunk below, we will load in a picture stored as `reed.jpg` in our main directory.  We then give it the caption of "Reed logo", the label of "reed", and specify that this is a figure.  Note again the use of the `results = "asis"` specification to automatically include and compile the \LaTeX\ code.
 
 ```{r reed_logo, results = "asis"}
-label(path = "reed.jpg", caption = "Reed logo", 
+label(path = "figure/reed.jpg", caption = "Reed logo", 
       label = "reed", type = "figure")
 ```
 
@@ -93,11 +93,12 @@ delay_airline <- flights %>% group_by(carrier) %>%
   summarize(mean_dep_delay = mean(dep_delay)) %>%
   ggplot(aes(x = carrier, y = mean_dep_delay)) +
   geom_bar(position = "identity", stat = "identity", fill = "red")
-ggsave("delays.png", plot = delay_airline, width = 5, height = 3)
+ggsave("figure/delays.png", plot = delay_airline, 
+       width = 5, height = 3)
 ```
 
 ```{r box_label, results = "asis"}
-label(path = "delays.png", 
+label(path = "figure/delays.png", 
       caption = "Mean Delays by Airline", 
       label = "delays", type = "figure",
       scale = 0.3)
@@ -110,7 +111,8 @@ A table linking these carrier codes to airline names is available at <https://gi
 Next, we will explore the use of the `scale` parameter which can be used to shrink or expand an image.  Here we use the mathematical graph stored in the "subdivision.pdf" file.  Note that we didn't specify the `caption =` or `label =` here, but we could have.
 
 ```{r subdiv1, results = "asis"}
-label("subdivision.pdf", "Subdiv. graph", "subd", scale = 0.75)
+label("figure/subdivision.pdf", "Subdiv. graph", "subd", 
+      scale = 0.75)
 ```
 
 Here is a reference to this image: `r ref("subd")`.  (Move this around throughout the document as you wish.)
@@ -120,7 +122,8 @@ Here is a reference to this image: `r ref("subd")`.  (Move this around throughou
 Lastly, we will explore how to rotate figures using the `angle` parameter.
 
 ```{r subdiv1_180, results = "asis"}
-label("subdivision.pdf", "A Larger Figure, Flipped Upside Down", 
+label("figure/subdivision.pdf", 
+      "A Larger Figure, Flipped Upside Down", 
       scale = 1.5,
       angle = 180,
       label = "subd2")
@@ -135,7 +138,7 @@ The following figure features the more popular changes thesis students want to t
 If you'd like to make further tweaks to figures, you might need to invoke some \LaTeX\ code.  Please email us at <data@reed.edu> if you need assistance.
 
 ```{r tinymathcap, results = "asis"}
-label("subdivision.pdf", 
+label("figure/subdivision.pdf", 
       caption = "Subdivision of arc segments",
       alt.cap = "You can see that $p_3 = p_6^\\prime$",
       cap.size = "footnotesize",

@@ -82,7 +82,7 @@ Included in this template is a file called `flights.csv`.  This file includes a 
 We can load in this data set using the following command:
 
 ```{r load_data}
-flights <- read.csv("flights.csv")
+flights <- read.csv("data/flights.csv")
 ```
 
 The data is now stored in the data frame called `flights` in **R**.  To get a better feel for the variables included in this dataset we can use a variety of functions.  Here we can see the dimensions (rows by columns) and also the names of the columns.
@@ -105,16 +105,14 @@ We begin by checking to ensure that needed packages are installed and then we lo
 ```{r load_pkgs, message = FALSE}
 # List of packages required for this analysis
 pkg <- c("dplyr", "ggplot2", "knitr", "devtools")
-
 # Check if packages are not installed and assign the
 # names of the packages not installed to the variable new.pkg
 new.pkg <- pkg[!(pkg %in% installed.packages())]
-
 # If there are any packages in the list that aren't installed,
 # install them
 if (length(new.pkg))
   install.packages(new.pkg, repos = "http://cran.rstudio.com")
-
+# Load packages
 library(dplyr)
 library(ggplot2)
 library(knitr)
