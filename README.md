@@ -15,6 +15,7 @@ To use **rticles** from RStudio:
 2) Install the **rticles** package: 
 
 ```S
+install.packages("devtools")
 devtools::install_github("ismayc/rticles")
 ```
 
