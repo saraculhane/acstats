@@ -2,6 +2,7 @@
 
 1. Use index features like Hadley did in adv-r
 1. Add Table of Abbreviations in an Rmd file
+  - Some ideas here:  <http://tex.stackexchange.com/questions/86666/how-to-create-both-list-of-abbreviations-and-list-of-nomenclature-using-nomencl>
 
 ### Possible enhancements
 
@@ -13,8 +14,8 @@
 #### Down the road
 
 1. Create manual pages and vignettes and documentation
-1. Test other citation styles as faculty/students request
 1. Submit to CRAN
+1. Test other citation styles as faculty/students request
 1. Allow for documents to be produced in epub/html formats as well as PDF format
 
 <!-- Useful LaTeX reference
