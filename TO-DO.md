@@ -1,5 +1,8 @@
 ## Things left to do with Reed Thesis template
 
+1. Use index features like Hadley did in adv-r
+1. Add Table of Abbreviations in an Rmd file
+
 ### Possible enhancements
 
 1. Change links inside document to be footnotes instead?
@@ -11,8 +14,6 @@
 
 1. Create manual pages and vignettes and documentation
 1. Test other citation styles as faculty/students request
-1. Add Table of Abbreviations (maybe in a text file/Rmd file?)
-1. Use index features like Hadley did in adv-r
 1. Submit to CRAN
 1. Allow for documents to be produced in epub/html formats as well as PDF format
 
