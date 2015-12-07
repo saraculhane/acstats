@@ -32,5 +32,3 @@ If you feel it necessary to include an appendix, it goes here.
 \appendix
 
 # The First Appendix
-
-# The Second Appendix, for Fun

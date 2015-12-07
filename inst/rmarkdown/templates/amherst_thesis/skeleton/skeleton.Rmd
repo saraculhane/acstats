@@ -1,9 +1,9 @@
 ---
 author: 'Your R. Name'
 date: 'May 20xx'
-division: 'Mathematics and Natural Sciences'
+division: 'Statistics'
 advisor: 'Advisor F. Name'
-department: 'Mathematics'
+department: 'Mathematics and Statistics'
 title: 'My Final College Paper'
 abstract: >
   "`r paste(readLines('abstract.Rmd'), collapse = '\n')`"
@@ -14,13 +14,13 @@ acknowledgements: >
 dedication: >
   You can have a dedication here if you wish. 
 preface: >
-  This is an example of a thesis setup to use the reed thesis document class.
+  This is an example of a thesis setup to use the Amherst thesis document class.
 bibliography: bib/thesis.bib
 # Download your specific bibliography database file and refer to it in the line above.
 csl: csl/apa.csl
 # Download your specific csl file and refer to it in the line above.
 output: 
-  rticles::reed_thesis:
+  rticles::amherst_thesis:
     toc: true
 lot: true
 lof: true
