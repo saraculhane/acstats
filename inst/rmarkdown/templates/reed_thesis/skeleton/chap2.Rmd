@@ -1,6 +1,5 @@
 ---
-output: pdf_document
-header-includes: 
+header-includes:
 - \usepackage{amssymb,amsthm,amsmath}
 - \usepackage{chemarr}
 ---
@@ -28,7 +27,7 @@ library(rticles)
 
 ## Math
 
-\TeX\ is the best way to typeset mathematics. Donald Knuth designed \TeX\ when he got frustrated at how long it was taking the typesetters to finish his book, which contained a lot of mathematics.  One nice feature of _R Markdown_ is its ability to read \LaTeX\ code directly.
+\\TeX\\ is the best way to typeset mathematics. Donald Knuth designed \\TeX\\ when he got frustrated at how long it was taking the typesetters to finish his book, which contained a lot of mathematics.  One nice feature of _R Markdown_ is its ability to read \\LaTeX\\ code directly.
 
 If you are doing a thesis that will involve lots of math, you will want to read the following section which has been commented out. If you're not going to use math, skip over or delete this next commented section.
 
@@ -98,17 +97,17 @@ So, $\mathrm{Fe_2^{2+}Cr_2O_4}$ is written `$\mathrm{Fe_2^{2+}Cr_2O_4}$`.
 The \noindent command below does what you'd expect:  it forces the current line/paragraph to not indent. This was done here to match the format of the LaTeX thesis PDF.
 -->
 
-\noindent Exponent or Superscript: O$^{-}$
+\noindent Exponent or Superscript: $\mathrm{O^-}$
 
-\noindent Subscript: CH$_{4}$
+\noindent Subscript: $\mathrm{CH_4}$
 
 To stack numbers or letters as in $\mathrm{Fe_2^{2+}}$, the subscript is defined first, and then the superscript is defined.
 
-\noindent Angstrom: {\AA}
+\noindent Angstrom: ${\AA}$
 
-\noindent Bullet: CuCl $\bullet$ 7H${_2}$O
+\noindent Bullet: CuCl $\bullet$ $\mathrm{7H_{2}O}$
 
-\noindent Double Dagger: \ddag
+\noindent Double Dagger: $\ddag$
 
 \noindent Delta: $\Delta$
 
@@ -131,9 +130,9 @@ label(path = "$\\mathrm{C_6H_{12}O_6  + 6O_2} \\longrightarrow \\mathrm{6CO_2 + 
 
 ### Other examples of reactions
 
-$\mathrm{NH_4Cl_{(s)}} \rightleftharpoons \mathrm{NH_{3(g)}+HCl_{(g)}}$
+$\mathrm{NH_4Cl_{(s)}}$ $\rightleftharpoons$ $\mathrm{NH_{3(g)}+HCl_{(g)}}$
 
-\noindent $\mathrm{MeCH_2Br + Mg} \xrightarrow[below]{above} \mathrm{MeCH_2\bullet Mg \bullet Br}$
+\noindent $\mathrm{MeCH_2Br + Mg}$ $\xrightarrow[below]{above}$ $\mathrm{MeCH_2\bullet Mg \bullet Br}$
 
 ## Physics
 
