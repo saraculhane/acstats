@@ -1,4 +1,4 @@
-Package: rticles
+Package: reed_templates
 Type: Package
 Title: Provides R Markdown templates
 Version: 1.0
