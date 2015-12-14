@@ -37,6 +37,6 @@ devtools::install_github(c("rstudio/rmarkdown", "ismayc/reedtemplates"))
 3) Use the `rmarkdown::draft` function to create articles:
 
 ```S
-rmarkdown::draft("MyAbstract.Rmd", template = "reed_thesis", package = "reedtemplates")
+rmarkdown::draft("MyThesis.Rmd", template = "reed_thesis", package = "reedtemplates")
 ```
 
