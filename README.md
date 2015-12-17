@@ -31,7 +31,8 @@ devtools::install_github("ismayc/reedtemplates")
 2) Install the **rmarkdown** and **reedtemplates** packages:
 
 ```S
-devtools::install_github(c("rstudio/rmarkdown", "ismayc/reedtemplates"))
+install.packages("rmarkdown")
+devtools::install_github("ismayc/reedtemplates")
 ```
     
 3) Use the `rmarkdown::draft` function to create articles:
