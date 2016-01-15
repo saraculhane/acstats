@@ -1,5 +1,5 @@
 #' @export
-reed_thesis <- function(toc = TRUE) {
+amherst_thesis <- function(toc = TRUE) {
   template <- find_resource("amherst_thesis", "template.tex")
 
   base <- rmarkdown::pdf_document(template = template,

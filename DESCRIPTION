@@ -1,11 +1,11 @@
-Package: reedtemplates
+Package: acstats
 Type: Package
-Title: Provides R Markdown templates
+Title: Amherst College Statistics Comprehensive Evaluation Template
 Version: 1.0
 Date: 2015-12-7
 Author: Susan Wang
 Maintainer: Susan Wang <swang@amherst.edu>
-Description: This package, based on Chester Ismay's Reed College Thesis template package, will contain a variety of different templates for journals, classroom projects, theses, books, etc.
+Description: This package, based on Chester Ismay's Reed College Thesis template package, contains the Amherst College statistics major Comprehensive Evaluation template.
 License: GPL-3
 Imports:
     rmarkdown

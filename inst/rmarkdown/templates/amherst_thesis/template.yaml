@@ -1,5 +1,5 @@
-name: Reed Senior Thesis
+name: Amherst Statistics Comprehensive Evaluation
 description: >
- Template for creating a Senior Thesis at Reed College using R Markdown based on the LaTeX template.
+ Template for creating a Statistics Comprehensive Report at Amherst College using R Markdown based on the LaTeX template.
 create_dir: true
 

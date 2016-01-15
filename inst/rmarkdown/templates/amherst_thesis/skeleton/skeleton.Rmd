@@ -1,10 +1,10 @@
 ---
 author: 'Your R. Name'
-date: 'May 20xx'
+date: 'Feburary 20xx'
 division: 'Statistics'
 advisor: 'Advisor F. Name'
 department: 'Mathematics and Statistics'
-title: 'My Final College Paper'
+title: 'My Comprehensive Evaluation'
 abstract: >
   `r paste(readLines('abstract.Rmd'), collapse = '\n')`
 # If you'd rather include the preliminary content in files instead of inline
@@ -14,17 +14,12 @@ acknowledgements: >
 dedication: >
   You can have a dedication here if you wish. 
 preface: >
-  This is an example of a thesis setup to use the Amherst thesis document class.
+  This is a preface to your hard work.
 bibliography: bib/thesis.bib
-# Download your specific bibliography database file and refer to it in the line above.
+# Modify your specific bibliography database file and refer to it in the line above.
 csl: csl/apa.csl
-# Download your specific csl file and refer to it in the line above.
 output: 
-<<<<<<< HEAD:inst/rmarkdown/templates/amherst_thesis/skeleton/skeleton.Rmd
-  rticles::amherst_thesis:
-=======
-  reedtemplates::reed_thesis:
->>>>>>> ismayc/master:inst/rmarkdown/templates/reed_thesis/skeleton/skeleton.Rmd
+  acstats::amherst_thesis:
     toc: true
 lot: true
 lof: true
@@ -47,11 +42,11 @@ If you'd like to include a comment that won't be produced in your resulting PDF 
 # used for labeling and referencing
 if(!require(devtools))
   install.packages("devtools", repos = "http://cran.rstudio.com")
-if(!require(reedtemplates)){
+if(!require(acstats)){
   library(devtools)
-  devtools::install_github("ismayc/reedtemplates")
+  devtools::install_github("swang/acstats")
 }
-library(reedtemplates)
+library(acstats)
 ```
 
 <!--
@@ -70,6 +65,7 @@ This is for including Chapter 1.  Notice that it's also good practice to name yo
 ```{r chapter1, child = 'chap1.Rmd'}
 ```
 
+
 <!--
 Immediately below is the chunk for Chapter 2.
 --> 
@@ -79,6 +75,7 @@ Immediately below is the chunk for Chapter 2.
 
 ```{r chapter3, child = 'chap3.Rmd'}
 ```
+
 
 <!--
 Add other chunks here for other chapters in your thesis.  Note that if you use the `child =` parameter, you can't include anything else in your chunk.

@@ -20,11 +20,11 @@ if(!require(dplyr))
     install.packages("dplyr", repos = "http://cran.rstudio.com")
 if(!require(ggplot2))
     install.packages("ggplot2", repos = "http://cran.rstudio.com")
-if(!require(reedtemplates)){
+if(!require(acstats)){
   library(devtools)
-  devtools::install_github("ismayc/reedtemplates")
+  devtools::install_github("swang/acstats")
   }
-library(reedtemplates)
+library(acstats)
 flights <- read.csv("data/flights.csv")
 ```
 
@@ -149,7 +149,7 @@ label("figure/subdivision.pdf",
 
 ## Footnotes and Endnotes
 
-You might want to footnote something. ^[footnote text] The footnote will be in a smaller font and placed appropriately. Endnotes work in much the same way. More information can be found about both on the CUS site or feel free to reach out to <data@reed.edu>.
+You might want to footnote something. ^[footnote text] The footnote will be in a smaller font and placed appropriately. Endnotes work in much the same way. 
 
 ## Bibliographies
 

@@ -10,6 +10,7 @@
 % May 2005 Patrick Carlisle Table of contents chapter definition
 % 2004-2005 Ben Salzberg (BTS) a variety of tweaks here and in the template
 % 2015 Chester Ismay (CII) modified to create R Markdown template
+% 2016 Xiaofei (Susan) Wang modified to create R Markdown template for Amherst College comprehensive evaluation report
 %
 % Oddities:
 %
@@ -24,7 +25,7 @@
 %
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{reedthesis}[2004/01/27 The Reed College Thesis Class]
+\ProvidesClass{amherstthesis}[2004/01/27 The Amherst College Thesis Class]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
 \LoadClass{book}
@@ -199,10 +200,8 @@
 \def\@division{\@latex@warning@no@line{No \noexpand\division given}}
 \def\department#1{\gdef \@department{#1}}
 \def\@department{\@latex@warning@no@line{No \noexpand\department given}}
-\def\thedivisionof#1{\gdef \@thedivisionof{#1}}
-\def\@thedivisionof{The Division of}
-\def\approvedforthe#1{\gdef \@approvedforthe{#1}}
-\def\@approvedforthe{Division}
+\def\thefaculty#1{\gdef \@thefaculty{#1}}
+\def\@thefaculty{The Statistics Faculty}
 \def\advisor#1{\gdef \@advisor{#1}}
 \def\@advisor{\@latex@warning@no@line{No \noexpand\advisor given}}
 \def\altadvisor#1{\gdef \@altadvisor{#1} \@altadvisortrue}
@@ -272,10 +271,10 @@
 
 \ifx\@pdfoutput\@undefined
   \newcommand{\RTpercent}{\@percentchar\space}
-  \AtBeginDvi{\special{!\RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}}
-  \AtBeginDvi{\special{rawpostscript \RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}}
+  \AtBeginDvi{\special{!\RTpercent Amherst College LaTeX Report Class 2001/12/04 SN}}
+  \AtBeginDvi{\special{rawpostscript \RTpercent Amherst College LaTeX Report Class 2001/12/04 SN}}
 \else
-  \AtEndDocument{\pdfinfo{/Creator	(Reed College LaTeX Thesis Class 2001/12/04 SN)}}
+  \AtEndDocument{\pdfinfo{/Creator	(Amherst College LaTeX Report Class 2001/12/04 SN)}}
 \fi
 
 % I hacked the title page to all be the same font size
@@ -300,16 +299,18 @@
     \vfil
     \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
     \vfil
-    A Thesis \\
+    A Comprehensive Evaluation Report \\
     Presented to \\
-    \@thedivisionof \ \@division \\
-    Reed College
+    \@thefaculty \\
+    Amherst College
     \vfil
     \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
     \vfil
     In Partial Fulfillment \\
     of the Requirements for the Degree \\
-    Bachelor of Arts
+    Bachelor of Arts\\
+    in\\
+    Statistics
     \vfil
     \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
     \bigskip
@@ -325,21 +326,21 @@
   \end{titlepage}
 
 %% Approved for the division page
-  \cleardoublepage
-  {\fontsize{12}{14}
-  \setbox0=\hbox{Approved for the \@approvedforthe}
-  \thispagestyle{empty}
-  \null\vfil		% just below center of page
-  \par\vskip 6cm	% below center, not center
-  \centerline{\copy0}	% approved
-  \centerline{(\@department)} %major
-  \vskip 1cm		%space to sign
-  \centerline{\makebox[\wd0][c]{\hrulefill}
-	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\hrulefill} \fi}
-  \centerline{\makebox[\wd0][c]{\@advisor}
-	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\@altadvisor} \fi}
-  \par\vfil\null}
-  \cleardoublepage
+%   \cleardoublepage
+%   {\fontsize{12}{14}
+%   \setbox0=\hbox{Approved for the \@approvedforthe}
+%   \thispagestyle{empty}
+%   \null\vfil		% just below center of page
+%   \par\vskip 6cm	% below center, not center
+%   \centerline{\copy0}	% approved
+%   \centerline{(\@department)} %major
+%   \vskip 1cm		%space to sign
+%   \centerline{\makebox[\wd0][c]{\hrulefill}
+% 	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\hrulefill} \fi}
+%   \centerline{\makebox[\wd0][c]{\@advisor}
+% 	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\@altadvisor} \fi}
+%   \par\vfil\null}
+%   \cleardoublepage
   }
 }
 
