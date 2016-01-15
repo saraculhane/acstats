@@ -1,22 +1,34 @@
 ### Overview
 
+<<<<<<< HEAD
 The **rticles** package includes a set of [R Markdown](http://rmarkdown.rstudio.com) templates that enable authoring of journal and conference submissions, e-books, class projects, and a variety of other reports.  Currently, this package only includes a template for creating a senior thesis at Amherst College. This package is based off of Chester Ismay's **rticles** [package](https://github.com/ismayc/rticles) for a Reed College Senior Thesis template.
+=======
+The **reedtemplates** package (formerly named **rticles** but changed due to ambiguity with the package at `rstudio/rticles`) includes a set of [R Markdown](http://rmarkdown.rstudio.com) templates that enable authoring of journal and conference submissions, e-books, class projects, and a variety of other reports.  Currently, this package only includes a template for creating a senior thesis at Reed College. If you'd like to see the PDF document the template produces, it can be found [here](https://github.com/ismayc/reedtemplates/blob/master/inst/rmarkdown/templates/reed_thesis/skeleton/skeleton.pdf).
+>>>>>>> ismayc/master
 
 Under the hood, LaTeX templates are used to ensure that documents conform precisely to submission standards. At the same time, composition and formatting can be done using lightweight [markdown](http://rmarkdown.rstudio.com/authoring_basics.html) syntax, and **R** code and its output can be seamlessly included using [knitr](http://yihui.name/knitr/).
 
-Using **rticles** has some prerequisites which are described below. To compile PDF documents using **R**, you are going to need to have LaTeX installed.  It can be downloaded for Windows at <http://http://miktex.org/download> and for Mac at <http://tug.org/mactex/mactex-download.html>.  Follow the instructions to install the necessary packages after downloading the (somewhat large) installer files.  You may need to install a few extra LaTeX packages on your first attempt to knit as well.
+Using **reedtemplates** has some prerequisites which are described below. To compile PDF documents using **R**, you are going to need to have LaTeX installed.  It can be downloaded for Windows at <http://http://miktex.org/download> and for Mac at <http://tug.org/mactex/mactex-download.html>.  Follow the instructions to install the necessary packages after downloading the (somewhat large) installer files.  You may need to install a few extra LaTeX packages on your first attempt to knit as well.
 
+<<<<<<< HEAD
 ### Using rticles from Susan's GitHub
+=======
+### Using reedtemplates from Chester's GitHub
+>>>>>>> ismayc/master
 
-To use **rticles** from RStudio:
+To use **reedtemplates** from RStudio:
 
 1) Install the latest [RStudio](http://www.rstudio.com/products/rstudio/download/).
 
-2) Install the **rticles** package: 
+2) Install the **reedtemplates** package: 
 
 ```S
 install.packages("devtools")
+<<<<<<< HEAD
 devtools::install_github("swang87/rticles")
+=======
+devtools::install_github("ismayc/reedtemplates")
+>>>>>>> ismayc/master
 ```
 
 3) Use the **New R Markdown** dialog to create an article from one of the templates:
@@ -24,19 +36,28 @@ devtools::install_github("swang87/rticles")
 ![New R Markdown](reed_template.png)
     
     
-### Using rticles outside of RStudio
+### Using reedtemplates outside of RStudio
 
 1) Install [pandoc](http://johnmacfarlane.net/pandoc/) using the [instructions for your platform](https://github.com/rstudio/rmarkdown/blob/master/PANDOC.md).
 
-2) Install the **rmarkdown** and **rticles** packages:
+2) Install the **rmarkdown** and **reedtemplates** packages:
 
 ```S
+<<<<<<< HEAD
 devtools::install_github(c("rstudio/rmarkdown", "swang87/rticles"))
+=======
+install.packages("rmarkdown")
+devtools::install_github("ismayc/reedtemplates")
+>>>>>>> ismayc/master
 ```
     
 3) Use the `rmarkdown::draft` function to create articles:
 
 ```S
+<<<<<<< HEAD
 rmarkdown::draft("MyAbstract.Rmd", template = "amherst_thesis", package = "rticles")
+=======
+rmarkdown::draft("MyThesis.Rmd", template = "reed_thesis", package = "reedtemplates")
+>>>>>>> ismayc/master
 ```
 

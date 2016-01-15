@@ -2,22 +2,9 @@
 output: pdf_document
 ---
 
-<!--
-\chapter*{Conclusion}
-         \addcontentsline{toc}{chapter}{Conclusion}
-	\chaptermark{Conclusion}
-	\markboth{Conclusion}{Conclusion}
-  \setcounter{chapter}{5}
-	\setcounter{section}{0}
-	
-	Here's a conclusion, demonstrating the use of all that manual incrementing and table of contents adding that has to happen if you use the starred form of the chapter command. The deal is, the chapter command in \LaTeX\ does a lot of things: it increments the chapter counter, it resets the section counter to zero, it puts the name of the chapter into the table of contents and the running headers, and probably some other stuff.
--->
-
 # Conclusion {.unnumbered}
   \setcounter{chapter}{4}
 	\setcounter{section}{0}
-
-
 
 If we don't want Conclusion to have a chapter number next to it, we can add the `{.unnumbered}` attribute.  This has an unintended consequence of the sections being labeled as 3.6 for example though instead of 4.1.  The \LaTeX\ commands immediately following the Conclusion declaration get things back on track.
 
@@ -32,3 +19,20 @@ If you feel it necessary to include an appendix, it goes here.
 \appendix
 
 # The First Appendix
+<<<<<<< HEAD:inst/rmarkdown/templates/amherst_thesis/skeleton/conclusion.Rmd
+=======
+
+This first appendix includes all of the R chunks of code that were hidden throughout the document (using the `include = FALSE` chunk tag) to help with readibility and/or setup.
+
+#### In the main Rmd file:
+
+```{r ref.label = 'include_packages', results = 'hide', echo = TRUE}
+```
+
+#### In [](#ref_labels):
+
+```{r ref.label = 'include_packages_2', results = 'hide', echo = TRUE}
+```
+
+# The Second Appendix, for Fun
+>>>>>>> ismayc/master:inst/rmarkdown/templates/reed_thesis/skeleton/conclusion.Rmd

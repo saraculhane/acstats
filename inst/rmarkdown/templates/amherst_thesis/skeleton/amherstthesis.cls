@@ -132,6 +132,8 @@
   }{\endoldtheindex}
 }
 
+%\usepackage{natbib}
+
 % Stolen from book.cls and modified
 \let\RToldchapter\chapter
 \renewcommand{\chapter}{\if@openright\RTcleardoublepage

@@ -1,6 +1,7 @@
 skeleton_files/
 skeleton_cache/
-skeleton.pdf
+chap1_cache/
+chap1_files/
 skeleton.tex
 chap0.pdf
 chap1.pdf
@@ -15,3 +16,14 @@ chap3.tex
 chap4.tex
 conclusion.tex
 delays.png
+chap0.docx
+chap1.docx
+chap2.docx
+chap3.docx
+chap4.docx
+chap0.html
+chap1.html
+chap2.html
+chap3.html
+chap4.html
+conclusion.docx
