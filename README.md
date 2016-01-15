@@ -10,13 +10,13 @@ The **acstats** package has some prerequisites which are described below. To com
 
 To use **acstats** from RStudio (including the Amherst College RStudio server):
 
-1. Within RStudio, install the package:
+* Within RStudio, install the package:
 
 ```
 install.packages("devtools")
 devtools::install_github("swang87/acstats")
 ```
 
-2. Use the **New R Markdown** dialog to create an article from one of the templates:
+* Use the **New R Markdown** dialog to create an article from one of the templates:
 
 ![New R Markdown](acstats_template.png)
