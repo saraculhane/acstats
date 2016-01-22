@@ -2,24 +2,37 @@
 
 # Introduction {.unnumbered}
 
-Welcome to the _R Markdown_ thesis template. This template is based on (and in many places copied directly from) the \LaTeX\ template, but hopefully it will provide a nicer interface for those that have never used \TeX\ or \LaTeX\ before.  Using _R Markdown_ will also allow you to easily keep track of your analyses in **R** chunks of code, with the resulting plots and output included as well.  The hope is this _R Markdown_ template gets you in the habit of doing reproducible research, which benefits you long-term as a researcher, but also will greatly help anyone that is trying to reproduce or build onto your results down the road.
+Welcome to the _R Markdown_ comprehensive evaluation report template. For illustration purposes, the template uses multiple chapters and sections. You should modify this setup based on your own needs. We recommend that you retain the following sections:
 
-<!--
-You'll see \LaTeX\ code here and there, but it won't make up a large chunk of your thesis text.
--->
+1. Abstract
+2. Introduction/Background
+3. 2-3 chapters on your work
+4. Conclusion
+5. Appendix
+6. References
 
-Hopefully, you won't have much of a learning period to go through and you will reap the benefits of a nicely formatted thesis.  The use of \LaTeX\ in combination with _Markdown_ is more consistent than the output of a word processor, much less prone to corruption or crashing, and the resulting file is smaller than a Word file. While you may have never had problems using Word in the past, your thesis is likely going to be about twice as large and complex as anything you've written before, taxing Word's capabilities.  After working with _Markdown_ and **R** together for a few weeks, we are confident this will be your reporting style of choice going forward.
+## Notes about the Appendix
+
+We highly recommend that lengthy chunks in the code should be pushed to the appendix. Note that you will not need to retype code chunks in full in the appendix. You just have to refer to them by name. See the bottom of `conclusion.Rmd` for details on this.
+
+## Notes about References
+
+We use BibTeX for references here. By default, the BibTeX file used lies in `bib/thesis.bib`. You should take a look at this file to get a sense for the structure of BibTeX references. You can export citations in BibTeX form from Google Scholar, for example. 
+
+_R Markdown_ uses _pandoc_ (<http://pandoc.org/>) to build its bibliographies.  One nice caveat of this is that you won't have to do a second compile to load in references as standard \LaTeX\ requires. To cite references in your thesis (after creating your bibliography database), place the reference name inside square brackets and precede it by the "at" symbol.  For example, here's a reference to a book about worrying:  [@Molina1994].  This `Molina1994` entry appears in a file called `thesis.bib` in the `bib` folder.  This bibliography database file was created by a program called BibTeX.  You can call this file something else if you like (look at the YAML header in the main .Rmd file) and, by default, is to placed in the `bib` folder.  
+
+For more information about BibTeX and bibliographies, see Reed College's CUS site (<http://web.reed.edu/cis/help/latex/index.html>)^[@reedweb2007]. There are three pages on this topic:  _bibtex_ (which talks about using BibTeX, at <http://web.reed.edu/cis/help/latex/bibtex.html>), _bibtexstyles_ (about how to find and use the bibliography style that best suits your needs, at <http://web.reed.edu/cis/help/latex/bibtexstyles.html>) and _bibman_ (which covers how to make and maintain a bibliography by hand, without BibTeX, at <http://web.reed.edu/cis/help/latex/bibman.html>). The last page will not be useful unless you have only a few sources.
+
+If you look at the YAML header at the top of the main .Rmd file you can see that we can specify the style of the bibliography by referencing the appropriate csl file.  You can download a variety of different style files at <https://www.zotero.org/styles>.  Make sure to download the file into the csl folder.
+
+### Tips
+
+- Like with thesis formatting, the sooner you start compiling your bibliography for something as large as thesis, the better. Typing in source after source is mind-numbing enough; do you really want to do it for hours on end in late April? Think of it as procrastination.
+- The cite key (a citation's label) needs to be unique from the other entries.
+- When you have more than one author or editor, you need to separate each author's name by the word "and" e.g. `Author = {Noble, Sam and Youngberg, Jessica},`.
+- Bibliographies made using BibTeX (whether manually or using a manager) accept \LaTeX\ markup, so you can italicize and add symbols as necessary.
+- To force capitalization in an article title or where all lowercase is generally used, bracket the capital letter in curly braces.
 
 
 
-#### Why use it?
 
-_R Markdown_ creates a simple and straightforward way to interface with the beauty of \LaTeX\.  Packages have been written in **R** to work directly with \LaTeX\ to produce nicely formatting tables and paragraphs. In addition to creating a user friendly interface to \LaTeX\, _R Markdown_ also allows you to read in your data, to analyze it and to visualize it using **R** functions, and also to provide the documentation and commentary on the results of your project.  Further, it allows for **R** results to be passed inline to the commentary of your results.  You'll see more on this later.  
-
-<!-- 
-Having your code and commentary all together in one place has a plethora of benefits!
--->
-
-#### Who should use it?
-
-Anyone who needs to use data analysis, math, tables, a lot of figures, complex cross-references, or who just cares about the final appearance of their document should use _R Markdown_. Of particular use should be anyone in the sciences, but the user-friendly nature of _Markdown_ and its ability to keep track of and easily include figures, automatically generate a table of contents, index, references, table of figures, etc. should make it of great benefit to nearly anyone writing a thesis project.
