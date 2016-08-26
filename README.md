@@ -6,15 +6,15 @@ Under the hood, LaTeX templates are used to ensure that documents conform precis
 
 The **acstats** package has some prerequisites which are described below. To compile PDF documents using **R**, you are going to need to have LaTeX installed.  It can be downloaded for Windows at <http://http://miktex.org/download> and for Mac at <http://tug.org/mactex/mactex-download.html>.  Follow the instructions to install the necessary packages after downloading the (somewhat large) installer files.  You may need to install a few extra LaTeX packages on your first attempt to knit as well.
 
-### Using acstats from Susan's GitHub
+### Using acstats from the Amherst Statistics's GitHub
 
 To use **acstats** from RStudio (including the Amherst College RStudio server):
 
 * Within RStudio, install the package:
 
 ```
-install.packages("devtools")
-devtools::install_github("swang87/acstats")
+install.packages("devtools")   # if not already installed
+devtools::install_github("Amherst-Statistics/acstats")
 ```
 
 * Use the **New R Markdown** dialog to create an article from one of the templates:
