@@ -1,6 +1,6 @@
 ---
 author: 'Your R. Name'
-date: 'Feburary 20xx'
+date: 'February 20xx'
 division: 'Statistics'
 advisor: 'Advisor F. Name'
 department: 'Mathematics and Statistics'
