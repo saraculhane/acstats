@@ -1,5 +1,7 @@
 <!-- The {.unnumbered} option here means that the introduction will be "Chapter 0." -->
 
+\onehalfspacing
+
 # Introduction {.unnumbered}
 
 Welcome to the _R Markdown_ comprehensive evaluation report template. For illustration purposes, the template uses multiple chapters and sections. You should modify this setup based on your own needs. We recommend that you retain the following sections:
