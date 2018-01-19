@@ -83,3 +83,4 @@ The bib chunk below must go last in this document according to how R Markdown re
 ```{r bib, child = 'bibliography.Rmd'}
 ```
 
+
