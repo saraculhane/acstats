@@ -186,13 +186,27 @@ make its application to numerous fields more efficient and usable.
   analysis used to recompose unknown original sources from known data.
   These methods utilize information from the known observed sources with
   consideration of a set of unknown weights, which are then applied to the
-  known observations to recover the original sources desired.
-  
-  In other words, there are always two unknowns and one known (each source
-  is its own vector within the matrix).
+  known observations to recover the original sources desired.In other
+  words, there are always two unknowns and one known (each source is its
+  own vector within the matrix).
   
   On a fundamental level, BSS attempts to solve a system of linear
   equations in which:
+  
+  \begin{figure}[h]
+    
+  
+    $\bullet$ N unknown sources $s_j$ (eg. the original sources to recover) \newline
+    
+    
+    $\bullet$ One unknown operator $\textbf{A}$ (an "un-mixing" or "de-mixing" matrix) \newline
+    
+    
+    $\bullet$ P observed signals $x_i$ with some relation: \newline
+    
+    \centering $\textbf{$x = A(s)$}$
+  
+  \end{figure}
   
   \begin{figure}[h]
     
@@ -212,39 +226,17 @@ make its application to numerous fields more efficient and usable.
   However, these \(s_i\) are not known values but instead a vector of
   distinct source signals, defined by their relationship to an also
   unknown operator matrix \(A\). The \(x_i\) are values that can be
-  directly observed from the signal/data without decomposition.
-  
-  In general the basic components are:
-  
-  \begin{figure}[h]
-    
-  
-    $\bullet$ N unknown sources $s_j$ (eg. the original sources to recover) \newline
-    
-    
-    $\bullet$ One unknown operator $\textbf{A}$ (an "un-mixing" or "de-mixing" matrix) \newline
-    
-    
-    $\bullet$ P observed signals $x_i$ with some relation: \newline
-    
-    \centering $\textbf{$x = A(s)$}$
-  
-  \end{figure}
-  
-  With this, the chosen BSS method takes the \(P\) known observations,
-  performs a separation technique (also known as un-mixing or de-mixing)
-  and outputs the unknown \(N\) sources that have been obscured by some
-  unobserved process (i.e.~the data collection process, random noise or
-  limits of a set of data in most cases).
-  
-  These \(y_k\) outputs should effectively estimate the original sources
-  that make up the \(s\) vector(s).
+  directly observed from the signal/data without decomposition. With this,
+  the chosen BSS method takes the \(P\) known observations, performs a
+  separation technique (also known as un-mixing or de-mixing) and outputs
+  the unknown \(N\) sources that have been obscured by some unobserved
+  process (i.e.~the data collection process, random noise or limits of a
+  set of data in most cases). These \(y_k\) outputs should effectively
+  estimate the original sources that make up the \(s\) vector(s).
   
   BSS possesses a large range of applications but can effectively uncover
   factors in data that are previously unknown or underlying the known data
-  through this demixing of source signals.
-  
-  (Puigt, 2011)
+  through this demixing of source signals.(Puigt, 2011)
   
   \section{ICA Generally}\label{ica-generally}
   
@@ -255,7 +247,7 @@ make its application to numerous fields more efficient and usable.
   methodology to the general BSS framework described above and has been
   proven a useful application in various settings with complex data. This
   process can be referred to a generative model, as ICA determines how the
-  observed data are constructed through the mixing process. (pg. 151, Aapo
+  observed data are constructed through the mixing process. (Aapo
   Hyvärinen \& Oja, 2001)
   
   While ICA follows the same basic matrix model as described above, it can
@@ -266,51 +258,41 @@ make its application to numerous fields more efficient and usable.
   \subsection{Assumptions of ICA Model}\label{assumptions-of-ica-model}
   
   The two key characteristics and model requirements differentiate ICA
-  from standard BSS and other methods are the following: \newline
+  from standard BSS and other methods are the following assumptions:
   
   \(\textbf{1. Assumption of statistical independence amongst the unknown source components}\)
   
   By definition, no component provides information on any of the other
-  components.
-  
-  (p 3, Aapo Hyvärinen \& Oja, 2001) \newline
+  components. Independence allows the effect of each individual components
+  to be isolated more easily.
   
   \(\textbf{2. Assumption of Non-Gaussianity}\):
   
-  \begin{itemize}
-  \item
-    These independent components are also assumed to have strictly
-    Non-Gaussian distributions (or at most one independent component with
-    a Gaussian distribution)
-  \item
-    Distinguishes from the similar structure method of Factor Analysis,
-    which instead requires Gaussianity.
-  \end{itemize}
-  
-  (p.~2, Hyvärinen \& Oja, 2000) \newline
+  These independent components are also assumed to have strictly
+  non-Gaussian distributions (or at most one independent component with a
+  Gaussian distribution). Non-Gaussian is an assumption necessary as
+  certain Gaussian signals may produce results where signals cannot be
+  recovered. This trait distinguishes ICA from the similar structure
+  method of Factor Analysis, which instead requires Gaussianity.
+  (Hyvärinen \& Oja, 2000)
   
   \(\textit{Note}\)-
   
-  \(\bullet\) The unknown mixing matrix will be denoted as a square for
-  ease of calculation (not always the case) \newline
-  
-  In this scenario, the number of IC will equal the number of observed
-  mixtures
-  
-  (pg. 153, Aapo Hyvärinen \& Oja, 2001)
+  The unknown mixing matrix will be denoted as a square for ease of
+  calculation (not always the case) In this scenario, the number of IC
+  will equal the number of observed mixtures (Aapo Hyvärinen \& Oja, 2001)
   
   \subsection{Ambigities of ICA Model}\label{ambigities-of-ica-model}
   
   Because of the two unknown factors (source signals and mixing matrix) :
   
   \(\bullet\) No reliable method of calculating variance of ICs exists.
+  \newline
   
   \(\textbf{Solution}\) : Set the RV to have unit variance or
   \(E(s_i^2) = 1\) \newline
   
-  \(\bullet\) No method of determining the order of ICs
-  
-  (pg. 154, Aapo Hyvärinen \& Oja, 2001)
+  \(\bullet\) No method of determining the order of ICs \newline
   
   \section{Primary Features of ICA (from
   Assumptions)}\label{primary-features-of-ica-from-assumptions}
@@ -327,11 +309,10 @@ make its application to numerous fields more efficient and usable.
   
   \[p(y_1,y_2) = p_1(y_1)p_2(y_2)\]
   
-  This can be extended to the expectation of two functions applied to
-  these RV's and is denoted:
+  As seen in Probability, this property can also be extended to the
+  expectation of these two functions and is denoted: \newline
   
-  \[E(h_1(y_1)h_2(y_2)) = E(h_1(y_1))E(h_2(y_2))\] (p.~3-4, Hyvärinen \&
-  Oja, 2000) \newline
+  \[E({p_1(y_1)p_2(y_2)}) = E(p_1({y_1}))E(p_2({y_2}))\]
   
   \(\textbf{Note on Correlation and Independence}\) \newline
   
@@ -340,23 +321,19 @@ make its application to numerous fields more efficient and usable.
   \[E({y_1y_2}) - E({y_1})E({y_2}) = 0\]
   
   While uncorrelatedness does not necessarily imply independence,
-  independent RV's will always be uncorrelated. For ICA modeling purposes,
-  this property helps simplify the estimation to only uncorrelated values.
-  
-  (p.~5, Hyvärinen \& Oja, 2000)
+  independent RV's will always be uncorrelated. Thus, for ICA modeling
+  purposes, this property helps simplify the estimation to only
+  uncorrelated values.
   
   \subsection{Non-Gaussianity and
   Measurement}\label{non-gaussianity-and-measurement}
   
   Though the Central Limit Theorem asserts that the sum of two or more
   independent RV's will tend towards a Gaussian distribution, the process
-  of un-mixing actually produces non-Gaussian signals.
-  
-  (Puigt, 2011) \newline
-  
-  ICA requires non-Gaussianity for the distributions of all source
-  signals, as accurate estimation of the mixing matrix \(A\) is not even
-  possible without meeting this condition.
+  of un-mixing actually produces non-Gaussian signals. ICA requires
+  non-Gaussianity for the distributions of all source signals, as accurate
+  estimation of the mixing matrix \(A\) is not even possible without
+  meeting this condition.
   
   To show this, assume that the known mixing matrix \(A\) is orthogonal
   (eg. \(A^{T}A = AA^{T}= I\)) and that all of the \(s_i\) are Gaussian.
@@ -367,62 +344,56 @@ make its application to numerous fields more efficient and usable.
   symmetry of this joint density function makes it impossible to know the
   directional signals of the columns of matrix \(A\), and therefore, the
   matrix cannot be estimated, rendering ICA ineffective in the Gaussian
-  case (although one Gaussian IC is technically allowed).
-  
-  (p.~5, Hyvärinen \& Oja, 2000)
+  case (although one Gaussian IC is technically allowed). (Hyvärinen \&
+  Oja, 2000)
   
   \subsubsection{Kurtosis as a Measure of
   Non-gaussianity}\label{kurtosis-as-a-measure-of-non-gaussianity}
   
-  Kurtosis is defined as the 4th order cumulant:
+  One primary metric used to measure the the non-gaussianity of a random
+  variable is Kurtosis. Explicitly, Kurtosis is defined as the 4th order
+  cumulant:
   
   \[ kurt(y) = E(y^4) - 3(E(y^2))^2\] Since y= 1, it can be simplified to:
   
-  \[ kurt(y) = E(y^4) - 3 \] Which is equivalent to the 4th moment of y
-  \newline
-  
-  In a Gaussian Distribution, the 4th moment equals \(3(E(y^2))^2\)
-  
-  (p.~6, Hyvärinen \& Oja, 2000) \newline
+  \[ kurt(y) = E(y^4) - 3 \] Which is equivalent to the 4th moment of y.In
+  a Gaussian Distribution, the 4th moment equals \(3(E(y^2))^2\)
+  (Hyvärinen \& Oja, 2000)
   
   Thus,
   
   \[ kurt(y) = 3(E(y^2))^2 - 3(E(y^2))^2 = 0 \]
   
-  All Gaussian distributions have kurtosis equal to 0, and therefore, it
-  is expected that most non-Gaussian distributions will have a nonzero
-  Kurtosis with some rare exceptions. Beyond this, Kurtosis essentially
-  measures the deviation of RV from Gaussianity. (Puigt, 2011)
+  All Gaussian distributions have Kurtosis equal to 0, and therefore, it
+  is expected that most non-Gaussian distributions will usually have a
+  nonzero Kurtosis with some rare exceptions. Beyond this, Kurtosis
+  essentially measures the amount of deviation of RV from Gaussianity.
+  (Puigt, 2011)
   
-  It's use in ICA is popular due to the ease of estimation as well as its
-  linearity property. This holds two properties, assuming that \(x_1\) and
-  \(x_2\) are independent:
+  Its use in ICA is popular due to the ease of estimation as well as its
+  linearity property. This holds for two properties, assuming that \(x_1\)
+  and \(x_2\) are independent:
   
   \[ kurt(x_1 + x_2) = kurt(x_1) + kurt(x_2)\]
   \[ kurt(\alpha x_1) = \alpha^4 kurt(x_1)\]
   
-  \(\textbf{Issues with Kurtosis}\) - Highly sensitive to outliers as just
-  a few extreme values can dramatically impact its calculation. Therefore,
-  its application to skewed data or data with outliers that strong
-  influence may not be accurate.
-  
-  (p.~7, Hyvärinen \& Oja, 2000) \newline
-  
-  Given this and the preference for another method in R packages to be
-  utilized later, kurtosis will not be discussed much further in this
-  paper, and more robust methods of measuring non-Gaussianity will be
-  explored instead.
+  \(\textbf{Issues with Kurtosis}\) - It is highly sensitive to outliers,
+  as just a few extreme values can dramatically impact its calculation.
+  Therefore, its application to skewed data or data with outliers that
+  strongly influence the distribution may not be accurate. Given this and
+  the preference for another method in R packages to be utilized later,
+  kurtosis will not be discussed much further in this paper, and more
+  robust methods of measuring non-Gaussianity will be explored
+  instead.(Hyvärinen \& Oja, 2000)
   
   \subsubsection{Negentropy}\label{negentropy}
   
   Since Kurtosis cannot always successfully determine Non-gaussianity, the
-  use of negentropy as a alternative method of estimation and is typically
-  preferred.
-  
-  Negentropy derives from the theoretical ``differential'' entropy or
-  level of randomness of a given variable. In general, Gaussian variables
-  tend to possess the largest entropy given control for an equal variance
-  condition. (8, Hyvärinen \& Oja, 2000)
+  use of negentropy as a alternative method of estimation is typically
+  preferred. Negentropy derives from the theoretical ``differential''
+  entropy or level of randomness of a given variable. In general, Gaussian
+  variables tend to possess the largest entropy given control for an equal
+  variance condition. (Hyvärinen \& Oja, 2000)
   
   Theoretical entropy is defined for discrete and continuous respectively
   as:
@@ -439,22 +410,16 @@ make its application to numerous fields more efficient and usable.
   
   It is always:
   
-  \begin{figure}[h]
+  \(\bullet\) Non-negative and will be zero if and only if \(\textbf{y}\)
+  is Gaussian.
   
-  $\bullet$ Non-negative and will be zero if and only if $\textbf{y}$ is Gaussian. \newline
-  
-  
-  
-  $\bullet$ Invariant for invertible linear transformations.
-  
-  \end{figure}
+  \(\bullet\) Invariant for invertible linear transformations.
   
   In most cases, negentropy tends to be the best performing estimator of
   non-gaussianity but can be difficult or expensive to compute. However,
   the ease of computation has improved over time with technology, and thus
-  the fastICA package relies on the estimator in its calculation.
-  
-  (p.~8, Hyvärinen \& Oja, 2000)
+  the fastICA package relies on the estimator in its
+  calculation.(Hyvärinen \& Oja, 2000)
   
   \subsubsection{Minimization of Mutual
   Information}\label{minimization-of-mutual-information}
@@ -463,7 +428,7 @@ make its application to numerous fields more efficient and usable.
   applications in this paper through fastICA, other forms of ICA
   estimation are still important to note for thoroughness purposes. A
   third commonly used estimator is the minimization of mutual information
-  technique. \newline
+  technique.
   
   \(\textbf{Mutual Information}\) - The MI between \(\textit{m}\) scalar
   variables \(y_i,\textit{i} = 1,..m\) is indicated by:
@@ -476,20 +441,18 @@ make its application to numerous fields more efficient and usable.
   \[ I(y_1,y_2,...,y_\textit{m}) = C- \sum_{i=1} J(y_\textit{i})\]
   
   MI measures the dependence between RV's and will be non-negative and
-  zero if independent. Critically, this allows it to be used as a criteria
-  for ICA transformation by minimizing mutual information of transformed
-  components. ICA can be viewed as the minimization of mutual information.
-  
-  (p.~9-10, Hyvärinen \& Oja, 2000)
+  zero if independent. This allows MI to be used as a criteria for ICA
+  transformation by minimizing mutual information of transformed
+  components. Thus, ICA can also be viewed as the minimization of mutual
+  information. (Hyvärinen \& Oja, 2000)
   
   \subsubsection{Maximum Likelihood Estimation
   (MLE)}\label{maximum-likelihood-estimation-mle}
   
-  MLE serves as a similar estimation approach to the mutual information
-  method for the ICA model.
-  
-  Particularly, the likelihood of the noise-free model can be formulated
-  then used to find an estimate with MLE.
+  A third method, MLE, serves as a similar estimation approach to the
+  mutual information method for the ICA model. Particularly, the
+  likelihood of the noise-free model can be formulated then used to find
+  an estimate with MLE.
   
   Log-likelihood for ICA:
   
@@ -503,17 +466,13 @@ make its application to numerous fields more efficient and usable.
   
   \[ \frac{1}{T} log L(\textbf{W}) = E\{\sum_{i=1}^n log p_i w_i^Tx\}) + log|det \textbf{W}|\]
   
-  (p.~10 Hyvärinen \& Oja, 2000)
-  
   In this, the \(\textit{f}_i\) signify the density functions of the
   \(s_i\), which would generally be unknown but are known here.
   
   \[ \textbf{x}(t), t= 1,...,N\] are the observations of x
   
   \[ log|det\textbf{W}|\] is linear transformation of an RV and its
-  density
-  
-  (p.~11 Hyvärinen \& Oja, 2000) \newline
+  density (Hyvärinen \& Oja, 2000) \newline
   
   \textbf{Connect to Infomax}
   
@@ -527,8 +486,7 @@ make its application to numerous fields more efficient and usable.
   Apply some function \(\textit{H()}\) and maximize:
   
   \[\textit{H}(\textbf{y}) = \textit{H}(\phi_1(\textbf{w}_1^Tx),...,\phi_n(\textbf{w}_n^Tx))\]
-  
-  (pg. 211, Aapo Hyvärinen \& Oja, 2001) \newline
+  \newline
   
   Maximization of mutual information will be equal to maximization of
   output entropy, for which the transformation can be written as:
@@ -538,11 +496,10 @@ make its application to numerous fields more efficient and usable.
   \[\textbf{F}(x) = (\phi_1(\textbf{b}_1^Tx),...,\phi_n(\textbf{b}_n^Tx))\]
   
   And therefore:
-  \[\textit{E}\{log | det \frac{\partial F}{\partial W}(x)|\} = \sum_{i} \textit{E}\{log \phi_i' \textbf{w}_i^Tx\} + log|det\textbf{W}|\]
-  Thus, output entropy equals likelihood and that infomax and MLE are
-  effectively equal methods.
   
-  (pg. 213, Aapo Hyvärinen \& Oja, 2001)
+  \[\textit{E}\{log | det \frac{\partial F}{\partial W}(x)|\} = \sum_{i} \textit{E}\{log \phi_i' \textbf{w}_i^Tx\} + log|det\textbf{W}|\]
+  Here the output entropy equals the likelihood, and so infomax and MLE
+  are effectively equal methods for.(Aapo Hyvärinen \& Oja, 2001)
   
   \subsubsection{ICA and Projection
   Pursuit}\label{ica-and-projection-pursuit}
@@ -550,7 +507,7 @@ make its application to numerous fields more efficient and usable.
   It is important to note the relationship between ICA and Projection
   Pursuit due to some significant similarities in their processes.
   Particularly, projection pursuit also looks at multidimensional data
-  with the intent to find ``interesting'' projections. Much of its key
+  with the intent to find ``interesting'' projections. Many of its key
   applications are in the data exploration phase, but often projection
   pursuit directions can successfully visualize nuanced distribution of
   the data.
@@ -559,43 +516,36 @@ make its application to numerous fields more efficient and usable.
   projections ties it directly to non-Gaussian distributions and how they
   can produce powerful visualizations of clustered data. Thus, most
   projection pursuit projections will be performed by determining the most
-  non-Gaussian, and therefore, ICA components can be considered projection
-  pursuit \(\textit{indicies}\) However, projection pursuit does not
-  follow a set model with rigorous definition like ICA.
-  
-  If the specified ICA model holds, then non-Gaussainity optimization will
+  non-Gaussian projects, and therefore, ICA components can be considered
+  projection pursuit \(\textit{indicies}\). However, projection pursuit
+  does not follow a set model with rigorous definition like ICA. If the
+  specified ICA model holds, then non-Gaussainity optimization will
   generate independent components. If not, the result model can be viewed
-  as a set of projection pursuit directions.
-  
-  (p 197-198, Aapo Hyvärinen \& Oja, 2001)
+  as a set of projection pursuit directions.(Aapo Hyvärinen \& Oja, 2001)
   
   \section{Pre-proccessing in ICA}\label{pre-proccessing-in-ica}
   
   \subsection{Centering}\label{centering}
   
-  Practically speaking, subtracting the expectation/mean vector
-  \(\textbf{m} = E({\textbf{x}})\) will \(\textit{center}\) the
-  observations and make \(x\) zero-mean.
-  
-  Centering data simplifies algorithmic processes and calculations.
-  
-  (p.~12, Hyvärinen \& Oja, 2000)
+  Practically speaking, centering is subtracting the expectation/mean
+  vector \(\textbf{m} = E({\textbf{x}})\) from each observation to make
+  \(x\) zero-mean. Centering data simplifies algorithmic processes and
+  calculations.
   
   \subsection{Whitening}\label{whitening}
   
   As a concept, whitening serves to take the original data and generate
   vectors with components that are both uncorrelated and equal variance
-  with theoretical notation for the covariance matrix of a whiten vector
+  with theoretical notation for the covariance matrix of a whitened vector
   as stated below:
   
-  \[ E(\tilde{x} \tilde{x}^T)= \textbf{I} \] (p.~12, Hyvärinen \& Oja,
-  2000)
+  \[ E(\tilde{x} \tilde{x}^T)= \textbf{I} \]
   
   Whitening, also known as \(\textit{Sphering}\), removes the scale and
-  correlation structure from the \(\textbf{X}\) dat matrix. In general,
-  the process has been criticized for manipulating the distribution too
-  far but still remains standard practice for pre-processing data for ICA.
-  (p.~5, Izenman, 2003)
+  correlation structure from the \(\textbf{X}\) data matrix. In general,
+  the process has been criticized for manipulating the distribution of
+  data too far but still remains standard practice for pre-processing data
+  for ICA.(Izenman, 2003)
   
   \section{fastICA and Other Methods}\label{fastica-and-other-methods}
   
@@ -604,7 +554,6 @@ make its application to numerous fields more efficient and usable.
   The next chapter will dig deeper in demonstrating the power of the
   fastICA R package in generating ICA models, but the key features should
   be pointed out before their application to two toy examples later.
-  \newline
   
   \(\textbf{Key Details}\) \newline
   
@@ -612,11 +561,9 @@ make its application to numerous fields more efficient and usable.
   components. Explicitly, this matrix is a linear combination of matrices
   \(S\) (original source signals) and \(A\) (mixing matrix) by generating
   matrix \(W\) that maximized non-Gaussianity, which is
-  \(\textbf{WX = S}\)
-  
-  This non-Gaussian approximation is based on negentropy calculations
-  discussed in prior sections, and it is used over kurtosis because of
-  efficiency according to the authors of the package.
+  \(\textbf{WX = S}\) This non-Gaussian approximation is based on
+  negentropy calculations discussed in prior sections, and it is used over
+  kurtosis because of efficiency according to the authors of the package.
   
   Specfically for the fastICA algorithm, the \(H(\textbf{y})\) function
   options are: \newline
@@ -625,7 +572,7 @@ make its application to numerous fields more efficient and usable.
   
   \(\bullet G(u) = -exp(u^2/2)\) \newline
   
-  (see J L Marchini \textless{}marchini@stats.ox.ac.uk\textgreater{} \&
+  (J L Marchini \textless{}marchini@stats.ox.ac.uk\textgreater{} \&
   \textless{}ripley@stats.ox.ac.uk\textgreater{}, 2017)
   
   \subsection{fastICA Algorithm}\label{fastica-algorithm}
@@ -646,21 +593,17 @@ make its application to numerous fields more efficient and usable.
     \(\textbf{w}^+\)/\textbar{}\textbar{}\(\textbf{w}^+\)\textbar{}\textbar{}
   \item
     Repeat until converged (eg. old and new values of vector are same
-    direction)
+    direction) (Hyvärinen \& Oja, 2000)
   \end{enumerate}
-  
-  (p 14, Hyvärinen \& Oja, 2000)
   
   \subsubsection{Several Units}\label{several-units}
   
   When determining multiple independent components, the vector
   \(\textbf{w}\) becomes a matrix \(\textbf{W}\) composed of vectors
-  \((\textbf{w}_{1}\),\ldots{},\(\textbf{w}_{n})\)
-  
-  Outputs must be decorrelated in this scenario, else they may converge to
-  the same value. This is done by iteratively subtracting
-  \(\textbf{w}_{p+1}\) with each additional projection, then normalizing
-  that same vector.
+  \((\textbf{w}_{1}\),\ldots{},\(\textbf{w}_{n})\) Outputs must be
+  decorrelated in this scenario, else they may converge to the same value.
+  This is done by iteratively subtracting \(\textbf{w}_{p+1}\) within each
+  additional projection, then normalizing that same vector.
   
   \begin{enumerate}
   \def\labelenumi{\arabic{enumi}.}
@@ -681,11 +624,13 @@ make its application to numerous fields more efficient and usable.
   \item
     Let \(\textbf{W}\) =
     \((3/2)*\)\(\textbf{W}\)-\((1/2)\)*\(\textbf{W}\textbf{W}^T\textbf{W}\)
+    (Hyvärinen \& Oja, 2000)
   \end{enumerate}
   
-  (Hyvärinen \& Oja, 2000, p. 15)
-  
   \subsection{Key Properties of fastICA}\label{key-properties-of-fastica}
+  
+  These are the key properties of fastICA that make it an efficient and
+  effective ICA modeling method.
   
   \begin{enumerate}
   \def\labelenumi{\arabic{enumi}.}
@@ -705,14 +650,12 @@ make its application to numerous fields more efficient and usable.
     requires little memory
   \end{enumerate}
   
-  (p.~16, Hyvärinen \& Oja, 2000)
-  
   \subsection{Arguments in the fastICA
   function}\label{arguments-in-the-fastica-function}
   
-  fastICA (R implementation) employs several different technical arguments
-  in its function that must be understood in order to interrupt the
-  results of its output rigorously.
+  fastICA (R implementation) also employs several different technical
+  arguments in its function that must be understood in order to interrupt
+  the results of its output rigorously.
   
   \(X\) simply the data matrix of interest
   
@@ -753,7 +696,7 @@ make its application to numerous fields more efficient and usable.
   
   \subsection{JADE and Infomax}\label{jade-and-infomax}
   
-  Although fastICA has largely become the primary R packages for ICA
+  Although fastICA has largely become the primary R package for ICA
   modeling, JADE and Infomax methods are also available to perform the
   same task. In subsequent sections, their effectiveness will be evaluated
   in relation to fastICA. \newline
@@ -762,7 +705,7 @@ make its application to numerous fields more efficient and usable.
   
   Uses \(\textit{Joint Approximate Diagonalization of Eigenmatrices}\)
   (JADE) derived by Cardoso and Souloumiac in 1993. This approach involves
-  finding a orthogonal rotation matrix R that diagonalizes the cumulant
+  finding an orthogonal rotation matrix R that diagonalizes the cumulant
   array of source signals. (Helwig, 2015) \newline
   
   Particularly, the original Cardoso paper describes the algorithm in 4
@@ -778,15 +721,15 @@ make its application to numerous fields more efficient and usable.
   
   \(\textbf{4}\) Estimate A with \(\hat{A} =\hat{W}\hat{U}\) \newline
   
-  (p.366, Cardoso \& Souloumiac, 1993) \newline
+  (Cardoso \& Souloumiac, 1993) \newline
   
   \(\textbf{Infomax}\) - \newline
   
-  Also utilizes the orthogonal rotation matrix R that maximizes the joint
-  entropy of a non-linear function of the estimated source signals and is
-  derived from Bell and Sejnowski's 1995 paper
-  \(\textit{An Information-Maximization Approach to Blind Separation and Blind Deconvolution}\).
-  (Helwig, 2015)
+  Infomax also utilizes the orthogonal rotation matrix R that maximizes
+  the joint entropy of a non-linear function of the estimated source
+  signals and is derived from Bell and Sejnowski's 1995 paper
+  \(\textit{An Information-Maximization Approach to Blind Separation and Blind Deconvolution}\).(Helwig,
+  2015)
   
   \chapter{Chapter 1: Toy Examples and
   Simulation}\label{chapter-1-toy-examples-and-simulation}
@@ -946,7 +889,8 @@ make its application to numerous fields more efficient and usable.
   the JADE package that contains 50,000 observations from 4 different
   microphones. (Klaus Nordhausen, 2017)
   
-  A smaller sample of 10,000 is take here for graphical purposes.
+  A smaller sample of 10,000 is take here for graphical and calculation
+  purposes.
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -1166,18 +1110,19 @@ make its application to numerous fields more efficient and usable.
   4 4.176865e-03 0.9999916 0.9958147 -0.02324014 -1.9847584 0.015028501
   \end{verbatim}
   
-  The expectation for the Absolute Maximum Congruence Coefficient for the
-  noiseless model was for it to be high (eg. close to 1) since the true S
-  and the generated S by the algorithms should be similar. However, this
-  was not the case, particularly for JADE and Infomax, as their means were
-  below \(0.10\) with SD of around \(0.044\). fastICA's mean was larger,
-  but the SD was high at around \(0.125\).
+  The expectation for the value of Absolute Maximum Congruence Coefficient
+  for the noiseless model was for it to be high (eg. close to 1, the
+  highest value) since the true S and the generated S by the algorithms
+  should be similar. However, this was not the case, particularly for JADE
+  and Infomax, as their means were below \(0.10\) with SD of around
+  \(0.044\). fastICA's mean was larger, but the SD was high at around
+  \(0.125\).
   
   Thus, the Absolute Maximum Congruence Coefficient between fastICA and
-  JADE was also calculated, and was found to be close to \(0.51\) but also
-  had a high standard deviation. Interestingly, the median was actually
-  close 1 at 0.9988695, suggesting that the algorithms performed
-  similarly.
+  JADE was also calculated for a sanity check, and was found to be close
+  to \(0.51\) but also had a high standard deviation. Interestingly, the
+  median was actually close 1 at 0.9988695, suggesting that the algorithms
+  performed relatively similarly.
   
   \subsection{Noise = 0.05 Results}\label{noise-0.05-results}
   
@@ -1195,12 +1140,13 @@ make its application to numerous fields more efficient and usable.
   \end{verbatim}
   
   Unsurprisingly, the results when a small amount of noise was added to
-  our data was essentially the same, although it seems strange that the
-  JADE and Infomax algorithms behaved more similar to the model with some
-  noise.
+  our data was essentially the same as for the NoNoise simulation.
+  However, it seems strange that the JADE and Infomax algorithms behaved
+  more similar to each other for this model with some additional noise.
   
   Again, comparing fastICA and JADE as an alternative approach, they
-  appeared to perform about equally on this noisier model.
+  appeared to perform about equally on this noisier model with a mean of
+  \(0.547\) and a median of \(0.924\).
   
   \subsection{Noise = 0.10 Results}\label{noise-0.10-results}
   
@@ -1218,8 +1164,8 @@ make its application to numerous fields more efficient and usable.
   \end{verbatim}
   
   Both JADE and Infomax ``improved'' at the 0.10 noise level, and fastICA
-  variability only fell marginally. The fastICA JADE did not demonstrate
-  the same success as the median value is only 0.24, suggesting increased
+  variability fell marginally.The fastICA JADE did not demonstrate the
+  same success as the median value is only \(0.407\), suggesting increased
   dissimilarity in results from the two methods.
   
   \subsection{Noise = 0.15 Results}\label{noise-0.15-results}
@@ -1237,15 +1183,15 @@ make its application to numerous fields more efficient and usable.
   4 0.0044797527 1.0000000 0.9955202 -0.02841594 -1.981007 0.0143205773
   \end{verbatim}
   
-  Oddly enough, all three algorithms performed their best on the 0.15
-  noise model, perhaps this indicates a need to run more iterations in
-  order to recover more of the uniform distributions. Additionally, the
-  random uniform may just have a high level of randomness for each dataset
-  that does not allow the Absolute Maximum Congruence Coefficient to
-  perform well.
+  Oddly enough, all three algorithms performed their best (largest mean
+  value) on the 0.15 noise model, perhaps this indicates a need to run
+  more iterations in order to recover more of the uniform distributions.
+  Additionally, the random uniform may just have a high level of
+  randomness for each dataset that does not allow the Absolute Maximum
+  Congruence Coefficient to perform well.
   
-  Again, the JADE and fastICA comparison did not demonstrate that the
-  performed roughly identically under these conditions.
+  Again, the JADE and fastICA comparison demonstrated that the performed
+  roughly the same under these conditions.
   
   \section{CPP Simulation:}\label{cpp-simulation}
   
@@ -1331,10 +1277,12 @@ make its application to numerous fields more efficient and usable.
   
   The comparison by Absolute Maximum Congruence Coefficient for the CPP
   proves slightly more difficult since the true S is not known (comparison
-  of congruence here is done between the data and generated S as mentioned
-  earlier). Regardless, each algorithm performed very similarly (means
-  within 0.0003 of each other) and had low standard deviation, thus the
-  noiseless model seems to be relatively indifferent between the models.
+  of congruence here is done between the data and generated S not known S
+  as mentioned earlier). Regardless, each algorithm performed very
+  similarly (means within 0.0003 of each other) and had low standard
+  deviation, thus the noiseless model seems to be relatively indifferent
+  between the models. The Jade and FastICA test resulted in a mean of
+  \(0.511\), suggesting relative similarity in the two methods.
   
   \subsection{Noise = 0.05 Results}\label{noise-0.05-results-1}
   
@@ -1352,7 +1300,8 @@ make its application to numerous fields more efficient and usable.
   \end{verbatim}
   
   Results for the lowest level of noise are even closer than in the
-  noiseless model.
+  noiseless model. Jade and FastICA comparison performs slightly better in
+  this case, suggesting closer performance.
   
   \subsection{Noise = 0.10 Results}\label{noise-0.10-results-1}
   
@@ -1369,7 +1318,8 @@ make its application to numerous fields more efficient and usable.
   4 1.357246e-03 0.99994625 0.99858900 -0.3430005 -1.2804338 0.0140307636
   \end{verbatim}
   
-  Once again, all 3 algorithms produce almost identical means.
+  Once again, all 3 algorithms produce almost identical means. Jade to
+  FastICA comparison is similar to prior comparisons.
   
   \subsection{Noise = 0.15 Results}\label{noise-0.15-results-1}
   
@@ -1387,8 +1337,8 @@ make its application to numerous fields more efficient and usable.
   \end{verbatim}
   
   The highest Noise threshold behaved most similarly to the noiseless, in
-  terms of slightly more variability between algorithms, with JADE
-  computing a marginally higher mean.
+  terms of slightly more variability between algorithms. The Jade to
+  FastICA comparison behaved similarly to the Noise = 0.05 case.
   
   \subsection{Method Effectiveness}\label{method-effectiveness}
   
@@ -1634,20 +1584,24 @@ make its application to numerous fields more efficient and usable.
   usage by the Statistical community at large. Even if the key model
   criteria (independence and non-Gaussianity) are met, choosing the
   correct number of components and making sense of the output requires a
-  deep understanding of the data. In their study on parallel time series
-  financial data, Kiviluoto and Oja note how the method successfully
-  revealed underlying factors in the retail chain analyzed but also how
-  ICA modeling calls for ``inspection from a domain expert.'' (pg. 3,
-  {\textbf{???}})
+  deep understanding of the data.
   
-  Perhaps the best example of this need for experts to analyze results
-  would be the work done with the ICA model on brain imaging data like EEG
-  and MEG. In many ways, ICA has proven to be a valuable tool for
-  neuroscience researchers, but this application would not be possible
-  with analysis by statisticians alone. Although successful understanding
-  of results in this case may always be limited to experts, new ICA
-  algorithms with more explicit outputs could potentially be developed to
-  improve breadth of its application.
+  However,despite the complexity of its application, ICA has proven to be
+  an effective method for improving understanding in several fields of
+  study. For example, in their study on parallel time series financial
+  data, Kiviluoto and Oja discovered how the method successfully revealed
+  underlying factors in the retail chain they analyzed. Their findings
+  showed the underlying effect of different mangagement on the
+  productivity of a given store. The only downside with this analysis
+  being that it also demonstrated how ICA modeling calls for ``inspection
+  from a domain expert.'' ({\textbf{???}}) Perhaps the best example of
+  this need for experts to analyze results is the work done with the ICA
+  model on brain imaging data like EEG and MEG. In many ways, ICA has
+  proven to be a valuable tool for neuroscience researchers, but this
+  application would not be possible with analysis by statisticians alone.
+  Although successful understanding of results in this case may always be
+  limited to experts, new ICA algorithms with more explicit outputs could
+  potentially be developed to improve breadth of its application.
   
   \appendix
   

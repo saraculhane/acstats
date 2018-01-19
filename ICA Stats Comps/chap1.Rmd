@@ -148,7 +148,7 @@ If the weighted $a_{ij}$ was known, this problem could be easily solved but beca
 A test example and simulation can be generated using the CPPdata from the JADE package that contains 50,000 observations from 4 different microphones. [@JADE]
 
 
-A smaller sample of 10,000 is take here for graphical purposes.
+A smaller sample of 10,000 is take here for graphical and calculation purposes.
 
 ```{r}
 set.seed(40)
@@ -358,9 +358,9 @@ val1 <- favstats(NoNoise[[1]])[1]
 val2 <- favstats(NoNoise[[4]])[4]
 ```
 
-The expectation for the Absolute Maximum Congruence Coefficient for the noiseless model was for it to be high (eg. close to 1) since the true S and the generated S by the algorithms should be similar. However, this was not the case, particularly for JADE and Infomax, as their means were below $0.10$ with SD of around $0.044$.  fastICA's mean was larger, but the SD was high at around $0.125$.
+The expectation for the value of Absolute Maximum Congruence Coefficient for the noiseless model was for it to be high (eg. close to 1, the highest value) since the true S and the generated S by the algorithms should be similar. However, this was not the case, particularly for JADE and Infomax, as their means were below $0.10$ with SD of around $0.044$.  fastICA's mean was larger, but the SD was high at around $0.125$.
 
-Thus, the Absolute Maximum Congruence Coefficient between fastICA and JADE was also calculated, and was found to be close to $0.51$ but also had a high standard deviation.  Interestingly, the median was actually close 1 at `r val2`, suggesting that the algorithms performed similarly.
+Thus, the Absolute Maximum Congruence Coefficient between fastICA and JADE was also calculated for a sanity check, and was found to be close to $0.51$ but also had a high standard deviation.  Interestingly, the median was actually close 1 at `r val2`, suggesting that the algorithms performed relatively similarly.
 
 ### Noise = 0.05 Results
 
@@ -370,9 +370,9 @@ new1 %>%
   broom::tidy()
 ```
 
-Unsurprisingly, the results when a small amount of noise was added to our data was essentially the same, although it seems strange that the JADE and Infomax algorithms behaved more similar to the model with some noise.
+Unsurprisingly, the results when a small amount of noise was added to our data was essentially the same as for the NoNoise simulation.  However, it seems strange that the JADE and Infomax algorithms behaved more similar to each other for this model with some additional noise.
 
-Again, comparing fastICA and JADE as an alternative approach, they appeared to perform about equally on this noisier model.
+Again, comparing fastICA and JADE as an alternative approach, they appeared to perform about equally on this noisier model with a mean of $0.547$ and a median of $0.924$.
 
 ### Noise = 0.10 Results
 
@@ -383,7 +383,7 @@ new2 %>%
   broom::tidy()
 ```
 
-Both JADE and Infomax "improved" at the 0.10 noise level, and fastICA variability only fell marginally.  The fastICA JADE did not demonstrate the same success as the median value is only 0.24, suggesting increased dissimilarity in results from the two methods.
+Both JADE and Infomax "improved" at the 0.10 noise level, and fastICA variability fell marginally.The fastICA JADE did not demonstrate the same success as the median value is only $0.407$, suggesting increased dissimilarity in results from the two methods.
 
 
 ### Noise = 0.15 Results
@@ -395,9 +395,9 @@ new3 %>%
   broom::tidy()
 ```
 
-Oddly enough, all three algorithms performed their best on the 0.15 noise model, perhaps this indicates a need to run more iterations in order to recover more of the uniform distributions. Additionally, the random uniform may just have a high level of randomness for each dataset that does not allow the Absolute Maximum Congruence Coefficient to perform well.
+Oddly enough, all three algorithms performed their best (largest mean value) on the 0.15 noise model, perhaps this indicates a need to run more iterations in order to recover more of the uniform distributions. Additionally, the random uniform may just have a high level of randomness for each dataset that does not allow the Absolute Maximum Congruence Coefficient to perform well.
 
-Again, the JADE and fastICA comparison did not demonstrate that the performed roughly identically under these conditions.
+Again, the JADE and fastICA comparison demonstrated that the performed roughly the same under these conditions.
 
 
 
@@ -472,7 +472,7 @@ nn2 %>%
   broom::tidy()
 ```
 
-The comparison by Absolute Maximum Congruence Coefficient for the CPP proves slightly more difficult since the true S is not known (comparison of congruence here is done between the data and generated S as mentioned earlier).  Regardless, each algorithm performed very similarly (means within 0.0003 of each other) and had low standard deviation, thus the noiseless model seems to be relatively indifferent between the models.
+The comparison by Absolute Maximum Congruence Coefficient for the CPP proves slightly more difficult since the true S is not known (comparison of congruence here is done between the data and generated S not known S as mentioned earlier).  Regardless, each algorithm performed very similarly (means within 0.0003 of each other) and had low standard deviation, thus the noiseless model seems to be relatively indifferent between the models.  The Jade and FastICA test resulted in a mean of $0.511$, suggesting relative similarity in the two methods.
 
 
 
@@ -484,7 +484,7 @@ new1 %>%
   broom::tidy()
 ```
 
-Results for the lowest level of noise are even closer than in the noiseless model.
+Results for the lowest level of noise are even closer than in the noiseless model.  Jade and FastICA comparison performs slightly better in this case, suggesting closer performance.
 
 ### Noise = 0.10 Results
 
@@ -494,7 +494,7 @@ new2 %>%
   broom::tidy()
 ```
 
-Once again, all 3 algorithms produce almost identical means.
+Once again, all 3 algorithms produce almost identical means.  Jade to FastICA comparison is similar to prior comparisons.
 
 
 ### Noise = 0.15 Results
@@ -505,7 +505,7 @@ new3 %>%
   broom::tidy()
 ```
 
-The highest Noise threshold behaved most similarly to the noiseless, in terms of slightly more variability between algorithms, with JADE computing a marginally higher mean.
+The highest Noise threshold behaved most similarly to the noiseless, in terms of slightly more variability between algorithms.  The Jade to FastICA comparison behaved similarly to the Noise = 0.05 case.
 
 
 ### Method Effectiveness
